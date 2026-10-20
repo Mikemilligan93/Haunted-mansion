@@ -1,0 +1,138 @@
+{
+  "_note": "All tunable numbers. Edit and press 'Reload config' in the testing modal (F1) to apply without restarting.",
+  "screen": {
+    "width": 640,
+    "height": 360
+  },
+  "room": {
+    "floorTilesW": 38,
+    "floorTilesH": 14,
+    "wallHeight": 96,
+    "originY": 4,
+    "wornChance": 0.22,
+    "detailChance": 0.06,
+    "wallVariantChance": 0.18
+  },
+  "liam": {
+    "walkSpeed": 72,
+    "sunSlowFactor": 0.45,
+    "fidgetAfterSeconds": 9,
+    "interactRange": 34,
+    "hitbox": [
+      14,
+      6
+    ],
+    "introWalkPixels": 34
+  },
+  "bat": {
+    "speed": 110,
+    "hover": 18,
+    "bobPixels": 2,
+    "bobSpeed": 6,
+    "panicSeconds": 3,
+    "panicSpeed": 150,
+    "panicTurnSeconds": 0.28,
+    "panicControl": 0.35
+  },
+  "ambrose": {
+    "speed": 40,
+    "greetRange": 56,
+    "greetCooldownSeconds": 25,
+    "talkRange": 44,
+    "waitSeconds": [
+      3,
+      7
+    ],
+    "driftChance": 0.3,
+    "fadeAlpha": 0.35,
+    "driftHoldSeconds": 1.6,
+    "tablePlaces": 4,
+    "wallHiddenSeconds": 6,
+    "deathHour": 3,
+    "repeatChance": 0.35,
+    "lightRadius": 60
+  },
+  "props": {
+    "table": {
+      "x": 104,
+      "y": 182,
+      "placeOffsets": [
+        [
+          -18,
+          -57
+        ],
+        [
+          18,
+          -57
+        ],
+        [
+          -18,
+          -43
+        ],
+        [
+          18,
+          -43
+        ]
+      ],
+      "variant": 0,
+      "halfWidth": 44,
+      "depth": 22
+    },
+    "clock": {
+      "x": 584,
+      "faceOffset": [
+        0,
+        -68
+      ],
+      "hourHand": 3,
+      "minuteHand": 4
+    },
+    "wallDoorY": 120
+  },
+  "time": {
+    "startHour": 10,
+    "dayLengthSeconds": 240,
+    "dawnStart": 5.5,
+    "dayStart": 7.5,
+    "duskStart": 18,
+    "nightStart": 20
+  },
+  "light": {
+    "nightDarkness": 0.72,
+    "nightTint": "#0b0a24",
+    "duskTint": "#ff8a3c",
+    "duskTintStrength": 0.18,
+    "sconcesLitFrom": 17.5,
+    "sconcesLitUntil": 7,
+    "sconceRadius": 78,
+    "sconceFlicker": 0.07,
+    "sconceGlowAlpha": 0.16,
+    "moonbeamAlpha": 0.1
+  },
+  "sunbeam": {
+    "length": 132,
+    "slant": 64,
+    "alpha": 0.3,
+    "color": "#ffe08a",
+    "motes": 16,
+    "minStrengthToSlow": 0.3
+  },
+  "text": {
+    "baseSeconds": 1,
+    "perWordSeconds": 0.3,
+    "minSeconds": 2,
+    "fontSizePx": 11,
+    "panelColor": "#1a1020",
+    "panelBorder": "#000000",
+    "panelInner": "#3a3340",
+    "textColor": "#f2e6cc",
+    "nameColor": "#c9d3e0"
+  },
+  "debug": {
+    "saveSlots": 3,
+    "viewerScale": 2
+  },
+  "ui": {
+    "startHintSeconds": 6
+  }
+}

@@ -1,0 +1,10 @@
+// Cloudflare Workers config: the game is served as static assets from the repo root.
+// Files listed in .assetsignore (docs, tools, raw art, tests) are not uploaded.
+{
+  "name": "haunted-mansion",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./",
+    "not_found_handling": "single-page-application"
+  }
+}

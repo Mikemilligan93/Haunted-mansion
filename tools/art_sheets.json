@@ -1,0 +1,1154 @@
+{
+ "_note": "Sheet definitions for tools/process_art.py. grid = [rows, cols]. frame = output frame [w, h] in game pixels. scale_ref = which source frame sets the scale (px = its height in game pixels); scale_from = reuse another sheet's scale (same drawing size). rows/anims/names are copied into assets/sprites/manifest.json for the game.",
+ "sheets": [
+  {
+   "name": "liam_td_idle",
+   "file": "liam_td_idle.png",
+   "kind": "sprite",
+   "palette": "liam",
+   "grid": [
+    3,
+    4
+   ],
+   "frame": [
+    48,
+    64
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 58
+   },
+   "rows": [
+    "down",
+    "left",
+    "up"
+   ],
+   "anims": {
+    "idle": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 3,
+     "loop": true
+    }
+   }
+  },
+  {
+   "name": "liam_td_walk",
+   "file": "liam_td_walk.png",
+   "kind": "sprite",
+   "palette": "liam",
+   "grid": [
+    3,
+    6
+   ],
+   "frame": [
+    48,
+    64
+   ],
+   "scale_from": "liam_td_idle",
+   "rows": [
+    "down",
+    "left",
+    "up"
+   ],
+   "anims": {
+    "walk": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fps": 9,
+     "loop": true
+    }
+   }
+  },
+  {
+   "name": "liam_td_inspect",
+   "file": "liam_td_inspect.png",
+   "kind": "sprite",
+   "palette": "liam",
+   "grid": [
+    3,
+    3
+   ],
+   "frame": [
+    64,
+    64
+   ],
+   "scale_from": "liam_td_idle",
+   "rows": [
+    "down",
+    "left",
+    "up"
+   ],
+   "anims": {
+    "inspect": {
+     "frames": [
+      0,
+      1,
+      2
+     ],
+     "fps": 8,
+     "loop": false
+    }
+   }
+  },
+  {
+   "name": "liam_td_hurt",
+   "file": "liam_td_hurt.png",
+   "kind": "sprite",
+   "palette": "liam",
+   "grid": [
+    3,
+    2
+   ],
+   "frame": [
+    64,
+    64
+   ],
+   "scale_from": "liam_td_idle",
+   "rows": [
+    "down",
+    "left",
+    "up"
+   ],
+   "anims": {
+    "hurt": {
+     "frames": [
+      0,
+      1
+     ],
+     "fps": 6,
+     "loop": false
+    }
+   }
+  },
+  {
+   "name": "liam_td_swipe",
+   "file": "liam_td_swipe.png",
+   "kind": "sprite",
+   "palette": "liam",
+   "grid": [
+    3,
+    4
+   ],
+   "frame": [
+    96,
+    64
+   ],
+   "scale_from": "liam_td_idle",
+   "rows": [
+    "down",
+    "left",
+    "up"
+   ],
+   "anims": {
+    "swipe": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 12,
+     "loop": false
+    }
+   }
+  },
+  {
+   "name": "liam_td_throw",
+   "file": "liam_td_throw.png",
+   "kind": "sprite",
+   "palette": "liam",
+   "grid": [
+    3,
+    4
+   ],
+   "frame": [
+    80,
+    64
+   ],
+   "scale_from": "liam_td_idle",
+   "rows": [
+    "down",
+    "left",
+    "up"
+   ],
+   "anims": {
+    "throw": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 12,
+     "loop": false
+    }
+   }
+  },
+  {
+   "name": "liam_td_startle",
+   "file": "liam_td_startle.png",
+   "kind": "sprite",
+   "palette": "liam",
+   "grid": [
+    3,
+    4
+   ],
+   "frame": [
+    80,
+    72
+   ],
+   "scale_from": "liam_td_idle",
+   "rows": [
+    "down",
+    "left",
+    "up"
+   ],
+   "anims": {
+    "startle": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 10,
+     "loop": false
+    }
+   }
+  },
+  {
+   "name": "liam_td_cower",
+   "file": "liam_td_cower.png",
+   "kind": "sprite",
+   "palette": "liam",
+   "grid": [
+    3,
+    4
+   ],
+   "frame": [
+    48,
+    64
+   ],
+   "scale_from": "liam_td_idle",
+   "rows": [
+    "down",
+    "left",
+    "up"
+   ],
+   "anims": {
+    "cower": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 8,
+     "loop": true
+    }
+   }
+  },
+  {
+   "name": "liam_td_fidget",
+   "file": "liam_td_fidget.png",
+   "kind": "sprite",
+   "palette": "liam",
+   "grid": [
+    3,
+    6
+   ],
+   "frame": [
+    80,
+    64
+   ],
+   "scale_from": "liam_td_idle",
+   "rows": [
+    "cape",
+    "hair",
+    "rehearse"
+   ],
+   "anims": {
+    "fidget": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fps": 4,
+     "loop": false
+    }
+   }
+  },
+  {
+   "name": "liam_td_doorpose",
+   "file": "liam_td_doorpose.png",
+   "kind": "sprite",
+   "palette": "liam",
+   "grid": [
+    1,
+    4
+   ],
+   "frame": [
+    96,
+    64
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 58
+   },
+   "rows": [
+    "down"
+   ],
+   "anims": {
+    "doorpose": {
+     "frames": [
+      0,
+      1,
+      2,
+      2,
+      2,
+      3
+     ],
+     "fps": 5,
+     "loop": false
+    }
+   }
+  },
+  {
+   "name": "liam_td_doorpose_moods",
+   "file": "liam_td_doorpose_moods.png",
+   "kind": "sprite",
+   "palette": "liam",
+   "grid": [
+    3,
+    4
+   ],
+   "frame": [
+    96,
+    64
+   ],
+   "scale_from": "liam_td_idle",
+   "rows": [
+    "proud",
+    "nervous",
+    "exhausted"
+   ],
+   "anims": {
+    "doorpose": {
+     "frames": [
+      0,
+      1,
+      2,
+      2,
+      2,
+      3
+     ],
+     "fps": 5,
+     "loop": false
+    }
+   }
+  },
+  {
+   "name": "liam_bat_fly",
+   "file": "liam_bat_fly.png",
+   "kind": "sprite",
+   "palette": "liam",
+   "grid": [
+    3,
+    4
+   ],
+   "frame": [
+    48,
+    40
+   ],
+   "anchor": "centre",
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 40,
+    "dim": "width"
+   },
+   "rows": [
+    "down",
+    "left",
+    "up"
+   ],
+   "anims": {
+    "fly": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 12,
+     "loop": true
+    }
+   }
+  },
+  {
+   "name": "liam_bat_transform",
+   "file": "liam_bat_transform.png",
+   "kind": "sprite",
+   "palette": "liam",
+   "grid": [
+    1,
+    5
+   ],
+   "frame": [
+    64,
+    80
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     4
+    ],
+    "px": 40,
+    "dim": "width"
+   },
+   "rows": [
+    "down"
+   ],
+   "skip": [
+    0
+   ],
+   "anims": {
+    "transform": {
+     "frames": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "fps": 10,
+     "loop": false
+    }
+   }
+  },
+  {
+   "name": "liam_sv_idle",
+   "file": "liam_sv_idle.png",
+   "kind": "sprite",
+   "palette": "liam",
+   "grid": [
+    1,
+    4
+   ],
+   "frame": [
+    48,
+    64
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 58
+   },
+   "rows": [
+    "right"
+   ],
+   "anims": {
+    "idle": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 3,
+     "loop": true
+    }
+   }
+  },
+  {
+   "name": "liam_sv_run",
+   "file": "liam_sv_run.png",
+   "kind": "sprite",
+   "palette": "liam",
+   "grid": [
+    1,
+    6
+   ],
+   "frame": [
+    64,
+    64
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 55
+   },
+   "rows": [
+    "right"
+   ],
+   "anims": {
+    "run": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fps": 12,
+     "loop": true
+    }
+   }
+  },
+  {
+   "name": "liam_sv_jump",
+   "file": "liam_sv_jump.png",
+   "kind": "sprite",
+   "palette": "liam",
+   "grid": [
+    1,
+    5
+   ],
+   "frame": [
+    64,
+    72
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     4
+    ],
+    "px": 58
+   },
+   "rows": [
+    "right"
+   ],
+   "anims": {
+    "rise": {
+     "frames": [
+      0
+     ],
+     "fps": 1,
+     "loop": true
+    },
+    "apex": {
+     "frames": [
+      1
+     ],
+     "fps": 1,
+     "loop": true
+    },
+    "fall": {
+     "frames": [
+      2
+     ],
+     "fps": 1,
+     "loop": true
+    },
+    "land": {
+     "frames": [
+      3,
+      4
+     ],
+     "fps": 8,
+     "loop": false
+    }
+   }
+  },
+  {
+   "name": "liam_portraits",
+   "file": "liam_portraits.png",
+   "kind": "cellcrop",
+   "palette": "liam",
+   "grid": [
+    2,
+    4
+   ],
+   "crop": [
+    0,
+    0,
+    384,
+    384
+   ],
+   "size": [
+    96,
+    96
+   ],
+   "names": [
+    "grand",
+    "smug",
+    "flat",
+    "startled",
+    "panicked",
+    "embarrassed",
+    "soft",
+    "sad"
+   ]
+  },
+  {
+   "name": "tiles_floor_oak",
+   "file": "tiles_floor_oak.png",
+   "kind": "tiles",
+   "palette": "world",
+   "tile": [
+    16,
+    16
+   ],
+   "inset": 10,
+   "seamless_check": true,
+   "regions": [
+    {
+     "name": "plain",
+     "rect": [
+      0,
+      0,
+      1536,
+      256
+     ],
+     "count": 6,
+     "size": [
+      16,
+      16
+     ]
+    },
+    {
+     "name": "worn",
+     "rect": [
+      0,
+      256,
+      1536,
+      256
+     ],
+     "count": 6,
+     "size": [
+      16,
+      16
+     ]
+    },
+    {
+     "name": "detail",
+     "rect": [
+      0,
+      512,
+      1536,
+      256
+     ],
+     "count": 6,
+     "size": [
+      16,
+      16
+     ]
+    },
+    {
+     "name": "edge",
+     "rect": [
+      0,
+      768,
+      1536,
+      256
+     ],
+     "count": 6,
+     "size": [
+      16,
+      16
+     ]
+    }
+   ],
+   "edge_tiles": [
+    "edge[4]",
+    "edge[5]"
+   ]
+  },
+  {
+   "name": "tiles_wall_sage",
+   "file": "tiles_wall_sage.png",
+   "kind": "tiles",
+   "palette": "world",
+   "tile": [
+    16,
+    16
+   ],
+   "inset": 6,
+   "seamless_check": true,
+   "regions": [
+    {
+     "name": "wall",
+     "rect": [
+      0,
+      0,
+      1536,
+      768
+     ],
+     "count": 6,
+     "size": [
+      32,
+      96
+     ]
+    },
+    {
+     "name": "cap",
+     "rect": [
+      0,
+      768,
+      1536,
+      256
+     ],
+     "count": 6,
+     "size": [
+      16,
+      16
+     ]
+    }
+   ],
+   "edge_tiles": [
+    "cap[0]",
+    "cap[1]",
+    "cap[2]",
+    "cap[3]",
+    "cap[4]",
+    "cap[5]"
+   ]
+  },
+  {
+   "name": "prop_window_sash",
+   "file": "prop_window_sash.png",
+   "kind": "fit",
+   "palette": "world",
+   "grid": [
+    2,
+    4
+   ],
+   "fit": [
+    64,
+    0
+   ],
+   "rows": [
+    "day",
+    "night"
+   ],
+   "names": [
+    "open",
+    "half",
+    "closed",
+    "bare"
+   ]
+  },
+  {
+   "name": "prop_door_panel",
+   "file": "prop_door_panel.png",
+   "kind": "fit",
+   "palette": "world",
+   "grid": [
+    1,
+    3
+   ],
+   "fit": [
+    0,
+    96
+   ],
+   "names": [
+    "closed",
+    "ajar",
+    "open"
+   ]
+  },
+  {
+   "name": "prop_sconce",
+   "file": "prop_sconce.png",
+   "kind": "fit",
+   "palette": "world",
+   "grid": [
+    1,
+    4
+   ],
+   "fit": [
+    0,
+    32
+   ],
+   "names": [
+    "unlit",
+    "lit1",
+    "lit2",
+    "lit3"
+   ]
+  },
+  {
+   "name": "ambrose_td_idle",
+   "file": "ambrose_td_idle.png",
+   "kind": "sprite",
+   "palette": "ambrose",
+   "grid": [
+    3,
+    4
+   ],
+   "frame": [
+    64,
+    80
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 64
+   },
+   "rows": [
+    "down",
+    "left",
+    "up"
+   ],
+   "anims": {
+    "idle": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 3,
+     "loop": true
+    }
+   }
+  },
+  {
+   "name": "ambrose_td_walk",
+   "file": "ambrose_td_walk.png",
+   "kind": "sprite",
+   "palette": "ambrose",
+   "grid": [
+    3,
+    6
+   ],
+   "frame": [
+    64,
+    80
+   ],
+   "scale_from": "ambrose_td_idle",
+   "rows": [
+    "down",
+    "left",
+    "up"
+   ],
+   "anims": {
+    "walk": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fps": 8,
+     "loop": true
+    }
+   }
+  },
+  {
+   "name": "ambrose_td_bow",
+   "file": "ambrose_td_bow.png",
+   "kind": "sprite",
+   "palette": "ambrose",
+   "grid": [
+    1,
+    4
+   ],
+   "frame": [
+    64,
+    80
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 64
+   },
+   "rows": [
+    "down"
+   ],
+   "anims": {
+    "bow": {
+     "frames": [
+      0,
+      1,
+      2,
+      2,
+      2,
+      3,
+      0
+     ],
+     "fps": 6,
+     "loop": false
+    }
+   }
+  },
+  {
+   "name": "ambrose_td_produce",
+   "file": "ambrose_td_produce.png",
+   "kind": "sprite",
+   "palette": "ambrose",
+   "grid": [
+    2,
+    5
+   ],
+   "frame": [
+    64,
+    80
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 64
+   },
+   "rows": [
+    "tea",
+    "item"
+   ],
+   "anims": {
+    "produce": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "fps": 6,
+     "loop": false
+    }
+   }
+  },
+  {
+   "name": "ambrose_td_drift",
+   "file": "ambrose_td_drift.png",
+   "kind": "sprite",
+   "palette": "ambrose",
+   "grid": [
+    1,
+    3
+   ],
+   "frame": [
+    64,
+    80
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 64
+   },
+   "rows": [
+    "down"
+   ],
+   "anims": {
+    "drift": {
+     "frames": [
+      0,
+      1,
+      2
+     ],
+     "fps": 3,
+     "loop": false
+    }
+   }
+  },
+  {
+   "name": "ambrose_td_settable",
+   "file": "ambrose_td_settable.png",
+   "kind": "sprite",
+   "palette": "ambrose",
+   "grid": [
+    1,
+    5
+   ],
+   "frame": [
+    64,
+    80
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 64
+   },
+   "rows": [
+    "left"
+   ],
+   "anims": {
+    "settable": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "fps": 4,
+     "loop": false
+    }
+   }
+  },
+  {
+   "name": "ambrose_td_windclock",
+   "file": "ambrose_td_windclock.png",
+   "kind": "sprite",
+   "palette": "ambrose",
+   "grid": [
+    1,
+    4
+   ],
+   "frame": [
+    64,
+    88
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     3
+    ],
+    "px": 80
+   },
+   "rows": [
+    "up"
+   ],
+   "anims": {
+    "windclock": {
+     "frames": [
+      0,
+      1,
+      2,
+      1,
+      2,
+      3
+     ],
+     "fps": 5,
+     "loop": false
+    }
+   },
+   "_note": "Scaled from the last frame with px 80: the raised candelabra adds height above his head, so a plain 64 px made him too small."
+  },
+  {
+   "name": "ambrose_portraits",
+   "file": "ambrose_portraits.png",
+   "kind": "cellcrop",
+   "palette": "ambrose",
+   "grid": [
+    2,
+    4
+   ],
+   "crop": [
+    0,
+    0,
+    384,
+    384
+   ],
+   "size": [
+    96,
+    96
+   ],
+   "names": [
+    "composed",
+    "polite",
+    "eyebrow",
+    "drifting",
+    "remembering",
+    "concerned",
+    "warm",
+    "shaken"
+   ]
+  },
+  {
+   "name": "prop_table",
+   "file": "prop_table.png",
+   "kind": "fit",
+   "palette": "world",
+   "grid": [
+    1,
+    2
+   ],
+   "fit": [
+    96,
+    0
+   ],
+   "names": [
+    "clean",
+    "faded"
+   ],
+   "ink_share": 0.5,
+   "min_blob": 3
+  },
+  {
+   "name": "prop_plate",
+   "file": "prop_plate.png",
+   "kind": "fit",
+   "palette": "world",
+   "grid": [
+    1,
+    4
+   ],
+   "fit": [
+    24,
+    0
+   ],
+   "names": [
+    "plate",
+    "napkin",
+    "teacup",
+    "cobweb"
+   ],
+   "ink_share": 0.7,
+   "min_blob": 2,
+   "_note": "Cream china is swapped to white/grey-blue so the plates read on the cream tablecloth; high ink_share keeps thin lines from turning into specks.",
+   "remap": {
+    "#EFE3C4": "#FFFFFF",
+    "#D9C9A3": "#C9D3E0"
+   }
+  },
+  {
+   "name": "prop_clock",
+   "file": "prop_clock.png",
+   "kind": "fit",
+   "palette": "world",
+   "grid": [
+    1,
+    3
+   ],
+   "fit": [
+    0,
+    88
+   ],
+   "names": [
+    "left",
+    "centre",
+    "right"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+.DS_Store
+tests/screenshots/
+tools/preview/
+__pycache__/
+~$*.xlsx

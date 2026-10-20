@@ -1,0 +1,126 @@
+{
+  "_note": "All on-screen text. Keys are used by the code; edit the strings freely. A list means one line is picked at random.",
+  "names": {
+    "liam": "Liam",
+    "ambrose": "Ambrose"
+  },
+  "intro": {
+    "entrance": "Behold! The lord of this manor arrives, and the shadows bow before him.",
+    "after": "...It's a very small manor. For testing."
+  },
+  "sun": {
+    "first": [
+      "The sun. My oldest enemy. Second oldest, after stairs.",
+      "Ah. Daylight. Personally, on purpose, at me.",
+      "I am not squinting. This is my brooding face."
+    ]
+  },
+  "window": {
+    "open": "Curtains open. Sunlight gets in. Brave of me.",
+    "half": "Half open. A compromise. Very mature.",
+    "closed": "Curtains closed. Darkness restored. Better."
+  },
+  "door": {
+    "inspect": "The door leads out. I'm not ready for out."
+  },
+  "sconce": {
+    "lit": "A candle. Someone keeps lighting these. I'm choosing not to ask who.",
+    "unlit": "An unlit candle. Waiting for evening, like me."
+  },
+  "fidget": {
+    "cape": "Don't look at me like that.",
+    "hair": "It's meant to look like this.",
+    "rehearse": "No. Too much. ...Or not enough?"
+  },
+  "prompt": {
+    "interact": "E"
+  },
+  "debug": {
+    "testDialogue": "This is a test dialogue line. It stays on screen one second plus a third of a second per word."
+  },
+  "menu": {
+    "title": "Paused",
+    "resume": "Resume",
+    "controls": "Controls",
+    "tools": "Testing tools",
+    "restart": "Restart room",
+    "navHint": "Up/Down choose · E select · Esc close",
+    "back": "E or Esc: back"
+  },
+  "controls": [
+    [
+      "Move",
+      "WASD / Arrow keys"
+    ],
+    [
+      "Interact",
+      "E / Space / Enter"
+    ],
+    [
+      "Pause menu",
+      "Esc / P"
+    ],
+    [
+      "Testing tools",
+      "F1 (or from the pause menu)"
+    ],
+    [
+      "Animation viewer (sandbox)",
+      "V, then [ and ]"
+    ],
+    [
+      "Step one frame (when frozen)",
+      "."
+    ]
+  ],
+  "hint": {
+    "start": "Esc: menu"
+  },
+  "ambrose": {
+    "names": [
+      "Master Edmund",
+      "Master Reginald",
+      "Master Percival",
+      "Master Bartholomew",
+      "Master Ignatius",
+      "Master Cornelius"
+    ],
+    "greet": [
+      "Good evening, {name}. Your tea will be along presently.",
+      "{name}. You're up early. Or late. I find it hard to tell, these days.",
+      "Welcome home, {name}. The house has been expecting you."
+    ],
+    "liamCorrects": [
+      "It's Liam.",
+      "Liam. Still Liam.",
+      "...Liam. We've talked about this."
+    ],
+    "accepts": [
+      "Of course, {name}.",
+      "Very good, {name}.",
+      "Quite so, {name}. I shall make a note."
+    ],
+    "smalltalk": [
+      "The east wing is closed to visitors, sir. Has been since the... since the...",
+      "Mind the third stair, sir. It has opinions.",
+      "The house is very quiet tonight, sir. It usually is.",
+      "I polished the mirror in the hall, sir. It's very clean. Nobody is ever in it."
+    ],
+    "repeat": "I believe I mentioned that, sir.",
+    "drift": "...Tea, sir?",
+    "bat": "Your bat form, sir. Shall I open a window?",
+    "ritual": {
+      "table": "The guests are running late again, sir.",
+      "clock": "Nearly time, sir. It is always nearly time.",
+      "wall": "Pardon me, sir. I'll take the usual way."
+    }
+  },
+  "table": {
+    "empty": "A table for guests. Nobody's coming. I checked.",
+    "set": "Someone set places for dinner. Fine china. For nobody."
+  },
+  "clock": {
+    "ticking": "A grandfather clock. It ticks like it's judging me.",
+    "stopped": "It says three o'clock. It's been saying that all night."
+  }
+}

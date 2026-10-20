@@ -1,0 +1,275 @@
+{
+ "_note": "Generated from the Palette sheet of docs/Haunted_Mansion_Art_Prompts.xlsx. Regenerate with: python3 tools/process_art.py --palette-from-xlsx",
+ "groups": {
+  "liam": [
+   {
+    "name": "Outline and hatching",
+    "hex": "#1A1020"
+   },
+   {
+    "name": "Cape exterior / trousers - dark",
+    "hex": "#1C1A24"
+   },
+   {
+    "name": "Cape exterior / trousers - mid",
+    "hex": "#2E2B3A"
+   },
+   {
+    "name": "Cape exterior / trousers - highlight",
+    "hex": "#474359"
+   },
+   {
+    "name": "Cape lining - shadow",
+    "hex": "#4A1626"
+   },
+   {
+    "name": "Cape lining - base",
+    "hex": "#6E1F35"
+   },
+   {
+    "name": "Cape lining - crimson edge highlight",
+    "hex": "#A8323E"
+   },
+   {
+    "name": "Hair - shadow",
+    "hex": "#8B95A8"
+   },
+   {
+    "name": "Hair - base",
+    "hex": "#C9D3E0"
+   },
+   {
+    "name": "Hair - highlight",
+    "hex": "#E8EEF5"
+   },
+   {
+    "name": "Skin - shadow",
+    "hex": "#C7B9CC"
+   },
+   {
+    "name": "Skin - base",
+    "hex": "#EDE6EE"
+   },
+   {
+    "name": "Shirt - shadow",
+    "hex": "#CDB98F"
+   },
+   {
+    "name": "Shirt - base",
+    "hex": "#F2E6CC"
+   },
+   {
+    "name": "Eyes",
+    "hex": "#AEB5BE"
+   },
+   {
+    "name": "Pupils and eye rings",
+    "hex": "#2A2233"
+   },
+   {
+    "name": "Fangs",
+    "hex": "#FFFFFF"
+   },
+   {
+    "name": "Boots",
+    "hex": "#24212C"
+   }
+  ],
+  "ambrose": [
+   {
+    "name": "Outline and hatching",
+    "hex": "#1A1020"
+   },
+   {
+    "name": "Ambrose - tailcoat / trousers - dark",
+    "hex": "#3B2E26"
+   },
+   {
+    "name": "Ambrose - tailcoat / trousers - mid",
+    "hex": "#5A4636"
+   },
+   {
+    "name": "Ambrose - tailcoat / trousers - highlight",
+    "hex": "#7A634D"
+   },
+   {
+    "name": "Ambrose - bow tie",
+    "hex": "#2A211B"
+   },
+   {
+    "name": "Ambrose - waistcoat - shadow",
+    "hex": "#6E5A44"
+   },
+   {
+    "name": "Ambrose - waistcoat - base",
+    "hex": "#8C7356"
+   },
+   {
+    "name": "Ambrose - shirt / gloves / wax - shadow",
+    "hex": "#D9C9A3"
+   },
+   {
+    "name": "Ambrose - shirt / gloves / wax - base",
+    "hex": "#EFE3C4"
+   },
+   {
+    "name": "Ambrose - skin - shadow",
+    "hex": "#B89A7E"
+   },
+   {
+    "name": "Ambrose - skin - base",
+    "hex": "#D8BFA0"
+   },
+   {
+    "name": "Ambrose - whiskers - shadow",
+    "hex": "#8E8272"
+   },
+   {
+    "name": "Ambrose - whiskers - base",
+    "hex": "#B8AD9C"
+   },
+   {
+    "name": "Ambrose - whiskers - highlight",
+    "hex": "#D6CEC0"
+   },
+   {
+    "name": "Ambrose - candelabra brass - shadow",
+    "hex": "#6E5A3A"
+   },
+   {
+    "name": "Ambrose - candelabra brass - base",
+    "hex": "#9C8352"
+   },
+   {
+    "name": "Ambrose - candelabra brass - highlight",
+    "hex": "#C2AA72"
+   },
+   {
+    "name": "Candle flame - outer (shared)",
+    "hex": "#FFB13B"
+   },
+   {
+    "name": "Candle flame - core (shared)",
+    "hex": "#FFE08A"
+   }
+  ],
+  "world": [
+   {
+    "name": "Outline and hatching",
+    "hex": "#1A1020"
+   },
+   {
+    "name": "Interior - oak floor - gaps / deep shadow",
+    "hex": "#4A3426"
+   },
+   {
+    "name": "Interior - oak floor - shadow",
+    "hex": "#6B4A33"
+   },
+   {
+    "name": "Interior - oak floor - base",
+    "hex": "#8A6142"
+   },
+   {
+    "name": "Interior - oak floor - highlight",
+    "hex": "#A57A55"
+   },
+   {
+    "name": "Interior - sage wallpaper - shadow / pattern",
+    "hex": "#5E6E58"
+   },
+   {
+    "name": "Interior - sage wallpaper - base",
+    "hex": "#7A8C70"
+   },
+   {
+    "name": "Interior - sage wallpaper - highlight",
+    "hex": "#96A688"
+   },
+   {
+    "name": "Interior - walnut - dark",
+    "hex": "#3E2C22"
+   },
+   {
+    "name": "Interior - walnut - base",
+    "hex": "#56402F"
+   },
+   {
+    "name": "Interior - walnut - highlight",
+    "hex": "#6E5440"
+   },
+   {
+    "name": "Interior - wall cap - base",
+    "hex": "#2B2530"
+   },
+   {
+    "name": "Interior - wall cap - edge",
+    "hex": "#3A3340"
+   },
+   {
+    "name": "Interior - dust / cobweb - shadow",
+    "hex": "#A9A39A"
+   },
+   {
+    "name": "Interior - dust / cobweb - base",
+    "hex": "#CFC9BE"
+   },
+   {
+    "name": "Interior - ochre curtains - shadow",
+    "hex": "#7A6230"
+   },
+   {
+    "name": "Interior - ochre curtains - base",
+    "hex": "#9C7F42"
+   },
+   {
+    "name": "Interior - ochre curtains - highlight",
+    "hex": "#B89A5A"
+   },
+   {
+    "name": "Interior - glass day - base",
+    "hex": "#A9C2D6"
+   },
+   {
+    "name": "Interior - glass day - light",
+    "hex": "#CFE0EC"
+   },
+   {
+    "name": "Interior - glass night - base",
+    "hex": "#2F3B4A"
+   },
+   {
+    "name": "Interior - glass night - light",
+    "hex": "#45566A"
+   },
+   {
+    "name": "Ambrose - shirt / gloves / wax - shadow",
+    "hex": "#D9C9A3"
+   },
+   {
+    "name": "Ambrose - shirt / gloves / wax - base",
+    "hex": "#EFE3C4"
+   },
+   {
+    "name": "Ambrose - candelabra brass - shadow",
+    "hex": "#6E5A3A"
+   },
+   {
+    "name": "Ambrose - candelabra brass - base",
+    "hex": "#9C8352"
+   },
+   {
+    "name": "Ambrose - candelabra brass - highlight",
+    "hex": "#C2AA72"
+   },
+   {
+    "name": "Candle flame - outer (shared)",
+    "hex": "#FFB13B"
+   },
+   {
+    "name": "Candle flame - core (shared)",
+    "hex": "#FFE08A"
+   }
+  ]
+ }
+}
