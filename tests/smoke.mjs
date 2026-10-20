@@ -311,6 +311,32 @@ await p.evaluate((x) => game.restore(x), snapA); s = await st(p);
 check(s.plates === places && s.clockStopped === 3, 'save states keep the table and the clock');
 await p.evaluate(() => { game.clock.hour = 9; }); await adv(p, 3); s = await st(p);
 check(s.plates === 0 && s.clockStopped === null, 'dawn clears the table and restarts the clock');
+// drifting is rare: at most one drift in two minutes of daytime
+await p.evaluate(() => { game.clock.hour = 10; game.clock.frozen = true; game.ui.messages = []; const A = game.scene.ambrose; A.force('none'); A.tasks = []; A.driftCooldown = 0; A.greetCooldown = 999; Object.assign(game.scene.liam, { x: 600, y: 320 }); });
+let drifts = 0, wasDrift = false;
+for (let i = 0; i < 240; i++) {
+  await adv(p, 30);
+  const d = (await st(p)).ambrose.task === 'drift';
+  if (d && !wasDrift) drifts++;
+  wasDrift = d;
+}
+check(drifts <= 1, 'drifting is rare (at most once in two minutes)', `drifts ${drifts}`);
+// the clock case must be identical in every frame; only the pendulum window may change
+const clockDiff = await p.evaluate(() => {
+  const s = game.sprites.sheet('prop_clock'), img = game.sprites.images.prop_clock;
+  if (!img) return 'no image';
+  const c = document.createElement('canvas'); c.width = img.width; c.height = img.height;
+  const x = c.getContext('2d'); x.drawImage(img, 0, 0);
+  const [fw, fh] = s.frame, f = [0, 1, 2].map((i) => x.getImageData(i * fw, 0, fw, fh).data);
+  let outside = 0, inside = 0;
+  for (let k = 0; k < fw * fh; k++) {
+    const same = [0, 1, 2, 3].every((ch) => f[0][k * 4 + ch] === f[1][k * 4 + ch] && f[2][k * 4 + ch] === f[1][k * 4 + ch]);
+    const yy = Math.floor(k / fw);
+    if (!same) { if (yy > fh * 0.3 && yy < fh * 0.8) inside++; else outside++; }
+  }
+  return { outside, inside };
+});
+check(clockDiff.outside === 0 && clockDiff.inside > 0, 'the clock case stays still; only the pendulum moves', JSON.stringify(clockDiff));
 await clean(p, 'ambrose');
 await p.close();
 

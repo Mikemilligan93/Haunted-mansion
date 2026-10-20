@@ -265,13 +265,20 @@ def process_fit(sheet, arr, idx, mask, pal):
     cl = list(cells(sheet, W, H))
     owned = cell_masks(mask, cl)
     ub = None
+    rel = {}
     for r, c, x, y, cw, ch in cl:
         bb = bbox(owned[(r, c)])
         if bb is None:
             continue
         b = (bb[0] - x, bb[1] - y, bb[2] - x, bb[3] - y)   # relative to the cell
+        rel[(r, c)] = b
         ub = b if ub is None else (min(ub[0], b[0]), min(ub[1], b[1]), max(ub[2], b[2]), max(ub[3], b[3]))
-    bw, bh = ub[2] - ub[0], ub[3] - ub[1]
+    align = sheet.get("align")  # "bottom-centre": line every frame up on its own box (generated frames often drift)
+    if align:
+        bw = max(b[2] - b[0] for b in rel.values())
+        bh = max(b[3] - b[1] for b in rel.values())
+    else:
+        bw, bh = ub[2] - ub[0], ub[3] - ub[1]
     tw, th = sheet["fit"]
     if tw and th:
         fw, fh = tw, th
@@ -282,9 +289,31 @@ def process_fit(sheet, arr, idx, mask, pal):
     sx, sy = bw / fw, bh / fh
     out = np.zeros((rows * fh, cols * fw, 4), dtype=np.uint8)
     for r, c, x, y, cw, ch in cl:
-        o = downscale(idx, owned[(r, c)], fw, fh, x + ub[0], y + ub[1], sx, sy, len(pal.rgb), pal.ink,
+        if align and (r, c) in rel:
+            b = rel[(r, c)]
+            ox0, oy0 = (b[0] + b[2]) / 2 - bw / 2, b[3] - bh
+        else:
+            ox0, oy0 = ub[0], ub[1]
+        o = downscale(idx, owned[(r, c)], fw, fh, x + ox0, y + oy0, sx, sy, len(pal.rgb), pal.ink,
                       sheet.get("ink_share", 0.35), sheet.get("alpha_min", 0.5))
         out[r * fh:(r + 1) * fh, c * fw:(c + 1) * fw] = drop_specks(to_rgba(o, pal), sheet.get("min_blob", 6))
+    # "still_body": generated frames redraw the whole object slightly differently, so it shimmers.
+    # Keep one frame for everything and take only the moving part (found by its colours) from each frame.
+    sb = sheet.get("still_body")
+    if sb:
+        base = out[0:fh, sb["base"] * fw:(sb["base"] + 1) * fw].copy()
+        cols_rgb = [hex_rgb(h) for h in sb["moving_colours"]]
+        m = np.zeros((fh, fw), dtype=bool)
+        for (r_, g_, b_) in cols_rgb:
+            m |= (base[..., 0] == r_) & (base[..., 1] == g_) & (base[..., 2] == b_) & (base[..., 3] > 0)
+        ys, xs = np.nonzero(m)
+        pad = sb.get("pad", 1)
+        y0, y1, x0, x1 = max(ys.min() - pad, 0), min(ys.max() + 1 + pad, fh), max(xs.min() - pad, 0), min(xs.max() + 1 + pad, fw)
+        for c in range(cols):
+            fr = out[0:fh, c * fw:(c + 1) * fw]
+            moving = fr[y0:y1, x0:x1].copy()
+            fr[:] = base
+            fr[y0:y1, x0:x1] = moving
     return out, {"frame": [fw, fh]}
 
 

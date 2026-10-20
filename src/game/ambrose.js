@@ -22,6 +22,7 @@ export class Ambrose {
     this.tasks = [];
     this.task = null;
     this.greetCooldown = 3;
+    this.driftCooldown = 0;
     this.talking = 0;          // seconds left of facing Liam while talking
     this.talkCount = 0;
     this.nameIndex = 0;
@@ -106,12 +107,16 @@ export class Ambrose {
       }
       if (r.clockStopped == null) this.tasks.push({ type: 'go', ...sp.clock }, { type: 'wind' });
       this.tasks.push({ type: 'go', x: sp.wall.x + 30, y: sp.wall.y }, { type: 'throughWall' }, wait());
-      if (r.plates >= c.tablePlaces && r.clockStopped != null) this.tasks.push({ type: 'go', ...sp.table }, wait(), { type: 'drift' });
+      if (r.plates >= c.tablePlaces && r.clockStopped != null) this.tasks.push({ type: 'go', ...sp.table }, wait());
       return;
     }
     const p = g.rng.pick(sp.day);
     this.tasks.push({ type: 'go', x: p.x, y: p.y }, wait());
-    if (g.rng.next() < c.driftChance) this.tasks.push({ type: 'drift' });
+    // drifting is rare: a small chance, and never again until the cooldown has passed
+    if (this.driftCooldown <= 0 && g.rng.next() < c.driftChance) {
+      this.tasks.push({ type: 'drift' });
+      this.driftCooldown = c.driftCooldownSeconds;
+    }
   }
 
   // used by the testing tools: do this now
@@ -135,6 +140,7 @@ export class Ambrose {
     this.t += dt;
     this.anim.t += dt;
     this.greetCooldown = Math.max(0, this.greetCooldown - dt);
+    this.driftCooldown = Math.max(0, (this.driftCooldown ?? 0) - dt);
 
     // dawn clears the night's work
     const ph = this.phaseNow();

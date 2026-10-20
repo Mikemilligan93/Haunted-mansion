@@ -1094,7 +1094,7 @@
     2
    ],
    "fit": [
-    96,
+    72,
     0
    ],
    "names": [
@@ -1114,7 +1114,7 @@
     4
    ],
    "fit": [
-    24,
+    20,
     0
    ],
    "names": [
@@ -1148,7 +1148,17 @@
     "left",
     "centre",
     "right"
-   ]
+   ],
+   "align": "bottom-centre",
+   "still_body": {
+    "base": 1,
+    "moving_colours": [
+     "#2F3B4A",
+     "#45566A"
+    ],
+    "pad": 1,
+    "_note": "Only the pendulum window (dark glass) comes from each frame; the case is taken from the middle frame so it does not shimmer."
+   }
   }
  ]
 }

@@ -43,9 +43,10 @@
       3,
       7
     ],
-    "driftChance": 0.3,
-    "fadeAlpha": 0.35,
-    "driftHoldSeconds": 1.6,
+    "driftChance": 0.12,
+    "driftCooldownSeconds": 120,
+    "fadeAlpha": 0.55,
+    "driftHoldSeconds": 1.0,
     "tablePlaces": 4,
     "wallHiddenSeconds": 6,
     "deathHour": 3,
@@ -58,25 +59,25 @@
       "y": 182,
       "placeOffsets": [
         [
-          -18,
-          -57
+          -14,
+          -42
         ],
         [
-          18,
-          -57
+          12,
+          -42
         ],
         [
-          -18,
-          -43
+          -12,
+          -30
         ],
         [
-          18,
-          -43
+          14,
+          -30
         ]
       ],
       "variant": 0,
-      "halfWidth": 44,
-      "depth": 22
+      "halfWidth": 33,
+      "depth": 18
     },
     "clock": {
       "x": 584,

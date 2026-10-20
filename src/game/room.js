@@ -72,7 +72,7 @@ export class Room {
       const T = this.game.config.props?.table || {}, hw = T.halfWidth ?? 32, dp = T.depth ?? 16;
       out.push({ x1: this.table.x - hw, x2: this.table.x + hw, y1: this.table.y - dp, y2: this.table.y + 2 });
     }
-    if (this.clock) out.push({ x1: this.clock.x - 15, x2: this.clock.x + 15, y1: this.floorTop, y2: this.floorTop + 10 });
+    if (this.clock) out.push({ x1: this.clock.x - 13, x2: this.clock.x + 13, y1: this.floorTop, y2: this.floorTop + 10 });
     return out;
   }
 
