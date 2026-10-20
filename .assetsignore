@@ -7,3 +7,9 @@ wrangler.jsonc
 .DS_Store
 *.xlsx
 *.md
+.git
+.gitignore
+.assetsignore
+node_modules
+.wrangler
+.gitattributes
