@@ -49,7 +49,7 @@
     "driftHoldSeconds": 1.0,
     "tablePlaces": 4,
     "wallHiddenSeconds": 6,
-    "deathHour": 3,
+    "deathHour": 21,
     "repeatChance": 0.35,
     "lightRadius": 60
   },

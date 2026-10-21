@@ -79,6 +79,7 @@ A freshly turned, easily frightened young vampire inherits a spooky old mansion.
 - **Calls Liam by the names of earlier masters**, going further back in time. In the ending, he finally says "Master Liam."
 - **Repeats himself** (tips, stories).
 - **Fades** (turns translucent) when he loses his train of thought.
+- **Died at 9 pm**, while counting for the Twins' hide-and-seek. Every night he winds the clocks back to nine (`config.json` → ambrose.deathHour = 21).
 
 **Role in the game**
 - **Lore keeper**: knows the tenants' stories, if he remembers.
@@ -123,6 +124,47 @@ Each tenant gets: a home, a fear they mirror, a fight format, a bat-control upgr
 - **The Twins come first.** Hide-and-seek is a gentle start that teaches exploring and the bat.
 - **The order is a draft:** each upgrade opens the next tenant's area (e.g. Carry for the library puzzles before the ballroom, Squeeze into the cellar vents, Long flight up the tower last). Confirm in playtests.
 - **Painting worlds are magic doors:** old paintings in the portrait gallery are portals; a tenant drags Liam into one. There is no painter character.
+
+### 5.4 The Twins (tenant 1, tutorial)
+
+**Who they are**
+- **Ghosts of two little girls** who lived in the house in the 1890s, in Ambrose's time. Identical: white pinafore dresses, big white bows, dark bobbed hair, pale faces.
+- **Perfect unison:** they speak together, finish each other's sentences, move in sync and tilt their heads at the same moment. Creepy-funny.
+- **Names:** **Frida** and **Wilhelmina**.
+
+**Their story**
+- In the 1890s they played hide-and-seek, and **Ambrose was the seeker**. He started counting and never came to find them, because **he died while counting**. The Twins don't know that; neither does he. This is a key clue in his mystery.
+- They have been **hiding ever since**, waiting for someone to find them. That is their unfinished business.
+- **Mirrors Liam's fear of being left alone:** nobody came looking for them; nobody looked at Liam's paintings.
+
+**How Liam meets them: properly menacing**
+- The tutorial tenant is the first real scare. Giggles in the dark, a ball rolling out of nowhere, toys moving by themselves, two voices whispering "Found you…" behind Liam.
+- **This is where Liam has his first big panic into bat form** (the fright meter's tutorial).
+- Once he understands them, they turn out to be lonely, playful and sweet.
+
+**Their rooms** (upper floor)
+- **Nursery** *(home, with a playroom corner)*: toys, two little beds, a rocking horse, a dollhouse. The Twins' picture-book painting hangs here.
+- **Guest room:** their favourite hiding place; the wardrobe matters at the end.
+- **Linen closet:** a secret passage; the Twins use it to vanish and reappear.
+
+**Fight: toy army** *(painting world, side view)*
+- The Twins drag Liam into their picture-book painting.
+- They command an army of **wind-up tin soldiers** and a **rocking horse**; Liam survives the waves.
+- Then he has to **tag both Twins** to win.
+
+**Resolution**
+1. **Liam finds them.** After the fight, the game finally has a seeker.
+2. **Then it's his turn to hide.** For the first time Liam **turns into a bat on purpose** and hangs in the guest-room wardrobe. The Twins find him, delighted. **This is the bat upgrade: transform at will.**
+3. **Epilogue:** Liam brings Ambrose to the nursery. Ambrose says **"Found you"** at last. It's sweet, and a small crack in his forgetting.
+
+**Memento:** their crayon drawing of Liam (as a bat, hanging in the wardrobe).
+
+**Sample lines** *(draft)*
+> **Twins:** "You're not the one who was counting." / "You're taller." / "And dead-er."
+
+> **Liam** *(performance voice)*: "Fear not, children of the night!" **Twins:** "We're not afraid." / "You are." **Liam** *(real voice)*: "...Fair."
+
+> **Ambrose** *(epilogue, remembering)*: "Ninety-nine… one hundred. Ready or not." *(A pause.)* "Found you, Miss Frida. Miss Wilhelmina."
 
 ## 6. Gameplay
 
@@ -255,7 +297,6 @@ Each tenant gets: a home, a fear they mirror, a fight format, a bat-control upgr
 |---|---|
 | Story | Why does Liam inherit the mansion? Who was the previous owner? |
 | Story | How does Ambrose learn he's dead? |
-| Story | Ambrose's death hour: the clock stops at 3:00 for now (`config.json` → ambrose.deathHour, and the clock line in `texts.json`). |
 | Art | Ambrose's sepia blends a little with the oak floor by day; consider a darker coat or a rim light. |
 | Tenants | Each tenant's origin (former resident or stranger, ghost or creature), story and unfinished business. One design session per tenant. |
 | Combat | What is Liam's projectile? |
@@ -287,3 +328,6 @@ Each tenant gets: a home, a fear they mirror, a fight format, a bat-control upgr
 | 2026-10-19 | Pause menu on Esc / P holds the testing tools and the controls hint; the TEST button is gone (F1 still works). |
 | 2026-10-21 | Six tenants: the Twins (tutorial), Poltergeist, Empty Armour, Banshee, Mummy, Gargoyle. Each mirrors one of Liam's fears and grants one bat upgrade. Tenants are a mix of residents and strangers, not all ghosts. No painter; painting worlds are magic doors in the gallery. Tower roof added. |
 | 2026-10-21 | World shrunk to about 27 rooms, grouped by owner: each tenant has a compact cluster (home + haunted rooms), Ambrose has his own rooms, plus hubs and endgame. Hedge maze cut. |
+| 2026-10-21 | The Twins: 1890s ghost girls in perfect unison; Ambrose was their seeker and never came. Menacing first meeting (first big bat panic), toy-army painting fight, resolved by Liam finding them, then hiding as a bat on purpose (transform at will); Ambrose says "Found you" in the epilogue. |
+| 2026-10-21 | The Twins are Frida and Wilhelmina. Ambrose stopped counting because he died mid-count. |
+| 2026-10-21 | Ambrose's death hour is 9 pm (was a 3:00 placeholder); the stopped clock now shows nine. |

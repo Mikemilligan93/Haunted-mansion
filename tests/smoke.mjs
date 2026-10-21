@@ -302,13 +302,13 @@ for (let i = 0; i < 160; i++) {
   if (s.plates === places && s.clockStopped !== null && sawHidden && !s.ambrose.hidden) break;
 }
 check(sawTable && s.plates === places, `night: he sets all ${places} places`, `plates ${s.plates}`);
-check(sawClock && s.clockStopped === 3, 'night: he winds the clock back to his hour', `clock ${s.clockStopped}`);
+check(sawClock && s.clockStopped === 21, 'night: he winds the clock back to his hour', `clock ${s.clockStopped}`);
 check(sawHidden, 'night: he walks through the wall and comes back');
 await shot(p, '23_ambrose_night_done');
 const snapA = await p.evaluate(() => game.snapshot());
 await p.evaluate(() => { game.scene.room.resetNight(); });
 await p.evaluate((x) => game.restore(x), snapA); s = await st(p);
-check(s.plates === places && s.clockStopped === 3, 'save states keep the table and the clock');
+check(s.plates === places && s.clockStopped === 21, 'save states keep the table and the clock');
 await p.evaluate(() => { game.clock.hour = 9; }); await adv(p, 3); s = await st(p);
 check(s.plates === 0 && s.clockStopped === null, 'dawn clears the table and restarts the clock');
 // drifting is rare: at most one drift in two minutes of daytime
