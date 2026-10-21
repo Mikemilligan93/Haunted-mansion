@@ -1,6 +1,6 @@
 # Haunted Mansion: Design Document
 
-*Living document. Last updated: 2026-10-19. Working title until we name the game.*
+*Living document. Last updated: 2026-10-21. Working title until we name the game.*
 
 The cornerstone for the game: every decision made so far, and what is still open. Update it with every major change (see the decision log at the end).
 
@@ -30,7 +30,7 @@ A freshly turned, easily frightened young vampire inherits a spooky old mansion.
 ## 4. Story frame
 
 - **Liam** inherits the mansion. *Why he inherits it, and who the previous owner was, is still open.*
-- **The tenants** are the ghosts of the house's former residents. Each has unfinished business; Liam helps each of them.
+- **The tenants** are six odd residents: some lived here before, some are strangers who moved in, and not all of them are ghosts. Each has unfinished business; Liam helps each of them.
 - **Ambrose**, the butler, is a ghost who doesn't know he's dead. His nightly rituals are a slow-burning mystery the player can investigate. *How he learns the truth is still open.*
 - **Ending: warm.** Ambrose learns the truth and chooses to stay. The tenants stop haunting and start living with Liam. A found family of oddballs, and Liam finally belongs.
 - **Language:** English.
@@ -107,7 +107,22 @@ A freshly turned, easily frightened young vampire inherits a spooky old mansion.
 
 ### 5.3 The tenants
 
-**Not designed yet: next design topic.** Each tenant gets: a home wing, a story and unfinished business, a fight format, a bat-control upgrade, and a memento for Liam's room. Planned count: about 5 (fits 3–5 hours of play).
+**Six tenants.** A mix of former residents and strangers who moved in; not all are ghosts. Every tenant looks scary and is misunderstood underneath, and each one mirrors one of Liam's own fears. Helping a tenant means understanding them; the fight is part of that, never the goal.
+
+Each tenant gets: a home, a fear they mirror, a fight format, a bat-control upgrade, and a memento for Liam's bedroom. **Origins** (former resident or stranger, ghost or creature), stories and unfinished business are decided in each tenant's own design session.
+
+| # | Tenant | Home | Mirrors Liam's fear | Fight | Bat upgrade | Memento |
+|---|---|---|---|---|---|---|
+| 1 | **The Twins** *(tutorial)* | Nursery (with the playroom corner; upper floor) | Being left alone | **Painting world:** a picture-book painting; a hide-and-seek chase | **Transform at will** (turn into a bat and back without panicking) | Their crayon drawing of Liam |
+| 2 | **The Poltergeist** | Library | Nobody looking at his work (Liam's unseen paintings) | **Locked room:** flying books and shelves | **Carry:** pick up small objects as a bat | A bookmark |
+| 3 | **The Empty Armour** | Ballroom | Being hollow behind the act | **Locked room:** a duel | **Dash:** a short burst past drafts and hazards | A polished gauntlet |
+| 4 | **The Banshee** | Music room | Not being heard | **Painting world:** an opera painting; dodging sound waves | **Screech:** reveals hidden passages, shatters glass | A music box |
+| 5 | **The Mummy** | Wine cellar (basement) | Falling apart; no longer being who you were | **Locked room:** crates and unravelling bandages | **Squeeze:** fit through vents and cracks | A small wrapped scarab |
+| 6 | **The Gargoyle** | Tower roof | Sunlight; frozen by day | **Survivor night** on the roof until dawn | **Long flight:** up shafts and the tower | A chipped stone wing tip |
+
+- **The Twins come first.** Hide-and-seek is a gentle start that teaches exploring and the bat.
+- **The order is a draft:** each upgrade opens the next tenant's area (e.g. Carry for the library puzzles before the ballroom, Squeeze into the cellar vents, Long flight up the tower last). Confirm in playtests.
+- **Painting worlds are magic doors:** old paintings in the portrait gallery are portals; a tenant drags Liam into one. There is no painter character.
 
 ## 6. Gameplay
 
@@ -132,7 +147,7 @@ A freshly turned, easily frightened young vampire inherits a spooky old mansion.
 - **Formats vary by tenant:**
   - **Painting worlds:** side-view 2D platformer arenas inside paintings (doors in the portrait gallery).
   - **Locked boss rooms:** top-down; the room locks until the fight is over.
-  - **Survivor nights:** wave survival in the garden or cemetery.
+  - **Survivor nights:** wave survival outside (garden, cemetery or the tower roof).
 - **Liam's moves:** a **cape swipe** (melee) and **one projectile** (not decided yet; ideas: teacups, a withering glare, tiny bats, crumpled sketches).
 - **Difficulty:** hard, fair, quick retry (Celeste or Hollow Knight style).
 - **Defeat:** no death. Liam startles, turns into a bat and flees in a panic. Retry puts him back at the door, mid-pose, pretending nothing happened.
@@ -150,20 +165,28 @@ A freshly turned, easily frightened young vampire inherits a spooky old mansion.
 
 ### 7.1 Structure
 
-- **Room by room:** each room is its own map, with a transition at the doors. Most rooms fit one screen; a few large ones scroll (ballroom, portrait gallery, hedge maze).
-- **About 43 rooms**, plus the painting worlds as separate side-view levels.
+- **Room by room:** each room is its own map, with a transition at the doors. Most rooms fit one screen; two large ones scroll (ballroom, portrait gallery).
+- **About 27 rooms**, plus the painting worlds as separate side-view levels. Small enough to design every room properly.
 - **Hub:** the entrance hall. The other areas branch off it.
+- **Tenant areas:** each tenant owns a compact cluster of 2–3 rooms: their **home** (where you meet them) and the rooms around it they **haunt** (their lore, puzzles and haunting effects). The previous tenant's bat upgrade opens the way in. Clusters stay together; the Gargoyle is the one exception (he watches the cemetery from the tower roof).
+- **Not every room belongs to a tenant:** Ambrose's rooms run through every floor (he roams the house), and the hubs are shared.
 - **Gating:** bat-control upgrades, puzzles and story events.
 
-### 7.2 Room list (first draft)
+### 7.2 Room list
 
-| Area | Rooms |
-|---|---|
-| **Ground floor (11)** | Entrance hall (hub), Ballroom *(large)*, Music room, Dining room, Drawing room, Library, Study, Billiard room, Back hall, Servants' passage *(hidden)*, Porch |
-| **Upper floor (10)** | Landing, Portrait gallery *(large; painting doors)*, Master bedroom (previous owner's), **Liam's bedroom**, Guest room ×2, Nursery, Playroom, Bathroom, Linen closet (secret passage) |
-| **Basement (7)** | Kitchen, Scullery, Wine cellar, Servants' hall, Ambrose's pantry, Boiler room, **Sealed room** |
-| **Attic / tower (4)** | Attic storage, Tower stairs, **Clock room**, Previous owner's studio *(endgame)* |
-| **Outside (11)** | Front drive, Garden terrace, Hedge maze ×3, Greenhouse ×2, Cemetery ×2, Family crypt ×2 |
+| Owner | Rooms | Where |
+|---|---|---|
+| **Hubs (4)** | Entrance hall *(hub)*, Landing, Portrait gallery *(large; painting doors)*, **Liam's bedroom** | Ground, upper |
+| **The Twins (3)** | **Nursery** *(home; with a playroom corner)*, Guest room, Linen closet *(secret passage)* | Upper floor |
+| **The Poltergeist (2)** | **Library** *(home)*, Study | Ground floor |
+| **The Empty Armour (2)** | **Ballroom** *(home; large)*, Billiard room | Ground floor |
+| **The Banshee (3)** | **Music room** *(home)*, Garden terrace, Greenhouse | Ground floor, outside |
+| **The Mummy (2)** | **Wine cellar** *(home)*, Boiler room | Basement |
+| **The Gargoyle (3)** | **Tower roof** *(home)*, Cemetery, Family crypt | Tower, outside |
+| **Ambrose (6)** | Dining room, Kitchen, Ambrose's pantry, **Sealed room**, Tower stairs, **Clock room** | Ground, basement, tower |
+| **Endgame (2)** | Master bedroom *(previous owner's)*, Previous owner's studio | Upper floor, tower |
+
+**Cut on 2026-10-21** (from the first draft of 43): Drawing room, Back hall, Servants' passage, Porch, second guest room, Bathroom, Scullery, Servants' hall, Attic storage, Front drive, Hedge maze ×3, second greenhouse, second cemetery, second crypt. The Playroom is merged into the Nursery.
 
 ### 7.3 Story rooms
 
@@ -234,9 +257,9 @@ A freshly turned, easily frightened young vampire inherits a spooky old mansion.
 | Story | How does Ambrose learn he's dead? |
 | Story | Ambrose's death hour: the clock stops at 3:00 for now (`config.json` → ambrose.deathHour, and the clock line in `texts.json`). |
 | Art | Ambrose's sepia blends a little with the oak floor by day; consider a darker coat or a rim light. |
-| Tenants | Who are they, where do they live, which fight format and bat upgrade each? |
+| Tenants | Each tenant's origin (former resident or stranger, ghost or creature), story and unfinished business. One design session per tenant. |
 | Combat | What is Liam's projectile? |
-| Gating | Exact bat-control upgrades and their order. |
+| Gating | The upgrade order in 5.3 is a draft; confirm it once rooms are built. |
 | Weather | Which weather types, and what they change. |
 | World art | Exterior palette, lighting model, day/night look. (Interior base palette is set.) |
 | Audio | Music and sound direction. |
@@ -262,3 +285,5 @@ A freshly turned, easily frightened young vampire inherits a spooky old mansion.
 | 2026-10-20 | Ambrose master approved; his in-game sprites will be chibi like Liam's. |
 | 2026-10-20 | Bat form testable from the testing tools (controlled and panic flight). Fixed: the art tool cut off hair that poked over a grid cell (Liam's head looked cut when walking up). |
 | 2026-10-19 | Pause menu on Esc / P holds the testing tools and the controls hint; the TEST button is gone (F1 still works). |
+| 2026-10-21 | Six tenants: the Twins (tutorial), Poltergeist, Empty Armour, Banshee, Mummy, Gargoyle. Each mirrors one of Liam's fears and grants one bat upgrade. Tenants are a mix of residents and strangers, not all ghosts. No painter; painting worlds are magic doors in the gallery. Tower roof added. |
+| 2026-10-21 | World shrunk to about 27 rooms, grouped by owner: each tenant has a compact cluster (home + haunted rooms), Ambrose has his own rooms, plus hubs and endgame. Hedge maze cut. |
