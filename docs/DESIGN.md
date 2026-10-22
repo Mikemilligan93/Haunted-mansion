@@ -128,7 +128,7 @@ Each tenant gets: a home, a fear they mirror, a fight format, a bat-control upgr
 ### 5.4 The Twins (tenant 1, tutorial)
 
 **Who they are**
-- **Ghosts of two little girls** who lived in the house in the 1890s, in Ambrose's time. Identical: white pinafore dresses, big white bows, dark bobbed hair, pale faces.
+- **Ghosts of two little girls** (about 8) who lived in the house in the 1890s, in Ambrose's time. Identical: dark grey bobs with a blunt fringe, very big solid dark eyes, tiny smiles, grey dresses under faded-white pinafores, one big white bow each.
 - **Perfect unison:** they speak together, finish each other's sentences, move in sync and tilt their heads at the same moment. Creepy-funny.
 - **Names:** **Frida** and **Wilhelmina**.
 
@@ -156,6 +156,30 @@ Each tenant gets: a home, a fear they mirror, a fight format, a bat-control upgr
 1. **Liam finds them.** After the fight, the game finally has a seeker.
 2. **Then it's his turn to hide.** For the first time Liam **turns into a bat on purpose** and hangs in the guest-room wardrobe. The Twins find him, delighted. **This is the bat upgrade: transform at will.**
 3. **Epilogue:** Liam brings Ambrose to the nursery. Ambrose says **"Found you"** at last. It's sweet, and a small crack in his forgetting.
+
+**Look** (art prompts TWN-00 to TWN-11, sheet *Twins* in the art tracker)
+- **Faded white and grey, almost monochrome:** like porcelain or a faded photograph. No colour on them at all, so they read as ghosts next to Liam's black and burgundy and Ambrose's sepia.
+- **Big dark eyes, tiny smiles:** solid dark eyes with no sparkle; the smile never changes. Storybook-creepy, not horror.
+- **Telling them apart:** they are mirror images. **Frida's bow sits on her left, Wilhelmina's on her right.** Only Frida is drawn; Wilhelmina is Frida mirrored in code.
+- **Size:** small children, about 75% of Liam's height; frames are 32×48 px. Chibi like every in-game sprite.
+- **Doll-like movement:** neat little steps with no arm swing and no bob; the unison head tilt as their idle. Inside the painting they float.
+- **Portraits:** both girls share one portrait, because they always speak together. 8 expressions: blank stare (default), head tilt, giggle, whisper, pouting, lonely, delighted, at peace.
+- **Ghostly transparency is added in code;** the art is solid.
+
+**The toy army** (TWN-12 to TWN-14)
+- **Tin soldiers** (24×32): wind-up toys with bearskin hats, faded red coats, a brass key in the back. They march in stiff scissor steps and lunge with a blunt toy bayonet. One cape swipe knocks a soldier flat; left alone, he winds himself back up.
+- **The rocking horse** (64×48, mini-boss): a dapple-grey horse with a fixed, slightly unhinged grin. It rocks, then leaps across the arena; when it lands hard it can topple, which opens a window to hit it.
+- **Thrown toys** (16×16): blocks, a ball, a jack, a spinning top. The Twins throw them from the fort towers.
+
+**The picture-book world** (TWN-15 to TWN-18)
+- The inside of an old Victorian picture book: ink cross-hatching on yellowed paper, painted wood and tin. **Its own palette:** paper, faded toy red, navy, mustard, felt green, so the side-view level looks different from the house.
+- Arena: a big wooden **toy fort**; the Twins stand on its two towers. Platforms are giant floorboards, toy blocks and bookshelf planks.
+- Backgrounds: a moonlit nursery window (far layer) and giant toys (middle layer). Both are kept low-contrast so the fight stays readable.
+
+**The nursery and the guest room** (TWN-19 to TWN-26)
+- **Nursery:** faded dusty-blue wallpaper with tiny stars and moons, a white wainscot with two identical height marks, the oak floor, a faded rose rug.
+- **Props:** two identical white iron beds (one can have a twin hiding under the quilt), a **dollhouse that is a miniature of the mansion** (with a tiny butler inside: an Ambrose clue), a rocking horse that rocks by itself, a toy chest that rattles, a rag doll, scattered toys, and **the picture-book painting**, which swirls into a portal.
+- **Guest room wardrobe:** closed, ajar (one big dark eye and a bit of bow inside), and open with an empty rail, where Liam hangs as a bat at the end.
 
 **Memento:** their crayon drawing of Liam (as a bat, hanging in the wardrobe).
 
@@ -242,7 +266,8 @@ Each tenant gets: a home, a fear they mirror, a fight format, a bat-control upgr
 
 - **Gothic storybook pixel art:** Edward Gorey and Tim Burton illustrations translated into pixels. Darkly whimsical and deadpan; not anime, not cute, not horror.
 - Angular, jagged shapes. Thick, slightly uneven inked outline (`#1A1020`). Flat colours, 2–3 tones per material, hatching instead of smooth shading. Matte, no shine. Light from the top-left.
-- Every character has a **distinct palette**: Liam black/burgundy/silver, Ambrose sepia. The full approved palette is in the art tracker.
+- Every character has a **distinct palette**: Liam black/burgundy/silver, Ambrose sepia, the Twins faded white and grey. The full approved palette is in the art tracker.
+- **Painting worlds** have their own palette and look (the Twins' world: an inked picture book on yellowed paper).
 - **Interior:** faded grandeur: dusty, cobwebs, peeling corners, but intact. Faded sage-green damask wallpaper, warm mid-brown oak floors, walnut wainscot and mouldings, ochre velvet curtains, tarnished brass. Kept mid-tone so Liam's black and burgundy read clearly.
 
 ### 8.2 Sizes
@@ -251,7 +276,7 @@ Each tenant gets: a home, a fear they mirror, a fight format, a bat-control upgr
 |---|---|
 | Internal resolution | **640×360**, scaled ×3 to 1080p |
 | Tiles | **16×16 px** (one screen = 40×22 tiles) |
-| Characters | **32×64 px** (Liam = 2×4 tiles) |
+| Characters | **32×64 px** (Liam = 2×4 tiles); children 32×48 px (the Twins) |
 | Bat form | 24×24 px |
 | Dialogue portraits | 96×96 px, 8 expressions each |
 
@@ -262,7 +287,7 @@ Each tenant gets: a home, a fear they mirror, a fight format, a bat-control upgr
 
 ### 8.4 Pipeline
 
-- Images are generated with ChatGPT or Gemini from the prompts in `docs/Haunted_Mansion_Art_Prompts.xlsx` (one sheet per asset group; `docs/PROMPTS.md` mirrors it).
+- Images are generated with ChatGPT or Gemini from the prompts in `docs/Haunted_Mansion_Art_Prompts.xlsx` (one sheet per asset group, and one sheet per tenant with everything that tenant needs; `docs/PROMPTS.md` mirrors it).
 - Every prompt is self-contained: style block, exact palette, solid magenta `#FF00FF` background, grid layout, no text.
 - Each character's approved master turnaround is attached to all of that character's prompts.
 - `tools/process_art.py`: chroma-key, auto-crop, palette snapping, nearest-neighbour resize, seamless tiles.
@@ -331,3 +356,4 @@ Each tenant gets: a home, a fear they mirror, a fight format, a bat-control upgr
 | 2026-10-21 | The Twins: 1890s ghost girls in perfect unison; Ambrose was their seeker and never came. Menacing first meeting (first big bat panic), toy-army painting fight, resolved by Liam finding them, then hiding as a bat on purpose (transform at will); Ambrose says "Found you" in the epilogue. |
 | 2026-10-21 | The Twins are Frida and Wilhelmina. Ambrose stopped counting because he died mid-count. |
 | 2026-10-21 | Ambrose's death hour is 9 pm (was a 3:00 placeholder); the stopped clock now shows nine. |
+| 2026-10-21 | Twins art direction: faded white and grey, big dark eyes, tiny smiles; mirror images (Frida's bow left, Wilhelmina's right), only Frida is drawn. 32×48 px. Toy army, picture-book world (own palette) and nursery props designed; 27 prompts (TWN-00 to TWN-26) in the new Twins sheet of the tracker. |

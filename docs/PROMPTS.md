@@ -3122,3 +3122,1960 @@ NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywher
 ## Garden
 
 *No prompts yet.*
+
+## Twins
+
+| ID | Asset | Priority | Status | Output file |
+|---|---|---|---|---|
+| TWN-00 | Twins - master reference (turnaround, Frida) | Must | To do | `twins_master.png` |
+| TWN-01 | Twins - dialogue portraits (both girls, 8 expressions) | Must | To do | `twins_portraits.png` |
+| TWN-02 | Twins - top-down idle (head tilt) | Must | To do | `twins_td_idle.png` |
+| TWN-03 | Twins - top-down walk (doll steps) | Must | To do | `twins_td_walk.png` |
+| TWN-04 | Twins - giggle | Must | To do | `twins_td_giggle.png` |
+| TWN-05 | Twins - peek (lean out from hiding) | Must | To do | `twins_td_peek.png` |
+| TWN-06 | Twins - point ("Found you!") | Must | To do | `twins_td_point.png` |
+| TWN-07 | Twins - count (hands over eyes) | Nice | To do | `twins_td_count.png` |
+| TWN-08 | Twins - side-view float idle (painting world) | Must | To do | `twins_sv_float.png` |
+| TWN-09 | Twins - side-view command (send the soldiers) | Must | To do | `twins_sv_command.png` |
+| TWN-10 | Twins - side-view throw toy | Must | To do | `twins_sv_throw.png` |
+| TWN-11 | Twins - side-view tagged | Must | To do | `twins_sv_tagged.png` |
+| TWN-12 | Toy army - tin soldier (march, lunge, knocked over) | Must | To do | `toy_soldier.png` |
+| TWN-13 | Toy army - rocking horse (rock, charge, topple) | Must | To do | `toy_rockinghorse.png` |
+| TWN-14 | Toy army - thrown toys (blocks, ball, jack, top) | Must | To do | `toy_projectiles.png` |
+| TWN-15 | Picture-book world - platform tileset | Must | To do | `tiles_picturebook.png` |
+| TWN-16 | Picture-book world - far background (moonlit nursery window) | Must | To do | `bg_picturebook_far.png` |
+| TWN-17 | Picture-book world - mid layer (giant toys) | Nice | To do | `bg_picturebook_mid.png` |
+| TWN-18 | Picture-book world - toy fort (arena) | Must | To do | `prop_toyfort.png` |
+| TWN-19 | Nursery - wall face strips + wall caps | Must | To do | `tiles_wall_nursery.png` |
+| TWN-20 | Nursery - child's bed (made, someone hiding, empty) | Must | To do | `prop_nursery_bed.png` |
+| TWN-21 | Nursery - dollhouse (closed, open, lit window) | Must | To do | `prop_dollhouse.png` |
+| TWN-22 | Nursery - rocking horse (rocks by itself) | Must | To do | `prop_rockinghorse.png` |
+| TWN-23 | Nursery - toy chest (3 frames) + scattered toys | Must | To do | `prop_toys.png` |
+| TWN-24 | Nursery - picture-book painting (still, portal swirl) | Must | To do | `prop_painting_twins.png` |
+| TWN-25 | Nursery - oval rug | Nice | To do | `prop_rug_nursery.png` |
+| TWN-26 | Guest room - wardrobe (closed, ajar with eye, open) | Must | To do | `prop_wardrobe.png` |
+
+### TWN-00: Twins - master reference (turnaround, Frida)
+
+- **Mode:** Reference · **Directions:** Down, Left, Right, Up · **Frames:** 4
+- **Grid:** 1 row x 4 cols, 1536x1024 · **In-game size:** 32x48
+- **Attach:** liam_master.png (style only) · **Output:** `twins_master.png`
+- **Notes:** Draw this first. Once approved, it is attached to every other Twins prompt. Only Frida is drawn; Wilhelmina is Frida mirrored in code (her bow is on the other side). Faded white and grey: no colour on them. Ghost transparency is added in code.
+
+```
+Create a pixel-art character sprite sheet for a top-down 2D game (3/4 view).
+A reference image of a DIFFERENT character (liam_master.png) is attached ONLY as a style reference. Match its art style, line work, outline thickness, pixel size and shading approach. Do NOT copy that character's design, face, hair, clothes or colours. Draw the new character described below.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, deadpan, spooky but comedic. Not anime, not manga, not cute-kawaii, not horror.
+- Angular, slightly irregular shapes. Nothing soft, round or glossy.
+- Thick dark outline (2 pixels, #1A1020) around the whole silhouette and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen. Rough rather than polished.
+- Flat colours with minimal shading: at most 2-3 tones per material. A few short dark hatching lines may be used for shadows (in the dress folds, under the fringe) instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no sparkle in the eyes.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow.
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+- Designed to be downscaled to a 32x48 pixel sprite, so keep shapes bold and readable; each pixel should be a clearly visible square block (about 8x8 screen pixels).
+
+COLOUR CONCEPT
+- Almost monochrome: faded whites and soft greys, like porcelain or a faded old photograph. No colour anywhere on her: no pink cheeks, no coloured ribbons, no coloured eyes.
+
+PROPORTIONS
+- A small, thin child of about 8, with a stiff, doll-like posture: feet together, back straight, arms straight down.
+- Enlarged head for readability: the head (including the hair, not the bow) is about 30% of the total height.
+- At the same drawing scale as the reference image she would be about 70% as tall as that adult character.
+
+CHARACTER: Frida, one of the Twins: the ghost of a little girl (about 8 years old) from the 1890s
+- Hair: straight, dark grey, chin-length bob with a blunt straight fringe cut just above the eyebrows. One big simple shape, not many strands.
+- Bow: ONE big faded-white ribbon bow on top of the head, sitting toward her LEFT side (the right side of the image when she faces the viewer). The bow is how players tell the twins apart, so it must be large and clearly visible from every direction.
+- Face: pale grey skin. Very big, round, solid dark eyes (no sparkle, no highlights, no eyelashes). A tiny closed-mouth smile: just a short, slightly upturned line. No nose, or only a tiny dot. No blush.
+- Expression: calm, polite and unblinking. Unsettling because it never changes, not because it is scary. Storybook-creepy, not horror.
+- Outfit (1890s child): a mid-grey long-sleeved dress reaching just below the knee, under a faded-white pinafore with ruffled shoulder straps and a little lace edge at the hem; dark grey stockings; small dark shoes with a strap (Mary Janes).
+- Hands: small; held stiffly at her sides or clasped in front of her.
+- She is a ghost, but draw her fully solid and opaque, feet on the ground: no transparency, no glow, no ghostly tail (transparency is added in the game).
+- No props, no jewellery, no other accessories unless this prompt asks for one.
+- Her twin sister Wilhelmina is identical, with the bow on the other side. The game makes Wilhelmina by mirroring Frida, so draw Frida ONLY, one girl per cell.
+
+PALETTE (exact hex, use nothing else):
+- Outline, hatching and eyes: #1A1020
+- Hair: #26232B (shadow), #3A3740 (base), #514D5A (highlight)
+- Skin: #ADABB0 (shadow), #CFCDD1 (base)
+- Pinafore, bow, lace: #C2BFB9 (shadow), #E4E1DB (base), #F2F0EC (highlight)
+- Dress: #6F6D72 (shadow), #8D8B90 (base)
+- Stockings: #4A4752
+- Shoes: #2B2833
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere on the character.
+
+SPRITE SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- One horizontal row of exactly four figures, four columns, each cell 384x1024 pixels.
+- Same standing pose in every cell, the character centred in its cell, feet on the same baseline (about 88% down the canvas), identical size and scale in all four cells. The character is about 520 pixels tall (including the bow) and about 220 pixels wide at most.
+- Column order, left to right:
+  1. Facing down (toward the viewer): face, big dark eyes, fringe, pinafore front; the bow on top of her head, toward the right side of the image.
+  2. Facing left: side profile with the bob, the fringe, the tiny smile; the bow on top of the head.
+  3. Facing right: the same side view facing right (the bow is now on the far side of her head but still clearly visible above it).
+  4. Facing up (away from the viewer): the back of the bob, the bow, the pinafore straps crossing on her back and its bow tied at the waist.
+- Leave clear empty space between the figures; nothing may touch or overlap a cell border.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling the entire canvas behind the character.
+- No floor, no furniture, no wall, no ground shadow, no scenery, no frame, no grid lines, no motion lines.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-01: Twins - dialogue portraits (both girls, 8 expressions)
+
+- **Mode:** Portrait · **Directions:** 3/4 facing left · **Frames:** 8
+- **Grid:** 2 rows x 4 cols, 1536x1024 · **In-game size:** 96x96
+- **Attach:** twins_master.png · **Output:** `twins_portraits.png`
+- **Notes:** Order: blank stare, head tilt, giggle, whisper, pouting, lonely, delighted, at peace. Blank stare is the default (menacing phase); delighted and at peace come after Liam wins them over. Both girls share one portrait because they always speak together.
+
+```
+Create a set of pixel-art dialogue portraits (character busts) for a 2D game. They appear next to the dialogue box. Each portrait shows TWO identical little girls together, because the twins always speak at the same time.
+
+A reference image (twins_master.png, a four-direction turnaround of Frida) is attached. Match its art style, line work, face, hair, bow, outfit and colours exactly. Do not add any clothing, accessories or details that are not in the reference or in this description.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, deadpan, spooky but comedic. Not anime, not manga, not cute-kawaii, not horror.
+- Angular, slightly irregular shapes. Nothing soft, round or glossy.
+- Thick dark outline (2 pixels, #1A1020) around the whole silhouette and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen. Rough rather than polished.
+- Flat colours with minimal shading: at most 2-3 tones per material. A few short dark hatching lines may be used for shadows (in the dress folds, under the fringe) instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no sparkle in the eyes.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow.
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+
+COLOUR CONCEPT
+- Almost monochrome: faded whites and soft greys, like porcelain or a faded old photograph. No colour anywhere on her: no pink cheeks, no coloured ribbons, no coloured eyes.
+
+CHARACTERS: Frida and Wilhelmina, the Twins: ghosts of two identical little girls (about 8 years old) from the 1890s
+- Both exactly as in the reference: dark grey chin-length bob with a blunt fringe, pale grey skin, very big round solid dark eyes (no sparkle, no eyelashes), a tiny closed-mouth smile, a mid-grey dress under a faded-white pinafore with ruffled shoulder straps.
+- The ONLY difference: each wears one big faded-white bow on top of the head on the OUTER side. Frida stands on the left with her bow on the left side of her head; Wilhelmina stands on the right with her bow on the right side of her head. They are mirror images.
+- Default: calm, polite, unblinking, perfectly in sync. Unsettling because it never changes. Storybook-creepy, not horror.
+- They are ghosts, but draw them fully solid and opaque: no transparency, no glow.
+
+PALETTE (exact hex, use nothing else):
+- Outline, hatching and eyes: #1A1020
+- Hair: #26232B (shadow), #3A3740 (base), #514D5A (highlight)
+- Skin: #ADABB0 (shadow), #CFCDD1 (base)
+- Pinafore, bow, lace: #C2BFB9 (shadow), #E4E1DB (base), #F2F0EC (highlight)
+- Dress: #6F6D72 (shadow), #8D8B90 (base)
+- Stockings: #4A4752
+- Shoes: #2B2833
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere on the character.
+
+EXPRESSIONS, one per cell, left to right then top to bottom (both girls show the same expression unless stated):
+  1. Blank stare: the default. Faces perfectly still, big dark eyes looking straight at the viewer, tiny identical smiles.
+  2. Head tilt: both heads tilted the same way at exactly the same angle, still staring.
+  3. Giggle: both have one hand over the mouth, eyes squeezed into happy curves, shoulders hunched.
+  4. Whisper: Wilhelmina leans to whisper into Frida's ear behind her hand; Frida keeps staring at the viewer.
+  5. Pouting: arms crossed, lower lips pushed out, eyebrows (just visible under the fringe) pulled down.
+  6. Lonely: both looking down, the tiny smiles gone, shoulders drooping, standing a little closer together.
+  7. Delighted: real, open-mouthed smiles for the first time, eyes bright and wide, leaning forward.
+  8. At peace: eyes closed, soft small smiles, heads leaning gently toward each other.
+
+SPRITE SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- Exactly 2 rows and 4 columns of equal cells, each cell 384x512 pixels. One portrait (both girls) per cell, 8 portraits in total.
+- Every portrait is a three-quarter view with both girls' bodies and faces turned slightly toward the LEFT side of the image (they usually face Liam, whose portraits face right).
+- Framing: the two girls side by side, shoulder to shoulder, both heads fully inside the cell including the bows; the busts are cut off flat at the bottom of the cell. The top of the bows about 8% below the top of the cell. Both heads together fill most of the cell width.
+- Same size, scale, lighting and design in all eight cells; only the expressions, heads and arms change.
+- Designed to be downscaled to 96x96 pixels per portrait (taking the top square of each cell), so keep shapes bold and readable; each pixel should be a clearly visible square block.
+- Nothing may touch or cross a cell border except the flat bottom cut of the busts.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling the entire canvas behind the portraits.
+- No scenery, no frame, no grid lines.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-02: Twins - top-down idle (head tilt)
+
+- **Mode:** Top-down · **Directions:** Down, Left, Up (Right = mirror) · **Frames:** 4
+- **Grid:** 3 rows x 4 cols, 1536x1024 · **In-game size:** 32x48
+- **Attach:** twins_master.png + liam_td_walk.png · **Output:** `twins_td_idle.png`
+- **Notes:** Loop. Both twins play it in sync (Wilhelmina mirrored). Slow it down in config so the tilt feels deliberate.
+
+```
+Create a pixel-art animation sprite sheet for a top-down 2D game (3/4 view).
+
+Two reference images are attached. twins_master.png (a four-direction turnaround of THIS character, Frida) defines her DESIGN: face, hair, bow, outfit and colours. liam_td_walk.png (an approved in-game sheet of ANOTHER character, Liam) defines only the game's IN-GAME PROPORTIONS and drawing scale: use its big-head chibi style and its scale, but do not copy anything of Liam's design. Do not add any clothing, accessories or details that are not in the references or in this description.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, deadpan, spooky but comedic. Not anime, not manga, not cute-kawaii, not horror.
+- Angular, slightly irregular shapes. Nothing soft, round or glossy.
+- Thick dark outline (2 pixels, #1A1020) around the whole silhouette and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen. Rough rather than polished.
+- Flat colours with minimal shading: at most 2-3 tones per material. A few short dark hatching lines may be used for shadows (in the dress folds, under the fringe) instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no sparkle in the eyes.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow.
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+
+COLOUR CONCEPT
+- Almost monochrome: faded whites and soft greys, like porcelain or a faded old photograph. No colour anywhere on her: no pink cheeks, no coloured ribbons, no coloured eyes.
+
+PROPORTIONS (in-game sprite, the game's chibi style as in liam_td_walk.png)
+- Big head for readability: the head (including hair and bow, not counting the top of the bow) is about 40-45% of the total height.
+- Small child: she is about 75% as tall as Liam in liam_td_walk.png; draw her at the same scale as Liam (do not enlarge her to fill the cell).
+- Short body and short thin legs, stiff doll-like posture.
+
+CHARACTER: Frida, one of the Twins: the ghost of a little girl (about 8 years old) from the 1890s
+- Hair: straight, dark grey, chin-length bob with a blunt straight fringe cut just above the eyebrows. One big simple shape, not many strands.
+- Bow: ONE big faded-white ribbon bow on top of the head, sitting toward her LEFT side (the right side of the image when she faces the viewer). The bow is how players tell the twins apart, so it must be large and clearly visible from every direction.
+- Face: pale grey skin. Very big, round, solid dark eyes (no sparkle, no highlights, no eyelashes). A tiny closed-mouth smile: just a short, slightly upturned line. No nose, or only a tiny dot. No blush.
+- Expression: calm, polite and unblinking. Unsettling because it never changes, not because it is scary. Storybook-creepy, not horror.
+- Outfit (1890s child): a mid-grey long-sleeved dress reaching just below the knee, under a faded-white pinafore with ruffled shoulder straps and a little lace edge at the hem; dark grey stockings; small dark shoes with a strap (Mary Janes).
+- Hands: small; held stiffly at her sides or clasped in front of her.
+- She is a ghost, but draw her fully solid and opaque, feet on the ground: no transparency, no glow, no ghostly tail (transparency is added in the game).
+- No props, no jewellery, no other accessories unless this prompt asks for one.
+- Her twin sister Wilhelmina is identical, with the bow on the other side. The game makes Wilhelmina by mirroring Frida, so draw Frida ONLY, one girl per cell.
+
+PALETTE (exact hex, use nothing else):
+- Outline, hatching and eyes: #1A1020
+- Hair: #26232B (shadow), #3A3740 (base), #514D5A (highlight)
+- Skin: #ADABB0 (shadow), #CFCDD1 (base)
+- Pinafore, bow, lace: #C2BFB9 (shadow), #E4E1DB (base), #F2F0EC (highlight)
+- Dress: #6F6D72 (shadow), #8D8B90 (base)
+- Stockings: #4A4752
+- Shoes: #2B2833
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere on the character.
+
+ANIMATION: Idle loop: the unison head tilt. She stands perfectly still, hands clasped in front of her pinafore, staring. Slowly, her head tilts to one side and back, like a curious doll. The body never moves.
+Frames, left to right (the same frame sequence in every row, adapted to that row's direction):
+  1. Standing straight, head upright.
+  2. Head tilted slightly toward her right shoulder.
+  3. Head tilted further (about 20 degrees), the tiny smile unchanged (hold frame).
+  4. Head halfway back to upright.
+
+SPRITE SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- Exactly 3 rows and 4 columns of equal cells, each cell 384x341 pixels. One pose per cell, 12 poses in total.
+- Designed to be downscaled to 32x48 pixels per frame, so keep shapes bold and readable; each pixel should be a clearly visible square block.
+- The character fills about 60% of the cell height (she is a small child; leave the space above her empty), centred horizontally, feet near the bottom of the cell.
+- Camera: top-down 2D game seen in 3/4 view (classic SNES-era RPG perspective): you see the front of the character and a little of the top of the head.
+- Row order, top to bottom:
+  1. Facing down (toward the viewer): face, big dark eyes, fringe, bow, pinafore front.
+  2. Facing left: side profile, the bob and the bow on top of the head clearly visible. (The right-facing version is made by mirroring this row in code, so draw LEFT only.)
+  3. Facing up (away from the viewer): the back of the bob, the big bow, the pinafore straps crossing on the back.
+
+CONSISTENCY
+- Every frame shows the same character at the same size and scale, with the same proportions, face, hair, bow, outfit and colours.
+- Feet stay on the same baseline in every frame of a row, and the character stays centred in its cell.
+- Only the pose changes from frame to frame; frames read left to right as a smooth sequence.
+- Leave clear empty space around each character; nothing may touch or cross a cell border.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling the entire canvas behind the character.
+- No floor, no furniture, no wall, no ground shadow, no scenery, no frame, no grid lines, no motion lines.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-03: Twins - top-down walk (doll steps)
+
+- **Mode:** Top-down · **Directions:** Down, Left, Up (Right = mirror) · **Frames:** 6
+- **Grid:** 3 rows x 6 cols, 1536x1024 · **In-game size:** 32x48
+- **Attach:** twins_master.png + liam_td_walk.png · **Output:** `twins_td_walk.png`
+- **Notes:** Loop. The twins walk in step with each other (same frame at the same time). No arm swing, no bob: doll-like.
+
+```
+Create a pixel-art animation sprite sheet for a top-down 2D game (3/4 view).
+
+Two reference images are attached. twins_master.png (a four-direction turnaround of THIS character, Frida) defines her DESIGN: face, hair, bow, outfit and colours. liam_td_walk.png (an approved in-game sheet of ANOTHER character, Liam) defines only the game's IN-GAME PROPORTIONS and drawing scale: use its big-head chibi style and its scale, but do not copy anything of Liam's design. Do not add any clothing, accessories or details that are not in the references or in this description.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, deadpan, spooky but comedic. Not anime, not manga, not cute-kawaii, not horror.
+- Angular, slightly irregular shapes. Nothing soft, round or glossy.
+- Thick dark outline (2 pixels, #1A1020) around the whole silhouette and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen. Rough rather than polished.
+- Flat colours with minimal shading: at most 2-3 tones per material. A few short dark hatching lines may be used for shadows (in the dress folds, under the fringe) instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no sparkle in the eyes.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow.
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+
+COLOUR CONCEPT
+- Almost monochrome: faded whites and soft greys, like porcelain or a faded old photograph. No colour anywhere on her: no pink cheeks, no coloured ribbons, no coloured eyes.
+
+PROPORTIONS (in-game sprite, the game's chibi style as in liam_td_walk.png)
+- Big head for readability: the head (including hair and bow, not counting the top of the bow) is about 40-45% of the total height.
+- Small child: she is about 75% as tall as Liam in liam_td_walk.png; draw her at the same scale as Liam (do not enlarge her to fill the cell).
+- Short body and short thin legs, stiff doll-like posture.
+
+CHARACTER: Frida, one of the Twins: the ghost of a little girl (about 8 years old) from the 1890s
+- Hair: straight, dark grey, chin-length bob with a blunt straight fringe cut just above the eyebrows. One big simple shape, not many strands.
+- Bow: ONE big faded-white ribbon bow on top of the head, sitting toward her LEFT side (the right side of the image when she faces the viewer). The bow is how players tell the twins apart, so it must be large and clearly visible from every direction.
+- Face: pale grey skin. Very big, round, solid dark eyes (no sparkle, no highlights, no eyelashes). A tiny closed-mouth smile: just a short, slightly upturned line. No nose, or only a tiny dot. No blush.
+- Expression: calm, polite and unblinking. Unsettling because it never changes, not because it is scary. Storybook-creepy, not horror.
+- Outfit (1890s child): a mid-grey long-sleeved dress reaching just below the knee, under a faded-white pinafore with ruffled shoulder straps and a little lace edge at the hem; dark grey stockings; small dark shoes with a strap (Mary Janes).
+- Hands: small; held stiffly at her sides or clasped in front of her.
+- She is a ghost, but draw her fully solid and opaque, feet on the ground: no transparency, no glow, no ghostly tail (transparency is added in the game).
+- No props, no jewellery, no other accessories unless this prompt asks for one.
+- Her twin sister Wilhelmina is identical, with the bow on the other side. The game makes Wilhelmina by mirroring Frida, so draw Frida ONLY, one girl per cell.
+
+PALETTE (exact hex, use nothing else):
+- Outline, hatching and eyes: #1A1020
+- Hair: #26232B (shadow), #3A3740 (base), #514D5A (highlight)
+- Skin: #ADABB0 (shadow), #CFCDD1 (base)
+- Pinafore, bow, lace: #C2BFB9 (shadow), #E4E1DB (base), #F2F0EC (highlight)
+- Dress: #6F6D72 (shadow), #8D8B90 (base)
+- Stockings: #4A4752
+- Shoes: #2B2833
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere on the character.
+
+ANIMATION: Walk cycle. Small, neat, perfectly even steps, like a wind-up doll. Her arms hang stiffly at her sides and do NOT swing. Her head stays perfectly level with NO bobbing up and down. Only the legs and the pinafore hem move.
+Frames, left to right (the same frame sequence in every row, adapted to that row's direction):
+  1. Left foot slightly forward, right foot back.
+  2. Feet together, left foot planted.
+  3. Right foot passing the left.
+  4. Right foot slightly forward, left foot back.
+  5. Feet together, right foot planted.
+  6. Left foot passing the right.
+
+SPRITE SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- Exactly 3 rows and 6 columns of equal cells, each cell 256x341 pixels. One pose per cell, 18 poses in total.
+- Designed to be downscaled to 32x48 pixels per frame, so keep shapes bold and readable; each pixel should be a clearly visible square block.
+- The character fills about 60% of the cell height (she is a small child; leave the space above her empty), centred horizontally, feet near the bottom of the cell.
+- Camera: top-down 2D game seen in 3/4 view (classic SNES-era RPG perspective): you see the front of the character and a little of the top of the head.
+- Row order, top to bottom:
+  1. Facing down (toward the viewer): face, big dark eyes, fringe, bow, pinafore front.
+  2. Facing left: side profile, the bob and the bow on top of the head clearly visible. (The right-facing version is made by mirroring this row in code, so draw LEFT only.)
+  3. Facing up (away from the viewer): the back of the bob, the big bow, the pinafore straps crossing on the back.
+- IMPORTANT: the head and shoulders are at exactly the same height in all six frames of a row.
+
+CONSISTENCY
+- Every frame shows the same character at the same size and scale, with the same proportions, face, hair, bow, outfit and colours.
+- Feet stay on the same baseline in every frame of a row, and the character stays centred in its cell.
+- Only the pose changes from frame to frame; frames read left to right as a smooth sequence.
+- Leave clear empty space around each character; nothing may touch or cross a cell border.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling the entire canvas behind the character.
+- No floor, no furniture, no wall, no ground shadow, no scenery, no frame, no grid lines, no motion lines.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-04: Twins - giggle
+
+- **Mode:** Top-down · **Directions:** Down only · **Frames:** 4
+- **Grid:** 1 row x 4 cols, 1536x1024 · **In-game size:** 32x48
+- **Attach:** twins_master.png + liam_td_walk.png · **Output:** `twins_td_giggle.png`
+- **Notes:** Frames 2-4 loop while the giggle sound plays. Heard in the dark before Liam sees them.
+
+```
+Create a pixel-art animation sprite sheet for a top-down 2D game (3/4 view).
+
+Two reference images are attached. twins_master.png (a four-direction turnaround of THIS character, Frida) defines her DESIGN: face, hair, bow, outfit and colours. liam_td_walk.png (an approved in-game sheet of ANOTHER character, Liam) defines only the game's IN-GAME PROPORTIONS and drawing scale: use its big-head chibi style and its scale, but do not copy anything of Liam's design. Do not add any clothing, accessories or details that are not in the references or in this description.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, deadpan, spooky but comedic. Not anime, not manga, not cute-kawaii, not horror.
+- Angular, slightly irregular shapes. Nothing soft, round or glossy.
+- Thick dark outline (2 pixels, #1A1020) around the whole silhouette and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen. Rough rather than polished.
+- Flat colours with minimal shading: at most 2-3 tones per material. A few short dark hatching lines may be used for shadows (in the dress folds, under the fringe) instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no sparkle in the eyes.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow.
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+
+COLOUR CONCEPT
+- Almost monochrome: faded whites and soft greys, like porcelain or a faded old photograph. No colour anywhere on her: no pink cheeks, no coloured ribbons, no coloured eyes.
+
+PROPORTIONS (in-game sprite, the game's chibi style as in liam_td_walk.png)
+- Big head for readability: the head (including hair and bow, not counting the top of the bow) is about 40-45% of the total height.
+- Small child: she is about 75% as tall as Liam in liam_td_walk.png; draw her at the same scale as Liam (do not enlarge her to fill the cell).
+- Short body and short thin legs, stiff doll-like posture.
+
+CHARACTER: Frida, one of the Twins: the ghost of a little girl (about 8 years old) from the 1890s
+- Hair: straight, dark grey, chin-length bob with a blunt straight fringe cut just above the eyebrows. One big simple shape, not many strands.
+- Bow: ONE big faded-white ribbon bow on top of the head, sitting toward her LEFT side (the right side of the image when she faces the viewer). The bow is how players tell the twins apart, so it must be large and clearly visible from every direction.
+- Face: pale grey skin. Very big, round, solid dark eyes (no sparkle, no highlights, no eyelashes). A tiny closed-mouth smile: just a short, slightly upturned line. No nose, or only a tiny dot. No blush.
+- Expression: calm, polite and unblinking. Unsettling because it never changes, not because it is scary. Storybook-creepy, not horror.
+- Outfit (1890s child): a mid-grey long-sleeved dress reaching just below the knee, under a faded-white pinafore with ruffled shoulder straps and a little lace edge at the hem; dark grey stockings; small dark shoes with a strap (Mary Janes).
+- Hands: small; held stiffly at her sides or clasped in front of her.
+- She is a ghost, but draw her fully solid and opaque, feet on the ground: no transparency, no glow, no ghostly tail (transparency is added in the game).
+- No props, no jewellery, no other accessories unless this prompt asks for one.
+- Her twin sister Wilhelmina is identical, with the bow on the other side. The game makes Wilhelmina by mirroring Frida, so draw Frida ONLY, one girl per cell.
+
+PALETTE (exact hex, use nothing else):
+- Outline, hatching and eyes: #1A1020
+- Hair: #26232B (shadow), #3A3740 (base), #514D5A (highlight)
+- Skin: #ADABB0 (shadow), #CFCDD1 (base)
+- Pinafore, bow, lace: #C2BFB9 (shadow), #E4E1DB (base), #F2F0EC (highlight)
+- Dress: #6F6D72 (shadow), #8D8B90 (base)
+- Stockings: #4A4752
+- Shoes: #2B2833
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere on the character.
+
+ANIMATION: Giggle. She lifts one hand to cover her mouth, her eyes squeeze shut into happy upside-down curves, her shoulders hunch and shake.
+Frames, left to right:
+  1. Standing, hands clasped, raising one hand.
+  2. Hand over her mouth, eyes squeezed into curves, shoulders hunched.
+  3. Same, shoulders 1 pixel higher (the giggle shake).
+  4. Same as frame 2.
+
+SPRITE SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- Exactly 1 row and 4 columns of equal cells, each cell 384x1024 pixels. One pose per cell, 4 poses in total.
+- Designed to be downscaled to 32x48 pixels per frame, so keep shapes bold and readable; each pixel should be a clearly visible square block.
+- The character fills about 60% of the cell height (she is a small child; leave the space above her empty), centred horizontally, feet near the bottom of the cell.
+- Camera: top-down 2D game seen in 3/4 view (classic SNES-era RPG perspective): you see the front of the character and a little of the top of the head.
+- Row order, top to bottom:
+  1. Facing down (toward the viewer), the only direction for this animation.
+
+CONSISTENCY
+- Every frame shows the same character at the same size and scale, with the same proportions, face, hair, bow, outfit and colours.
+- Feet stay on the same baseline in every frame of a row, and the character stays centred in its cell.
+- Only the pose changes from frame to frame; frames read left to right as a smooth sequence.
+- Leave clear empty space around each character; nothing may touch or cross a cell border.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling the entire canvas behind the character.
+- No floor, no furniture, no wall, no ground shadow, no scenery, no frame, no grid lines, no motion lines.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-05: Twins - peek (lean out from hiding)
+
+- **Mode:** Top-down · **Directions:** Down only · **Frames:** 4
+- **Grid:** 1 row x 4 cols, 1536x1024 · **In-game size:** 32x48
+- **Attach:** twins_master.png + liam_td_walk.png · **Output:** `twins_td_peek.png`
+- **Notes:** Hide-and-seek scares: the game draws her behind furniture, so only the leaning part shows. Mirror in code to peek the other way.
+
+```
+Create a pixel-art animation sprite sheet for a top-down 2D game (3/4 view).
+
+Two reference images are attached. twins_master.png (a four-direction turnaround of THIS character, Frida) defines her DESIGN: face, hair, bow, outfit and colours. liam_td_walk.png (an approved in-game sheet of ANOTHER character, Liam) defines only the game's IN-GAME PROPORTIONS and drawing scale: use its big-head chibi style and its scale, but do not copy anything of Liam's design. Do not add any clothing, accessories or details that are not in the references or in this description.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, deadpan, spooky but comedic. Not anime, not manga, not cute-kawaii, not horror.
+- Angular, slightly irregular shapes. Nothing soft, round or glossy.
+- Thick dark outline (2 pixels, #1A1020) around the whole silhouette and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen. Rough rather than polished.
+- Flat colours with minimal shading: at most 2-3 tones per material. A few short dark hatching lines may be used for shadows (in the dress folds, under the fringe) instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no sparkle in the eyes.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow.
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+
+COLOUR CONCEPT
+- Almost monochrome: faded whites and soft greys, like porcelain or a faded old photograph. No colour anywhere on her: no pink cheeks, no coloured ribbons, no coloured eyes.
+
+PROPORTIONS (in-game sprite, the game's chibi style as in liam_td_walk.png)
+- Big head for readability: the head (including hair and bow, not counting the top of the bow) is about 40-45% of the total height.
+- Small child: she is about 75% as tall as Liam in liam_td_walk.png; draw her at the same scale as Liam (do not enlarge her to fill the cell).
+- Short body and short thin legs, stiff doll-like posture.
+
+CHARACTER: Frida, one of the Twins: the ghost of a little girl (about 8 years old) from the 1890s
+- Hair: straight, dark grey, chin-length bob with a blunt straight fringe cut just above the eyebrows. One big simple shape, not many strands.
+- Bow: ONE big faded-white ribbon bow on top of the head, sitting toward her LEFT side (the right side of the image when she faces the viewer). The bow is how players tell the twins apart, so it must be large and clearly visible from every direction.
+- Face: pale grey skin. Very big, round, solid dark eyes (no sparkle, no highlights, no eyelashes). A tiny closed-mouth smile: just a short, slightly upturned line. No nose, or only a tiny dot. No blush.
+- Expression: calm, polite and unblinking. Unsettling because it never changes, not because it is scary. Storybook-creepy, not horror.
+- Outfit (1890s child): a mid-grey long-sleeved dress reaching just below the knee, under a faded-white pinafore with ruffled shoulder straps and a little lace edge at the hem; dark grey stockings; small dark shoes with a strap (Mary Janes).
+- Hands: small; held stiffly at her sides or clasped in front of her.
+- She is a ghost, but draw her fully solid and opaque, feet on the ground: no transparency, no glow, no ghostly tail (transparency is added in the game).
+- No props, no jewellery, no other accessories unless this prompt asks for one.
+- Her twin sister Wilhelmina is identical, with the bow on the other side. The game makes Wilhelmina by mirroring Frida, so draw Frida ONLY, one girl per cell.
+
+PALETTE (exact hex, use nothing else):
+- Outline, hatching and eyes: #1A1020
+- Hair: #26232B (shadow), #3A3740 (base), #514D5A (highlight)
+- Skin: #ADABB0 (shadow), #CFCDD1 (base)
+- Pinafore, bow, lace: #C2BFB9 (shadow), #E4E1DB (base), #F2F0EC (highlight)
+- Dress: #6F6D72 (shadow), #8D8B90 (base)
+- Stockings: #4A4752
+- Shoes: #2B2833
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere on the character.
+
+ANIMATION: Peek. She leans her whole upper body sideways to her LEFT (toward the right side of the image), as if looking around the edge of a wardrobe or a bed; her feet stay where they are. At the full lean her head tilts and she stares straight at the viewer.
+Frames, left to right:
+  1. Standing straight.
+  2. Leaning a little to the side.
+  3. Leaning far to the side, head tilted, staring (hold frame).
+  4. Back halfway, as frame 2.
+
+SPRITE SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- Exactly 1 row and 4 columns of equal cells, each cell 384x1024 pixels. One pose per cell, 4 poses in total.
+- Designed to be downscaled to 32x48 pixels per frame, so keep shapes bold and readable; each pixel should be a clearly visible square block.
+- The character fills about 60% of the cell height (she is a small child; leave the space above her empty), centred horizontally, feet near the bottom of the cell.
+- Camera: top-down 2D game seen in 3/4 view (classic SNES-era RPG perspective): you see the front of the character and a little of the top of the head.
+- Row order, top to bottom:
+  1. Facing down (toward the viewer), the only direction for this animation.
+
+CONSISTENCY
+- Every frame shows the same character at the same size and scale, with the same proportions, face, hair, bow, outfit and colours.
+- Feet stay on the same baseline in every frame of a row, and the character stays centred in its cell.
+- Only the pose changes from frame to frame; frames read left to right as a smooth sequence.
+- Leave clear empty space around each character; nothing may touch or cross a cell border.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling the entire canvas behind the character.
+- No floor, no furniture, no wall, no ground shadow, no scenery, no frame, no grid lines, no motion lines.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-06: Twins - point ("Found you!")
+
+- **Mode:** Top-down · **Directions:** Down only · **Frames:** 3
+- **Grid:** 1 row x 3 cols, 1536x1024 · **In-game size:** 32x48
+- **Attach:** twins_master.png + liam_td_walk.png · **Output:** `twins_td_point.png`
+- **Notes:** Menacing phase ("Found you…") and the resolution, when they find Liam hanging as a bat in the wardrobe.
+
+```
+Create a pixel-art animation sprite sheet for a top-down 2D game (3/4 view).
+
+Two reference images are attached. twins_master.png (a four-direction turnaround of THIS character, Frida) defines her DESIGN: face, hair, bow, outfit and colours. liam_td_walk.png (an approved in-game sheet of ANOTHER character, Liam) defines only the game's IN-GAME PROPORTIONS and drawing scale: use its big-head chibi style and its scale, but do not copy anything of Liam's design. Do not add any clothing, accessories or details that are not in the references or in this description.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, deadpan, spooky but comedic. Not anime, not manga, not cute-kawaii, not horror.
+- Angular, slightly irregular shapes. Nothing soft, round or glossy.
+- Thick dark outline (2 pixels, #1A1020) around the whole silhouette and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen. Rough rather than polished.
+- Flat colours with minimal shading: at most 2-3 tones per material. A few short dark hatching lines may be used for shadows (in the dress folds, under the fringe) instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no sparkle in the eyes.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow.
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+
+COLOUR CONCEPT
+- Almost monochrome: faded whites and soft greys, like porcelain or a faded old photograph. No colour anywhere on her: no pink cheeks, no coloured ribbons, no coloured eyes.
+
+PROPORTIONS (in-game sprite, the game's chibi style as in liam_td_walk.png)
+- Big head for readability: the head (including hair and bow, not counting the top of the bow) is about 40-45% of the total height.
+- Small child: she is about 75% as tall as Liam in liam_td_walk.png; draw her at the same scale as Liam (do not enlarge her to fill the cell).
+- Short body and short thin legs, stiff doll-like posture.
+
+CHARACTER: Frida, one of the Twins: the ghost of a little girl (about 8 years old) from the 1890s
+- Hair: straight, dark grey, chin-length bob with a blunt straight fringe cut just above the eyebrows. One big simple shape, not many strands.
+- Bow: ONE big faded-white ribbon bow on top of the head, sitting toward her LEFT side (the right side of the image when she faces the viewer). The bow is how players tell the twins apart, so it must be large and clearly visible from every direction.
+- Face: pale grey skin. Very big, round, solid dark eyes (no sparkle, no highlights, no eyelashes). A tiny closed-mouth smile: just a short, slightly upturned line. No nose, or only a tiny dot. No blush.
+- Expression: calm, polite and unblinking. Unsettling because it never changes, not because it is scary. Storybook-creepy, not horror.
+- Outfit (1890s child): a mid-grey long-sleeved dress reaching just below the knee, under a faded-white pinafore with ruffled shoulder straps and a little lace edge at the hem; dark grey stockings; small dark shoes with a strap (Mary Janes).
+- Hands: small; held stiffly at her sides or clasped in front of her.
+- She is a ghost, but draw her fully solid and opaque, feet on the ground: no transparency, no glow, no ghostly tail (transparency is added in the game).
+- No props, no jewellery, no other accessories unless this prompt asks for one.
+- Her twin sister Wilhelmina is identical, with the bow on the other side. The game makes Wilhelmina by mirroring Frida, so draw Frida ONLY, one girl per cell.
+
+PALETTE (exact hex, use nothing else):
+- Outline, hatching and eyes: #1A1020
+- Hair: #26232B (shadow), #3A3740 (base), #514D5A (highlight)
+- Skin: #ADABB0 (shadow), #CFCDD1 (base)
+- Pinafore, bow, lace: #C2BFB9 (shadow), #E4E1DB (base), #F2F0EC (highlight)
+- Dress: #6F6D72 (shadow), #8D8B90 (base)
+- Stockings: #4A4752
+- Shoes: #2B2833
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere on the character.
+
+ANIMATION: Point ("Found you!"). She slowly raises one arm and points straight at the viewer, head tilted, the tiny smile a little wider.
+Frames, left to right:
+  1. Standing, hands clasped, beginning to raise her right arm.
+  2. Arm raised halfway.
+  3. Arm fully extended toward the viewer, finger pointing, head tilted, smile slightly wider (hold frame).
+
+SPRITE SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- Exactly 1 row and 3 columns of equal cells, each cell 512x1024 pixels. One pose per cell, 3 poses in total.
+- Designed to be downscaled to 32x48 pixels per frame, so keep shapes bold and readable; each pixel should be a clearly visible square block.
+- The character fills about 60% of the cell height (she is a small child; leave the space above her empty), centred horizontally, feet near the bottom of the cell.
+- Camera: top-down 2D game seen in 3/4 view (classic SNES-era RPG perspective): you see the front of the character and a little of the top of the head.
+- Row order, top to bottom:
+  1. Facing down (toward the viewer), the only direction for this animation.
+
+CONSISTENCY
+- Every frame shows the same character at the same size and scale, with the same proportions, face, hair, bow, outfit and colours.
+- Feet stay on the same baseline in every frame of a row, and the character stays centred in its cell.
+- Only the pose changes from frame to frame; frames read left to right as a smooth sequence.
+- Leave clear empty space around each character; nothing may touch or cross a cell border.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling the entire canvas behind the character.
+- No floor, no furniture, no wall, no ground shadow, no scenery, no frame, no grid lines, no motion lines.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-07: Twins - count (hands over eyes)
+
+- **Mode:** Top-down · **Directions:** Up only · **Frames:** 4
+- **Grid:** 1 row x 4 cols, 1536x1024 · **In-game size:** 32x48
+- **Attach:** twins_master.png + liam_td_walk.png · **Output:** `twins_td_count.png`
+- **Notes:** Resolution: Liam's turn to hide, and the twins finally get to count. Frames 1-3 loop.
+
+```
+Create a pixel-art animation sprite sheet for a top-down 2D game (3/4 view).
+
+Two reference images are attached. twins_master.png (a four-direction turnaround of THIS character, Frida) defines her DESIGN: face, hair, bow, outfit and colours. liam_td_walk.png (an approved in-game sheet of ANOTHER character, Liam) defines only the game's IN-GAME PROPORTIONS and drawing scale: use its big-head chibi style and its scale, but do not copy anything of Liam's design. Do not add any clothing, accessories or details that are not in the references or in this description.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, deadpan, spooky but comedic. Not anime, not manga, not cute-kawaii, not horror.
+- Angular, slightly irregular shapes. Nothing soft, round or glossy.
+- Thick dark outline (2 pixels, #1A1020) around the whole silhouette and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen. Rough rather than polished.
+- Flat colours with minimal shading: at most 2-3 tones per material. A few short dark hatching lines may be used for shadows (in the dress folds, under the fringe) instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no sparkle in the eyes.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow.
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+
+COLOUR CONCEPT
+- Almost monochrome: faded whites and soft greys, like porcelain or a faded old photograph. No colour anywhere on her: no pink cheeks, no coloured ribbons, no coloured eyes.
+
+PROPORTIONS (in-game sprite, the game's chibi style as in liam_td_walk.png)
+- Big head for readability: the head (including hair and bow, not counting the top of the bow) is about 40-45% of the total height.
+- Small child: she is about 75% as tall as Liam in liam_td_walk.png; draw her at the same scale as Liam (do not enlarge her to fill the cell).
+- Short body and short thin legs, stiff doll-like posture.
+
+CHARACTER: Frida, one of the Twins: the ghost of a little girl (about 8 years old) from the 1890s
+- Hair: straight, dark grey, chin-length bob with a blunt straight fringe cut just above the eyebrows. One big simple shape, not many strands.
+- Bow: ONE big faded-white ribbon bow on top of the head, sitting toward her LEFT side (the right side of the image when she faces the viewer). The bow is how players tell the twins apart, so it must be large and clearly visible from every direction.
+- Face: pale grey skin. Very big, round, solid dark eyes (no sparkle, no highlights, no eyelashes). A tiny closed-mouth smile: just a short, slightly upturned line. No nose, or only a tiny dot. No blush.
+- Expression: calm, polite and unblinking. Unsettling because it never changes, not because it is scary. Storybook-creepy, not horror.
+- Outfit (1890s child): a mid-grey long-sleeved dress reaching just below the knee, under a faded-white pinafore with ruffled shoulder straps and a little lace edge at the hem; dark grey stockings; small dark shoes with a strap (Mary Janes).
+- Hands: small; held stiffly at her sides or clasped in front of her.
+- She is a ghost, but draw her fully solid and opaque, feet on the ground: no transparency, no glow, no ghostly tail (transparency is added in the game).
+- No props, no jewellery, no other accessories unless this prompt asks for one.
+- Her twin sister Wilhelmina is identical, with the bow on the other side. The game makes Wilhelmina by mirroring Frida, so draw Frida ONLY, one girl per cell.
+
+PALETTE (exact hex, use nothing else):
+- Outline, hatching and eyes: #1A1020
+- Hair: #26232B (shadow), #3A3740 (base), #514D5A (highlight)
+- Skin: #ADABB0 (shadow), #CFCDD1 (base)
+- Pinafore, bow, lace: #C2BFB9 (shadow), #E4E1DB (base), #F2F0EC (highlight)
+- Dress: #6F6D72 (shadow), #8D8B90 (base)
+- Stockings: #4A4752
+- Shoes: #2B2833
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere on the character.
+
+ANIMATION: Counting for hide-and-seek. She faces the wall (away from the viewer), both hands over her eyes, forehead bowed, and nods slightly with each number.
+Frames, left to right:
+  1. Facing away, both hands over her eyes, head bowed.
+  2. Head nodding 1 pixel lower.
+  3. Same as frame 1.
+  4. Head lifting slightly, about to turn (the last number).
+
+SPRITE SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- Exactly 1 row and 4 columns of equal cells, each cell 384x1024 pixels. One pose per cell, 4 poses in total.
+- Designed to be downscaled to 32x48 pixels per frame, so keep shapes bold and readable; each pixel should be a clearly visible square block.
+- The character fills about 60% of the cell height (she is a small child; leave the space above her empty), centred horizontally, feet near the bottom of the cell.
+- Camera: top-down 2D game seen in 3/4 view (classic SNES-era RPG perspective): you see the front of the character and a little of the top of the head.
+- Row order, top to bottom:
+  1. Facing up (away from the viewer, toward a wall), the only direction for this animation. Her elbows stick out on both sides of her head.
+
+CONSISTENCY
+- Every frame shows the same character at the same size and scale, with the same proportions, face, hair, bow, outfit and colours.
+- Feet stay on the same baseline in every frame of a row, and the character stays centred in its cell.
+- Only the pose changes from frame to frame; frames read left to right as a smooth sequence.
+- Leave clear empty space around each character; nothing may touch or cross a cell border.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling the entire canvas behind the character.
+- No floor, no furniture, no wall, no ground shadow, no scenery, no frame, no grid lines, no motion lines.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-08: Twins - side-view float idle (painting world)
+
+- **Mode:** Side-view · **Directions:** Right (Left = mirror) · **Frames:** 4
+- **Grid:** 1 row x 4 cols, 1536x1024 · **In-game size:** 32x48
+- **Attach:** twins_master.png + liam_td_walk.png · **Output:** `twins_sv_float.png`
+- **Notes:** Loop. Toy-army fight. Also used while they glide between the fort towers (movement in code).
+
+```
+Create a pixel-art animation sprite sheet for a 2D side-scrolling platformer (pure side view).
+
+Two reference images are attached. twins_master.png (a four-direction turnaround of THIS character, Frida) defines her DESIGN: face, hair, bow, outfit and colours. liam_td_walk.png (an approved in-game sheet of ANOTHER character, Liam) defines only the game's IN-GAME PROPORTIONS and drawing scale: use its big-head chibi style and its scale, but do not copy anything of Liam's design. Do not add any clothing, accessories or details that are not in the references or in this description.
+She is inside a magic painting (a picture-book world) where she can float.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, deadpan, spooky but comedic. Not anime, not manga, not cute-kawaii, not horror.
+- Angular, slightly irregular shapes. Nothing soft, round or glossy.
+- Thick dark outline (2 pixels, #1A1020) around the whole silhouette and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen. Rough rather than polished.
+- Flat colours with minimal shading: at most 2-3 tones per material. A few short dark hatching lines may be used for shadows (in the dress folds, under the fringe) instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no sparkle in the eyes.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow.
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+
+COLOUR CONCEPT
+- Almost monochrome: faded whites and soft greys, like porcelain or a faded old photograph. No colour anywhere on her: no pink cheeks, no coloured ribbons, no coloured eyes.
+
+PROPORTIONS (in-game sprite, the game's chibi style as in liam_td_walk.png)
+- Big head for readability: the head (including hair and bow, not counting the top of the bow) is about 40-45% of the total height.
+- Small child: she is about 75% as tall as Liam in liam_td_walk.png; draw her at the same scale as Liam (do not enlarge her to fill the cell).
+- Short body and short thin legs, stiff doll-like posture.
+
+CHARACTER: Frida, one of the Twins: the ghost of a little girl (about 8 years old) from the 1890s
+- Hair: straight, dark grey, chin-length bob with a blunt straight fringe cut just above the eyebrows. One big simple shape, not many strands.
+- Bow: ONE big faded-white ribbon bow on top of the head, sitting toward her LEFT side (the right side of the image when she faces the viewer). The bow is how players tell the twins apart, so it must be large and clearly visible from every direction.
+- Face: pale grey skin. Very big, round, solid dark eyes (no sparkle, no highlights, no eyelashes). A tiny closed-mouth smile: just a short, slightly upturned line. No nose, or only a tiny dot. No blush.
+- Expression: calm, polite and unblinking. Unsettling because it never changes, not because it is scary. Storybook-creepy, not horror.
+- Outfit (1890s child): a mid-grey long-sleeved dress reaching just below the knee, under a faded-white pinafore with ruffled shoulder straps and a little lace edge at the hem; dark grey stockings; small dark shoes with a strap (Mary Janes).
+- Hands: small; held stiffly at her sides or clasped in front of her.
+- She is a ghost, but draw her fully solid and opaque, feet on the ground: no transparency, no glow, no ghostly tail (transparency is added in the game).
+- No props, no jewellery, no other accessories unless this prompt asks for one.
+- Her twin sister Wilhelmina is identical, with the bow on the other side. The game makes Wilhelmina by mirroring Frida, so draw Frida ONLY, one girl per cell.
+
+PALETTE (exact hex, use nothing else):
+- Outline, hatching and eyes: #1A1020
+- Hair: #26232B (shadow), #3A3740 (base), #514D5A (highlight)
+- Skin: #ADABB0 (shadow), #CFCDD1 (base)
+- Pinafore, bow, lace: #C2BFB9 (shadow), #E4E1DB (base), #F2F0EC (highlight)
+- Dress: #6F6D72 (shadow), #8D8B90 (base)
+- Stockings: #4A4752
+- Shoes: #2B2833
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere on the character.
+
+ANIMATION: Floating idle. She hovers in the air, toes pointing down, a little above the ground; her hair, bow and pinafore hem drift gently upward as if underwater. Her body bobs slowly up and down. Hands clasped in front.
+Frames, left to right:
+  1. Hovering, neutral.
+  2. 2 pixels higher, hem drifting up.
+  3. 3 pixels higher (top of the bob).
+  4. 1 pixel higher, coming back down.
+
+SPRITE SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- Exactly 1 row and 4 columns of equal cells, each cell 384x1024 pixels. One pose per cell, 4 poses in total.
+- Designed to be downscaled to 32x48 pixels per frame, so keep shapes bold and readable; each pixel should be a clearly visible square block.
+- The character fills about 60% of the cell height (she is a small child; leave the space above her empty), centred horizontally, feet near the bottom of the cell.
+- Camera: pure side view for a 2D side-scrolling platformer (not top-down, not 3/4). The character faces RIGHT in every frame.
+- Row order, top to bottom:
+  1. Facing right, side profile: the bob, fringe, big dark eye and bow clearly visible; she floats a little above the bottom of the cell.
+
+CONSISTENCY
+- Every frame shows the same character at the same size and scale, with the same proportions, face, hair, bow, outfit and colours.
+- Feet stay on the same baseline in every frame of a row except for the gentle up-and-down float of the animation, and the character stays centred in its cell.
+- Only the pose changes from frame to frame; frames read left to right as a smooth sequence.
+- Leave clear empty space around each character; nothing may touch or cross a cell border.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling the entire canvas behind the character.
+- No floor, no furniture, no wall, no ground shadow, no scenery, no frame, no grid lines, no motion lines.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-09: Twins - side-view command (send the soldiers)
+
+- **Mode:** Side-view · **Directions:** Right (Left = mirror) · **Frames:** 4
+- **Grid:** 1 row x 4 cols, 1536x1024 · **In-game size:** 32x48
+- **Attach:** twins_master.png + liam_td_walk.png · **Output:** `twins_sv_command.png`
+- **Notes:** Telegraph before each wave of tin soldiers.
+
+```
+Create a pixel-art animation sprite sheet for a 2D side-scrolling platformer (pure side view).
+
+Two reference images are attached. twins_master.png (a four-direction turnaround of THIS character, Frida) defines her DESIGN: face, hair, bow, outfit and colours. liam_td_walk.png (an approved in-game sheet of ANOTHER character, Liam) defines only the game's IN-GAME PROPORTIONS and drawing scale: use its big-head chibi style and its scale, but do not copy anything of Liam's design. Do not add any clothing, accessories or details that are not in the references or in this description.
+She is inside a magic painting (a picture-book world) where she can float.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, deadpan, spooky but comedic. Not anime, not manga, not cute-kawaii, not horror.
+- Angular, slightly irregular shapes. Nothing soft, round or glossy.
+- Thick dark outline (2 pixels, #1A1020) around the whole silhouette and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen. Rough rather than polished.
+- Flat colours with minimal shading: at most 2-3 tones per material. A few short dark hatching lines may be used for shadows (in the dress folds, under the fringe) instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no sparkle in the eyes.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow.
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+
+COLOUR CONCEPT
+- Almost monochrome: faded whites and soft greys, like porcelain or a faded old photograph. No colour anywhere on her: no pink cheeks, no coloured ribbons, no coloured eyes.
+
+PROPORTIONS (in-game sprite, the game's chibi style as in liam_td_walk.png)
+- Big head for readability: the head (including hair and bow, not counting the top of the bow) is about 40-45% of the total height.
+- Small child: she is about 75% as tall as Liam in liam_td_walk.png; draw her at the same scale as Liam (do not enlarge her to fill the cell).
+- Short body and short thin legs, stiff doll-like posture.
+
+CHARACTER: Frida, one of the Twins: the ghost of a little girl (about 8 years old) from the 1890s
+- Hair: straight, dark grey, chin-length bob with a blunt straight fringe cut just above the eyebrows. One big simple shape, not many strands.
+- Bow: ONE big faded-white ribbon bow on top of the head, sitting toward her LEFT side (the right side of the image when she faces the viewer). The bow is how players tell the twins apart, so it must be large and clearly visible from every direction.
+- Face: pale grey skin. Very big, round, solid dark eyes (no sparkle, no highlights, no eyelashes). A tiny closed-mouth smile: just a short, slightly upturned line. No nose, or only a tiny dot. No blush.
+- Expression: calm, polite and unblinking. Unsettling because it never changes, not because it is scary. Storybook-creepy, not horror.
+- Outfit (1890s child): a mid-grey long-sleeved dress reaching just below the knee, under a faded-white pinafore with ruffled shoulder straps and a little lace edge at the hem; dark grey stockings; small dark shoes with a strap (Mary Janes).
+- Hands: small; held stiffly at her sides or clasped in front of her.
+- She is a ghost, but draw her fully solid and opaque, feet on the ground: no transparency, no glow, no ghostly tail (transparency is added in the game).
+- No props, no jewellery, no other accessories unless this prompt asks for one.
+- Her twin sister Wilhelmina is identical, with the bow on the other side. The game makes Wilhelmina by mirroring Frida, so draw Frida ONLY, one girl per cell.
+
+PALETTE (exact hex, use nothing else):
+- Outline, hatching and eyes: #1A1020
+- Hair: #26232B (shadow), #3A3740 (base), #514D5A (highlight)
+- Skin: #ADABB0 (shadow), #CFCDD1 (base)
+- Pinafore, bow, lace: #C2BFB9 (shadow), #E4E1DB (base), #F2F0EC (highlight)
+- Dress: #6F6D72 (shadow), #8D8B90 (base)
+- Stockings: #4A4752
+- Shoes: #2B2833
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere on the character.
+
+ANIMATION: Command the toy army. Still floating, she raises one arm high, then sweeps it forward and points to the right like a tiny general, mouth open in a small round "o" (calling "March!").
+Frames, left to right:
+  1. Floating, hands clasped.
+  2. Right arm raised straight up.
+  3. Arm sweeping forward, mouth open in a small "o".
+  4. Arm pointing straight ahead to the right, chin up (hold frame).
+
+SPRITE SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- Exactly 1 row and 4 columns of equal cells, each cell 384x1024 pixels. One pose per cell, 4 poses in total.
+- Designed to be downscaled to 32x48 pixels per frame, so keep shapes bold and readable; each pixel should be a clearly visible square block.
+- The character fills about 60% of the cell height (she is a small child; leave the space above her empty), centred horizontally, feet near the bottom of the cell.
+- Camera: pure side view for a 2D side-scrolling platformer (not top-down, not 3/4). The character faces RIGHT in every frame.
+- Row order, top to bottom:
+  1. Facing right, side profile: the bob, fringe, big dark eye and bow clearly visible; she floats a little above the bottom of the cell.
+
+CONSISTENCY
+- Every frame shows the same character at the same size and scale, with the same proportions, face, hair, bow, outfit and colours.
+- Feet stay on the same baseline in every frame of a row (she floats), and the character stays centred in its cell.
+- Only the pose changes from frame to frame; frames read left to right as a smooth sequence.
+- Leave clear empty space around each character; nothing may touch or cross a cell border.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling the entire canvas behind the character.
+- No floor, no furniture, no wall, no ground shadow, no scenery, no frame, no grid lines, no motion lines.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-10: Twins - side-view throw toy
+
+- **Mode:** Side-view · **Directions:** Right (Left = mirror) · **Frames:** 4
+- **Grid:** 1 row x 4 cols, 1536x1024 · **In-game size:** 32x48
+- **Attach:** twins_master.png + liam_td_walk.png · **Output:** `twins_sv_throw.png`
+- **Notes:** The toy (block, ball, top, jack) spawns at frame 3 from TWN-14.
+
+```
+Create a pixel-art animation sprite sheet for a 2D side-scrolling platformer (pure side view).
+
+Two reference images are attached. twins_master.png (a four-direction turnaround of THIS character, Frida) defines her DESIGN: face, hair, bow, outfit and colours. liam_td_walk.png (an approved in-game sheet of ANOTHER character, Liam) defines only the game's IN-GAME PROPORTIONS and drawing scale: use its big-head chibi style and its scale, but do not copy anything of Liam's design. Do not add any clothing, accessories or details that are not in the references or in this description.
+She is inside a magic painting (a picture-book world) where she can float.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, deadpan, spooky but comedic. Not anime, not manga, not cute-kawaii, not horror.
+- Angular, slightly irregular shapes. Nothing soft, round or glossy.
+- Thick dark outline (2 pixels, #1A1020) around the whole silhouette and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen. Rough rather than polished.
+- Flat colours with minimal shading: at most 2-3 tones per material. A few short dark hatching lines may be used for shadows (in the dress folds, under the fringe) instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no sparkle in the eyes.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow.
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+
+COLOUR CONCEPT
+- Almost monochrome: faded whites and soft greys, like porcelain or a faded old photograph. No colour anywhere on her: no pink cheeks, no coloured ribbons, no coloured eyes.
+
+PROPORTIONS (in-game sprite, the game's chibi style as in liam_td_walk.png)
+- Big head for readability: the head (including hair and bow, not counting the top of the bow) is about 40-45% of the total height.
+- Small child: she is about 75% as tall as Liam in liam_td_walk.png; draw her at the same scale as Liam (do not enlarge her to fill the cell).
+- Short body and short thin legs, stiff doll-like posture.
+
+CHARACTER: Frida, one of the Twins: the ghost of a little girl (about 8 years old) from the 1890s
+- Hair: straight, dark grey, chin-length bob with a blunt straight fringe cut just above the eyebrows. One big simple shape, not many strands.
+- Bow: ONE big faded-white ribbon bow on top of the head, sitting toward her LEFT side (the right side of the image when she faces the viewer). The bow is how players tell the twins apart, so it must be large and clearly visible from every direction.
+- Face: pale grey skin. Very big, round, solid dark eyes (no sparkle, no highlights, no eyelashes). A tiny closed-mouth smile: just a short, slightly upturned line. No nose, or only a tiny dot. No blush.
+- Expression: calm, polite and unblinking. Unsettling because it never changes, not because it is scary. Storybook-creepy, not horror.
+- Outfit (1890s child): a mid-grey long-sleeved dress reaching just below the knee, under a faded-white pinafore with ruffled shoulder straps and a little lace edge at the hem; dark grey stockings; small dark shoes with a strap (Mary Janes).
+- Hands: small; held stiffly at her sides or clasped in front of her.
+- She is a ghost, but draw her fully solid and opaque, feet on the ground: no transparency, no glow, no ghostly tail (transparency is added in the game).
+- No props, no jewellery, no other accessories unless this prompt asks for one.
+- Her twin sister Wilhelmina is identical, with the bow on the other side. The game makes Wilhelmina by mirroring Frida, so draw Frida ONLY, one girl per cell.
+
+PALETTE (exact hex, use nothing else):
+- Outline, hatching and eyes: #1A1020
+- Hair: #26232B (shadow), #3A3740 (base), #514D5A (highlight)
+- Skin: #ADABB0 (shadow), #CFCDD1 (base)
+- Pinafore, bow, lace: #C2BFB9 (shadow), #E4E1DB (base), #F2F0EC (highlight)
+- Dress: #6F6D72 (shadow), #8D8B90 (base)
+- Stockings: #4A4752
+- Shoes: #2B2833
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere on the character.
+
+ANIMATION: Throw a toy. Floating, she reaches back, then throws overarm to the right. Her hands are EMPTY in every frame: the toy is a separate sprite added by the game.
+Frames, left to right:
+  1. Floating, reaching back with her right arm, leaning back.
+  2. Arm high behind her head.
+  3. Arm swinging forward at full stretch (the release).
+  4. Follow-through, arm down in front, leaning forward.
+
+SPRITE SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- Exactly 1 row and 4 columns of equal cells, each cell 384x1024 pixels. One pose per cell, 4 poses in total.
+- Designed to be downscaled to 32x48 pixels per frame, so keep shapes bold and readable; each pixel should be a clearly visible square block.
+- The character fills about 60% of the cell height (she is a small child; leave the space above her empty), centred horizontally, feet near the bottom of the cell.
+- Camera: pure side view for a 2D side-scrolling platformer (not top-down, not 3/4). The character faces RIGHT in every frame.
+- Row order, top to bottom:
+  1. Facing right, side profile: the bob, fringe, big dark eye and bow clearly visible; she floats a little above the bottom of the cell.
+
+CONSISTENCY
+- Every frame shows the same character at the same size and scale, with the same proportions, face, hair, bow, outfit and colours.
+- Feet stay on the same baseline in every frame of a row (she floats), and the character stays centred in its cell.
+- Only the pose changes from frame to frame; frames read left to right as a smooth sequence.
+- Leave clear empty space around each character; nothing may touch or cross a cell border.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling the entire canvas behind the character.
+- No floor, no furniture, no wall, no ground shadow, no scenery, no frame, no grid lines, no motion lines.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-11: Twins - side-view tagged
+
+- **Mode:** Side-view · **Directions:** Right (Left = mirror) · **Frames:** 3
+- **Grid:** 1 row x 3 cols, 1536x1024 · **In-game size:** 32x48
+- **Attach:** twins_master.png + liam_td_walk.png · **Output:** `twins_sv_tagged.png`
+- **Notes:** Win condition: tag both twins. The giggle shows the fight is a game to them.
+
+```
+Create a pixel-art animation sprite sheet for a 2D side-scrolling platformer (pure side view).
+
+Two reference images are attached. twins_master.png (a four-direction turnaround of THIS character, Frida) defines her DESIGN: face, hair, bow, outfit and colours. liam_td_walk.png (an approved in-game sheet of ANOTHER character, Liam) defines only the game's IN-GAME PROPORTIONS and drawing scale: use its big-head chibi style and its scale, but do not copy anything of Liam's design. Do not add any clothing, accessories or details that are not in the references or in this description.
+She is inside a magic painting (a picture-book world) where she can float.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, deadpan, spooky but comedic. Not anime, not manga, not cute-kawaii, not horror.
+- Angular, slightly irregular shapes. Nothing soft, round or glossy.
+- Thick dark outline (2 pixels, #1A1020) around the whole silhouette and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen. Rough rather than polished.
+- Flat colours with minimal shading: at most 2-3 tones per material. A few short dark hatching lines may be used for shadows (in the dress folds, under the fringe) instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no sparkle in the eyes.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow.
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+
+COLOUR CONCEPT
+- Almost monochrome: faded whites and soft greys, like porcelain or a faded old photograph. No colour anywhere on her: no pink cheeks, no coloured ribbons, no coloured eyes.
+
+PROPORTIONS (in-game sprite, the game's chibi style as in liam_td_walk.png)
+- Big head for readability: the head (including hair and bow, not counting the top of the bow) is about 40-45% of the total height.
+- Small child: she is about 75% as tall as Liam in liam_td_walk.png; draw her at the same scale as Liam (do not enlarge her to fill the cell).
+- Short body and short thin legs, stiff doll-like posture.
+
+CHARACTER: Frida, one of the Twins: the ghost of a little girl (about 8 years old) from the 1890s
+- Hair: straight, dark grey, chin-length bob with a blunt straight fringe cut just above the eyebrows. One big simple shape, not many strands.
+- Bow: ONE big faded-white ribbon bow on top of the head, sitting toward her LEFT side (the right side of the image when she faces the viewer). The bow is how players tell the twins apart, so it must be large and clearly visible from every direction.
+- Face: pale grey skin. Very big, round, solid dark eyes (no sparkle, no highlights, no eyelashes). A tiny closed-mouth smile: just a short, slightly upturned line. No nose, or only a tiny dot. No blush.
+- Expression: calm, polite and unblinking. Unsettling because it never changes, not because it is scary. Storybook-creepy, not horror.
+- Outfit (1890s child): a mid-grey long-sleeved dress reaching just below the knee, under a faded-white pinafore with ruffled shoulder straps and a little lace edge at the hem; dark grey stockings; small dark shoes with a strap (Mary Janes).
+- Hands: small; held stiffly at her sides or clasped in front of her.
+- She is a ghost, but draw her fully solid and opaque, feet on the ground: no transparency, no glow, no ghostly tail (transparency is added in the game).
+- No props, no jewellery, no other accessories unless this prompt asks for one.
+- Her twin sister Wilhelmina is identical, with the bow on the other side. The game makes Wilhelmina by mirroring Frida, so draw Frida ONLY, one girl per cell.
+
+PALETTE (exact hex, use nothing else):
+- Outline, hatching and eyes: #1A1020
+- Hair: #26232B (shadow), #3A3740 (base), #514D5A (highlight)
+- Skin: #ADABB0 (shadow), #CFCDD1 (base)
+- Pinafore, bow, lace: #C2BFB9 (shadow), #E4E1DB (base), #F2F0EC (highlight)
+- Dress: #6F6D72 (shadow), #8D8B90 (base)
+- Stockings: #4A4752
+- Shoes: #2B2833
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere on the character.
+
+ANIMATION: Tagged. Liam touches her: she jolts, eyes even wider, arms flung up, then dissolves into a giggle with a hand over her mouth.
+Frames, left to right:
+  1. Startled: arms up, eyes wide, bow and hair flicked up.
+  2. Tumbling backward a little, still floating.
+  3. Giggling: hand over her mouth, eyes squeezed into happy curves.
+
+SPRITE SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- Exactly 1 row and 3 columns of equal cells, each cell 512x1024 pixels. One pose per cell, 3 poses in total.
+- Designed to be downscaled to 32x48 pixels per frame, so keep shapes bold and readable; each pixel should be a clearly visible square block.
+- The character fills about 60% of the cell height (she is a small child; leave the space above her empty), centred horizontally, feet near the bottom of the cell.
+- Camera: pure side view for a 2D side-scrolling platformer (not top-down, not 3/4). The character faces RIGHT in every frame.
+- Row order, top to bottom:
+  1. Facing right, side profile: the bob, fringe, big dark eye and bow clearly visible; she floats a little above the bottom of the cell.
+
+CONSISTENCY
+- Every frame shows the same character at the same size and scale, with the same proportions, face, hair, bow, outfit and colours.
+- Feet stay on the same baseline in every frame of a row (she floats), and the character stays centred in its cell.
+- Only the pose changes from frame to frame; frames read left to right as a smooth sequence.
+- Leave clear empty space around each character; nothing may touch or cross a cell border.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling the entire canvas behind the character.
+- No floor, no furniture, no wall, no ground shadow, no scenery, no frame, no grid lines, no motion lines.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-12: Toy army - tin soldier (march, lunge, knocked over)
+
+- **Mode:** Side-view · **Directions:** Right (Left = mirror) · **Frames:** 12
+- **Grid:** 2 rows x 6 cols, 1536x1024 · **In-game size:** 24x32 (32x32 frame)
+- **Attach:** liam_master.png (style only) · **Output:** `toy_soldier.png`
+- **Notes:** Main wave enemy of the toy-army fight. One cape swipe knocks him over; he lies still, then winds himself back up (reverse row 2, frames 6-4) unless Liam moves on. Speeds and counts in config.json.
+
+```
+Create a pixel-art animation sprite sheet for a 2D side-scrolling platformer (pure side view): an enemy for a boss fight inside a magic picture-book painting.
+
+A reference image (liam_master.png, the game's main character) is attached ONLY as a style reference. Match its art style, line work, outline thickness and shading approach. Do NOT draw that character or anything from his design.
+
+STYLE
+- The inside of an old Victorian children's picture book, translated into pixel art: a hand-inked storybook illustration with cross-hatching, printed on yellowed paper. Think Edward Gorey drawing a nursery rhyme. Whimsical and a little eerie, not horror, not cute-kawaii, not anime.
+- Everything looks like toys and paper: painted wood, tin, felt, cardboard, ink lines.
+- Slightly irregular, hand-drawn shapes. Nothing glossy.
+- Dark ink outline (#1A1020) around objects and major shapes, slightly uneven, as if drawn with a scratchy pen nib.
+- Flat colours with minimal shading: at most 2-3 tones per material. Shadows are short ink hatching lines, not smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no reflections.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow.
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+
+THE TIN SOLDIER (a wind-up toy, about 24 game pixels wide and 32 tall)
+- A classic toy soldier made of painted tin: tall black bearskin hat with a mustard chin strap, faded red coat with two rows of mustard buttons and white-paper cross belts, navy trousers with a thin red stripe, black boots.
+- A painted wooden face: round dot eyes, two round rosy-red painted cheek dots, a painted black moustache, a fixed blank expression.
+- A big brass wind-up key sticking out of his back.
+- He carries a simple toy rifle with a short blunt toy bayonet (clearly a toy: chunky, painted, no realistic detail).
+- Stiff, jointless movement: legs swing like scissors from the hip, arms barely move.
+
+PALETTE (exact hex, use nothing else):
+- Ink outline and hatching: #1A1020
+- Paper: #D3C29F (shadow), #E9DCC0 (base), #F4ECD8 (light)
+- Toy red: #7E2E2A (shadow), #A4433A (base), #C2655A (highlight)
+- Toy navy: #2C3550 (shadow), #3F4A6B (base), #5A678A (highlight)
+- Toy mustard and brass: #9C7A2C (shadow), #C29F45 (base), #DDBE6E (highlight)
+- Toy wood: #6B4A33 (shadow), #8A6142 (base), #A57A55 (highlight)
+- Felt green: #4F6648 (shadow), #6B8460 (base), #8AA27C (highlight)
+- Dapple grey: #8C857A (shadow), #B5AEA2 (base)
+- Black paint: #2A2630
+- Painted skin: #C99A7E (shadow), #E5C09F (base)
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere in the art.
+
+ANIMATION (he faces RIGHT in every frame)
+Row 1, march loop, 6 frames: stiff scissor steps, rifle held upright against the shoulder, the wind-up key turning (show the key at a different angle in each frame).
+  1. Left leg forward. 2. Legs together. 3. Right leg passing. 4. Right leg forward. 5. Legs together. 6. Left leg passing.
+Row 2, attack and defeat, 6 frames:
+  1. Stops, leans back, rifle lowered to point forward (wind-up for the lunge).
+  2. Lunges forward, toy bayonet thrust out at full stretch.
+  3. Back to standing, rifle on the shoulder.
+  4. Knocked: tilting backward stiffly like a plank, hat slipping.
+  5. Falling flat on his back, legs still straight.
+  6. Lying flat on his back, rifle beside him, the key still sticking up.
+
+SPRITE SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- Exactly 2 rows and 6 columns of equal cells, each cell 256x512 pixels. One pose per cell, 12 poses in total.
+- Designed to be downscaled to 32x32 pixels per frame (the soldier is about 24x32 game pixels standing), so keep shapes bold and readable; each pixel should be a clearly visible square block.
+- The standing soldier fills about 70% of the cell height, centred horizontally, feet near the bottom of the cell. The lying poses lie along the bottom of the cell.
+- Camera: pure side view for a 2D side-scrolling platformer (not top-down, not 3/4).
+- Same size and scale in every frame; feet on the same baseline; nothing may touch or cross a cell border.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling every part of the canvas that is not art.
+- No scenery beyond what is described, no frame, no grid lines, no labels, no ground shadow.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-13: Toy army - rocking horse (rock, charge, topple)
+
+- **Mode:** Side-view · **Directions:** Right (Left = mirror) · **Frames:** 8
+- **Grid:** 2 rows x 4 cols, 1536x1024 · **In-game size:** 64x48
+- **Attach:** liam_master.png (style only) · **Output:** `toy_rockinghorse.png`
+- **Notes:** Mini-boss between soldier waves: rocks, then charges across the arena. Jump over it; when it lands hard, it can topple (stunned window).
+
+```
+Create a pixel-art animation sprite sheet for a 2D side-scrolling platformer (pure side view): a mini-boss for a boss fight inside a magic picture-book painting.
+
+A reference image (liam_master.png, the game's main character) is attached ONLY as a style reference. Match its art style, line work, outline thickness and shading approach. Do NOT draw that character or anything from his design.
+
+STYLE
+- The inside of an old Victorian children's picture book, translated into pixel art: a hand-inked storybook illustration with cross-hatching, printed on yellowed paper. Think Edward Gorey drawing a nursery rhyme. Whimsical and a little eerie, not horror, not cute-kawaii, not anime.
+- Everything looks like toys and paper: painted wood, tin, felt, cardboard, ink lines.
+- Slightly irregular, hand-drawn shapes. Nothing glossy.
+- Dark ink outline (#1A1020) around objects and major shapes, slightly uneven, as if drawn with a scratchy pen nib.
+- Flat colours with minimal shading: at most 2-3 tones per material. Shadows are short ink hatching lines, not smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no reflections.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow.
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+
+THE ROCKING HORSE
+- A big old wooden rocking horse painted dapple grey (round grey spots), on two long curved wooden rockers.
+- Dark grey yarn mane and tail (#2A2630 and the dapple shadow), a faded red saddle and bridle with mustard trim and a small brass stirrup.
+- Painted face: round staring eyes with a dark dot, flared nostrils, a fixed toothy grin. Cheerful in a slightly unhinged way, not horror.
+- About 64 game pixels long and 48 tall (including the rockers).
+
+PALETTE (exact hex, use nothing else):
+- Ink outline and hatching: #1A1020
+- Paper: #D3C29F (shadow), #E9DCC0 (base), #F4ECD8 (light)
+- Toy red: #7E2E2A (shadow), #A4433A (base), #C2655A (highlight)
+- Toy navy: #2C3550 (shadow), #3F4A6B (base), #5A678A (highlight)
+- Toy mustard and brass: #9C7A2C (shadow), #C29F45 (base), #DDBE6E (highlight)
+- Toy wood: #6B4A33 (shadow), #8A6142 (base), #A57A55 (highlight)
+- Felt green: #4F6648 (shadow), #6B8460 (base), #8AA27C (highlight)
+- Dapple grey: #8C857A (shadow), #B5AEA2 (base)
+- Black paint: #2A2630
+- Painted skin: #C99A7E (shadow), #E5C09F (base)
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere in the art.
+
+ANIMATION (the horse faces RIGHT in every frame; it moves by rocking, never by walking)
+Row 1, rocking loop, 4 frames:
+  1. Level on the rockers.
+  2. Tipped forward, nose down, the back ends of the rockers in the air.
+  3. Level.
+  4. Tipped backward, nose up, the front ends of the rockers in the air.
+Row 2, charge and topple, 4 frames:
+  1. Tipped far back, winding up (front of the rockers high).
+  2. Leaping forward: the whole horse in the air, rockers flat, mane and tail streaming back.
+  3. Landing hard, tipped forward, two small puffs of paper dust at the rockers.
+  4. Toppled over on its side, rockers sticking out, eyes turned into dizzy spirals.
+
+SPRITE SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- Exactly 2 rows and 4 columns of equal cells, each cell 384x512 pixels. One pose per cell, 8 poses in total.
+- Designed to be downscaled to 64x48 pixels per frame, so keep shapes bold and readable; each pixel should be a clearly visible square block.
+- The horse fills about 85% of the cell width, centred, the rockers near the bottom of the cell (higher in the leaping frame).
+- Camera: pure side view for a 2D side-scrolling platformer (not top-down, not 3/4).
+- Same size and scale in every frame; nothing may touch or cross a cell border.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling every part of the canvas that is not art.
+- No scenery beyond what is described, no frame, no grid lines, no labels, no ground shadow.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-14: Toy army - thrown toys (blocks, ball, jack, top)
+
+- **Mode:** Side-view · **Directions:** Side · **Frames:** 6
+- **Grid:** 1 row x 6 cols, 1536x1024 · **In-game size:** 16x16
+- **Attach:** liam_master.png (style only) · **Output:** `toy_projectiles.png`
+- **Notes:** Projectiles for TWN-10. Rotation is done in code. Tops 5-6 alternate while spinning along the floor.
+
+```
+Create a pixel-art sprite sheet of small toys that are thrown as projectiles in a 2D side-scrolling platformer boss fight inside a magic picture-book painting.
+
+A reference image (liam_master.png, the game's main character) is attached ONLY as a style reference. Match its art style, line work, outline thickness and shading approach. Do NOT draw that character or anything from his design.
+
+STYLE
+- The inside of an old Victorian children's picture book, translated into pixel art: a hand-inked storybook illustration with cross-hatching, printed on yellowed paper. Think Edward Gorey drawing a nursery rhyme. Whimsical and a little eerie, not horror, not cute-kawaii, not anime.
+- Everything looks like toys and paper: painted wood, tin, felt, cardboard, ink lines.
+- Slightly irregular, hand-drawn shapes. Nothing glossy.
+- Dark ink outline (#1A1020) around objects and major shapes, slightly uneven, as if drawn with a scratchy pen nib.
+- Flat colours with minimal shading: at most 2-3 tones per material. Shadows are short ink hatching lines, not smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no reflections.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow.
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+
+PALETTE (exact hex, use nothing else):
+- Ink outline and hatching: #1A1020
+- Paper: #D3C29F (shadow), #E9DCC0 (base), #F4ECD8 (light)
+- Toy red: #7E2E2A (shadow), #A4433A (base), #C2655A (highlight)
+- Toy navy: #2C3550 (shadow), #3F4A6B (base), #5A678A (highlight)
+- Toy mustard and brass: #9C7A2C (shadow), #C29F45 (base), #DDBE6E (highlight)
+- Toy wood: #6B4A33 (shadow), #8A6142 (base), #A57A55 (highlight)
+- Felt green: #4F6648 (shadow), #6B8460 (base), #8AA27C (highlight)
+- Dapple grey: #8C857A (shadow), #B5AEA2 (base)
+- Black paint: #2A2630
+- Painted skin: #C99A7E (shadow), #E5C09F (base)
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere in the art.
+
+CONTENT: six small toys, each about 12-16 game pixels across, seen from the side.
+Cells, left to right:
+  1. A wooden toy block, faded red, with a simple painted mustard star on its face (no letters, no numbers).
+  2. A wooden toy block, navy, with a simple painted paper-white crescent moon on its face (no letters, no numbers).
+  3. A small ball, half red and half mustard, with a thin ink seam.
+  4. A metal jack (six short spikes with round tips), mustard brass.
+  5. A wooden spinning top, red and paper-white stripes, upright on its point.
+  6. The same spinning top, the stripes shifted (second spin frame).
+
+SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- One row of exactly 6 equal cells, each cell 256x1024 pixels.
+- Each toy is centred in its cell, about 200 pixels across, with plenty of empty space around it.
+- Each game pixel is a clearly visible square block of about 14x14 image pixels.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling every part of the canvas that is not art.
+- No scenery beyond what is described, no frame, no grid lines, no labels, no ground shadow.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-15: Picture-book world - platform tileset
+
+- **Mode:** Tileset (side view) · **Directions:** Side · **Frames:** 24
+- **Grid:** 4 rows x 6 cols, 1536x1024 (256 px cells) · **In-game size:** 16x16 per tile
+- **Attach:** liam_master.png (style only) · **Output:** `tiles_picturebook.png`
+- **Notes:** Side-view arena tiles. Shelves are one-way platforms. Block tiles are solid and can also be used as stacked steps.
+
+```
+Create a pixel-art tileset for a 2D side-scrolling platformer (pure side view): the inside of a magic picture-book painting of a Victorian nursery at night.
+
+A reference image (liam_master.png, the game's main character) is attached ONLY as a style reference. Match its art style, line work, outline thickness and shading approach. Do NOT draw that character or anything from his design.
+
+STYLE
+- The inside of an old Victorian children's picture book, translated into pixel art: a hand-inked storybook illustration with cross-hatching, printed on yellowed paper. Think Edward Gorey drawing a nursery rhyme. Whimsical and a little eerie, not horror, not cute-kawaii, not anime.
+- Everything looks like toys and paper: painted wood, tin, felt, cardboard, ink lines.
+- Slightly irregular, hand-drawn shapes. Nothing glossy.
+- Dark ink outline (#1A1020) around objects and major shapes, slightly uneven, as if drawn with a scratchy pen nib.
+- Flat colours with minimal shading: at most 2-3 tones per material. Shadows are short ink hatching lines, not smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no reflections.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow.
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+
+PALETTE (exact hex, use nothing else):
+- Ink outline and hatching: #1A1020
+- Paper: #D3C29F (shadow), #E9DCC0 (base), #F4ECD8 (light)
+- Toy red: #7E2E2A (shadow), #A4433A (base), #C2655A (highlight)
+- Toy navy: #2C3550 (shadow), #3F4A6B (base), #5A678A (highlight)
+- Toy mustard and brass: #9C7A2C (shadow), #C29F45 (base), #DDBE6E (highlight)
+- Toy wood: #6B4A33 (shadow), #8A6142 (base), #A57A55 (highlight)
+- Felt green: #4F6648 (shadow), #6B8460 (base), #8AA27C (highlight)
+- Dapple grey: #8C857A (shadow), #B5AEA2 (base)
+- Black paint: #2A2630
+- Painted skin: #C99A7E (shadow), #E5C09F (base)
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere in the art.
+
+CONTENT: 16x16 pixel platform tiles seen from the side.
+- The ground is a giant nursery floor drawn like a book illustration: wooden boards on top (toy wood colours, ink grain lines), and below the surface the paper of the page (paper colours with sparse diagonal ink hatching).
+- SEAMLESS where pieces repeat: ground tiles tile left-right with each other and the fill tiles tile in all directions.
+- NO outline around the tile edges, except on the outer edges of platforms and blocks.
+
+TILES, left to right, row by row:
+- Row 1 (ground top, 6 tiles): left end (rounded inked edge), middle, middle with a knot, middle with a nail, right end, a single one-tile-wide pillar top.
+- Row 2 (fill and blocks, 6 tiles): paper fill plain; paper fill with more hatching; paper fill with a torn ink edge; a red toy block with a mustard star; a navy toy block with a paper-white moon; a mustard toy block with a red circle (no letters or numbers on any block).
+- Row 3 (thin shelf platforms, 6 tiles): a walnut-coloured bookshelf plank 4 pixels thick at the top of the tile: left end with a bracket, middle, right end with a bracket; then three tiles of book spines lying flat as a step (red, navy, mustard spines, no titles, no letters).
+- Row 4 (decoration, 6 tiles, magenta around the art): a felt-green tuft of crayon-scribble grass; a small drawn star; a cobweb in the top-left corner; a dangling paper streamer; a torn paper edge along the top; a pile of three tiny wooden beads.
+
+SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- A grid of exactly 6 columns and 4 rows of equal square cells, each cell 256x256 pixels, 24 tiles in total.
+- Rows 1-3: every cell is completely filled edge to edge by its tile, except where a piece is thinner than the tile (shelf planks, pillar top, ends): fill the rest of those cells with magenta.
+- Row 4: decorations on magenta.
+- Each cell is ONE game tile drawn hugely enlarged: every game pixel is a clearly visible square block of 16x16 image pixels, aligned to a strict grid. Keep shapes bold and simple; the tile is downscaled to its in-game size.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling every part of the canvas that is not art.
+- No scenery beyond what is described, no frame, no grid lines, no labels, no ground shadow.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-16: Picture-book world - far background (moonlit nursery window)
+
+- **Mode:** Background · **Directions:** Side · **Frames:** 1
+- **Grid:** Full canvas, 1536x1024 · **In-game size:** 768x512 (parallax, larger than the 640x360 screen)
+- **Attach:** liam_master.png (style only) · **Output:** `bg_picturebook_far.png`
+- **Notes:** Slow parallax layer. Processed with fit to 768 wide. Keep it low-contrast; check readability with Liam and the soldiers on top in the sandbox.
+
+```
+Create a pixel-art background for a 2D side-scrolling platformer level: the far background inside a magic picture-book painting of a Victorian nursery at night.
+
+A reference image (liam_master.png, the game's main character) is attached ONLY as a style reference. Match its art style, line work, outline thickness and shading approach. Do NOT draw that character or anything from his design.
+
+STYLE
+- The inside of an old Victorian children's picture book, translated into pixel art: a hand-inked storybook illustration with cross-hatching, printed on yellowed paper. Think Edward Gorey drawing a nursery rhyme. Whimsical and a little eerie, not horror, not cute-kawaii, not anime.
+- Everything looks like toys and paper: painted wood, tin, felt, cardboard, ink lines.
+- Slightly irregular, hand-drawn shapes. Nothing glossy.
+- Dark ink outline (#1A1020) around objects and major shapes, slightly uneven, as if drawn with a scratchy pen nib.
+- Flat colours with minimal shading: at most 2-3 tones per material. Shadows are short ink hatching lines, not smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no reflections.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow.
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+
+PALETTE (exact hex, use nothing else):
+- Ink outline and hatching: #1A1020
+- Paper: #D3C29F (shadow), #E9DCC0 (base), #F4ECD8 (light)
+- Toy red: #7E2E2A (shadow), #A4433A (base), #C2655A (highlight)
+- Toy navy: #2C3550 (shadow), #3F4A6B (base), #5A678A (highlight)
+- Toy mustard and brass: #9C7A2C (shadow), #C29F45 (base), #DDBE6E (highlight)
+- Toy wood: #6B4A33 (shadow), #8A6142 (base), #A57A55 (highlight)
+- Felt green: #4F6648 (shadow), #6B8460 (base), #8AA27C (highlight)
+- Dapple grey: #8C857A (shadow), #B5AEA2 (base)
+- Black paint: #2A2630
+- Painted skin: #C99A7E (shadow), #E5C09F (base)
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere in the art.
+
+CONTENT: a full-width backdrop drawn as a picture-book illustration, seen from the side at a small child's height.
+- A huge, tall arched nursery window in the centre with a big round pale-paper moon behind thin navy clouds.
+- Around it, faded paper-coloured wallpaper with a simple repeating pattern of small navy stars, drawn in ink.
+- Heavy curtains on both sides of the window drawn with ink hatching, in faded red.
+- The bottom fifth is an empty, flat paper-coloured band (gameplay platforms go there).
+- Low contrast and calm: this is a background, it must not compete with the characters. Use mostly the paper and navy colours, very little red and mustard.
+- No characters, no toys in the foreground, no furniture.
+
+SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape. The art fills the WHOLE canvas edge to edge.
+- Drawn as pixel art with clearly visible chunky square pixels (each about 2x2 image pixels: the image is downscaled to 768x512 game pixels).
+- The left and right edges must match so the background can repeat horizontally (seamless left-right).
+
+BACKGROUND
+- No magenta: the art fills the whole canvas.
+- No frame, no border, no grid lines.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-17: Picture-book world - mid layer (giant toys)
+
+- **Mode:** Background · **Directions:** Side · **Frames:** 1
+- **Grid:** Full canvas, 1536x1024 · **In-game size:** 768x512 (parallax)
+- **Attach:** liam_master.png (style only) · **Output:** `bg_picturebook_mid.png`
+- **Notes:** Middle parallax layer, magenta = transparent. Nice to have: the level works with the far background alone.
+
+```
+Create a pixel-art parallax layer for a 2D side-scrolling platformer level: the middle layer inside a magic picture-book painting of a Victorian nursery at night.
+
+A reference image (liam_master.png, the game's main character) is attached ONLY as a style reference. Match its art style, line work, outline thickness and shading approach. Do NOT draw that character or anything from his design.
+
+STYLE
+- The inside of an old Victorian children's picture book, translated into pixel art: a hand-inked storybook illustration with cross-hatching, printed on yellowed paper. Think Edward Gorey drawing a nursery rhyme. Whimsical and a little eerie, not horror, not cute-kawaii, not anime.
+- Everything looks like toys and paper: painted wood, tin, felt, cardboard, ink lines.
+- Slightly irregular, hand-drawn shapes. Nothing glossy.
+- Dark ink outline (#1A1020) around objects and major shapes, slightly uneven, as if drawn with a scratchy pen nib.
+- Flat colours with minimal shading: at most 2-3 tones per material. Shadows are short ink hatching lines, not smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no reflections.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow.
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+
+PALETTE (exact hex, use nothing else):
+- Ink outline and hatching: #1A1020
+- Paper: #D3C29F (shadow), #E9DCC0 (base), #F4ECD8 (light)
+- Toy red: #7E2E2A (shadow), #A4433A (base), #C2655A (highlight)
+- Toy navy: #2C3550 (shadow), #3F4A6B (base), #5A678A (highlight)
+- Toy mustard and brass: #9C7A2C (shadow), #C29F45 (base), #DDBE6E (highlight)
+- Toy wood: #6B4A33 (shadow), #8A6142 (base), #A57A55 (highlight)
+- Felt green: #4F6648 (shadow), #6B8460 (base), #8AA27C (highlight)
+- Dapple grey: #8C857A (shadow), #B5AEA2 (base)
+- Black paint: #2A2630
+- Painted skin: #C99A7E (shadow), #E5C09F (base)
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere in the art.
+
+CONTENT: a row of giant toys standing along the bottom of the image, seen from the side, drawn as a picture-book illustration:
+- From left to right: a tall stack of wooden toy blocks (no letters), a big toy drum with mustard rims, a sitting teddy bear with a button eye missing, a toy sailing ship on wheels, a jack-in-the-box with the lid open and the jester bent over the edge, a stack of picture books (no titles).
+- All of them stand on the bottom edge of the image and reach between 40% and 70% of the image height.
+- Muted and a little darker than the gameplay layer: mostly navy and paper tones with only touches of red and mustard, so the characters in front stay readable.
+- Everything above the toys is magenta (transparent in the game).
+
+SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- Drawn as pixel art with clearly visible chunky square pixels (each about 2x2 image pixels: the image is downscaled to 768x512 game pixels).
+- The toys sit on the bottom edge; the left and right ends must join seamlessly so the layer can repeat horizontally.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling every part of the canvas that is not art.
+- No scenery beyond what is described, no frame, no grid lines, no labels, no ground shadow.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-18: Picture-book world - toy fort (arena)
+
+- **Mode:** Side-view prop · **Directions:** Side · **Frames:** 2
+- **Grid:** 1 row x 2 cols, 1536x1024 · **In-game size:** 128x96
+- **Attach:** liam_master.png (style only) · **Output:** `prop_toyfort.png`
+- **Notes:** Arena centrepiece: the tower tops and the wall walkway are platforms (collision in code). Frame 2 after the fight.
+
+```
+Create a pixel-art sprite sheet of a toy fort for a 2D side-scrolling platformer boss arena inside a magic picture-book painting.
+
+A reference image (liam_master.png, the game's main character) is attached ONLY as a style reference. Match its art style, line work, outline thickness and shading approach. Do NOT draw that character or anything from his design.
+
+STYLE
+- The inside of an old Victorian children's picture book, translated into pixel art: a hand-inked storybook illustration with cross-hatching, printed on yellowed paper. Think Edward Gorey drawing a nursery rhyme. Whimsical and a little eerie, not horror, not cute-kawaii, not anime.
+- Everything looks like toys and paper: painted wood, tin, felt, cardboard, ink lines.
+- Slightly irregular, hand-drawn shapes. Nothing glossy.
+- Dark ink outline (#1A1020) around objects and major shapes, slightly uneven, as if drawn with a scratchy pen nib.
+- Flat colours with minimal shading: at most 2-3 tones per material. Shadows are short ink hatching lines, not smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no reflections.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow.
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+
+PALETTE (exact hex, use nothing else):
+- Ink outline and hatching: #1A1020
+- Paper: #D3C29F (shadow), #E9DCC0 (base), #F4ECD8 (light)
+- Toy red: #7E2E2A (shadow), #A4433A (base), #C2655A (highlight)
+- Toy navy: #2C3550 (shadow), #3F4A6B (base), #5A678A (highlight)
+- Toy mustard and brass: #9C7A2C (shadow), #C29F45 (base), #DDBE6E (highlight)
+- Toy wood: #6B4A33 (shadow), #8A6142 (base), #A57A55 (highlight)
+- Felt green: #4F6648 (shadow), #6B8460 (base), #8AA27C (highlight)
+- Dapple grey: #8C857A (shadow), #B5AEA2 (base)
+- Black paint: #2A2630
+- Painted skin: #C99A7E (shadow), #E5C09F (base)
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere in the art.
+
+CONTENT: a big wooden toy fort, seen from the side, 128 game pixels wide and 96 tall.
+- Two square towers at the left and right with flat crenellated tops (the Twins stand on them), joined by a lower wall with a walkway on top and an arched gate in the middle.
+- Painted wood: faded red walls with mustard trim and edges, navy roof flags on short poles (plain triangles, no symbols), ink lines for the planks.
+- Small square windows (dark navy), a wind-up key on the side of one tower (it is a toy).
+
+FRAMES, left to right:
+  1. Intact.
+  2. Battered after the fight: the right tower leaning a little, one flag bent, a few planks hanging loose, the gate open.
+
+SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- One row of exactly 2 equal cells, each cell 768x1024 pixels.
+- In both cells the fort is the same size (640x480 image pixels = 128x96 game pixels) and in the same position: centred horizontally, its base 160 pixels above the bottom of the cell.
+- Each game pixel is a clearly visible square block of 5x5 image pixels.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling every part of the canvas that is not art.
+- No scenery beyond what is described, no frame, no grid lines, no labels, no ground shadow.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-19: Nursery - wall face strips + wall caps
+
+- **Mode:** Tileset · **Directions:** Front (wall), top (caps) · **Frames:** 12
+- **Grid:** 6 strips 256x768 + 6 cells 256x256, 1536x1024 · **In-game size:** 16x48 strips, 16x16 caps
+- **Attach:** liam_master.png (style only) · **Output:** `tiles_wall_nursery.png`
+- **Notes:** Same layout as MAN-02, so it drops into the room code. The floor reuses the oak tiles (MAN-01). Height marks are a quiet clue: two identical marks side by side.
+
+```
+Create a pixel-art tileset of interior wall pieces for a top-down 2D game (3/4 view): the wall of a Victorian nursery.
+
+A reference image (liam_master.png, the game's main character) is attached ONLY as a style reference. Match its art style, line work, outline thickness and shading approach. Do NOT draw that character or anything from his design.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, spooky but cosy. Not anime, not cute-kawaii, not horror.
+- Setting: an old Victorian mansion in faded grandeur: once beautiful, now dusty, a few cobwebs and peeling corners, but intact. Not ruined, not broken.
+- Slightly irregular, hand-drawn shapes. Nothing glossy.
+- Dark outline (#1A1020) around objects and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen.
+- Flat colours with minimal shading: at most 2-3 tones per material. Short dark hatching lines may be used for shadows and wood grain instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no reflections.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow, no lighting effects (lighting is added later in the game).
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+- Camera: top-down 2D game in 3/4 view (classic SNES-era RPG perspective): floors are seen from above, walls show their front face, furniture shows its top and front.
+
+PALETTE (exact hex, use nothing else):
+- Outline and hatching: #1A1020
+- Oak floor: #4A3426 (deep shadow), #6B4A33 (shadow), #8A6142 (base), #A57A55 (highlight)
+- Walnut (furniture, mouldings, skirting, frames): #3E2C22 (dark), #56402F (base), #6E5440 (highlight)
+- Nursery wallpaper, faded dusty blue: #6E7C88 (shadow and pattern), #8796A2 (base), #A3B0BA (highlight)
+- Faded rose (rug, quilts, curtains): #7E5257 (shadow), #9E6D71 (base), #BC8D8F (highlight)
+- Painted white (iron beds, dollhouse trim, linen): #C9C4BA (shadow), #E6E1D6 (base)
+- Wall top cap (seen from above): #2B2530 (base), #3A3340 (edge highlight)
+- Dust and cobwebs: #A9A39A (shadow), #CFC9BE (base)
+- Brass (handles, hinges, wind-up keys): #6E5A3A (shadow), #9C8352 (base), #C2AA72 (highlight)
+- Window glass by night: #2F3B4A (base), #45566A (light)
+- Toy red: #7E2E2A (shadow), #A4433A (base), #C2655A (highlight)
+- Toy navy: #2C3550 (shadow), #3F4A6B (base), #5A678A (highlight)
+- Toy mustard: #9C7A2C (shadow), #C29F45 (base), #DDBE6E (highlight)
+- Toy felt green: #4F6648 (shadow), #6B8460 (base)
+- Dapple grey (rocking horse): #8C857A (shadow), #B5AEA2 (base)
+- Black paint: #2A2630
+- Painted skin (toy faces): #C99A7E (shadow), #E5C09F (base)
+- Paper: #D3C29F (shadow), #E9DCC0 (base), #F4ECD8 (light)
+- Candle flame and lit windows ONLY: #FFB13B (outer), #FFE08A (core)
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere in the art.
+
+CONTENT: the back (north) wall of the nursery, seen from the front, plus the wall-top caps seen from above.
+WALL FACE STRIP (top part of the sheet): each strip is 16 pixels wide and 48 pixels tall, and from top to bottom shows:
+- 4 px crown moulding in walnut along the top.
+- 24 px faded dusty-blue wallpaper with thin vertical stripes and a small repeating pattern of tiny stars and crescent moons (pattern in #6E7C88 on #8796A2).
+- 2 px walnut picture rail.
+- 14 px painted-white (#E6E1D6, #C9C4BA) wainscot panel with a simple raised-panel shape.
+- 4 px walnut skirting board at the bottom.
+- SEAMLESS horizontally: strips tile left-to-right with each other; the stripes, pattern and mouldings continue across the left and right edges. No outline on the left and right edges.
+WALL CAPS (bottom row): 16x16 pixel tiles showing the thick top of a wall seen from directly above: a flat dark band (#2B2530) with a thin lighter edge (#3A3340) on the side facing the room.
+
+PIECES:
+- Top part, 6 wall face strips, left to right: (1) plain; (2) plain with the pattern shifted half a repeat; (3) a corner of wallpaper peeling down from the top; (4) small child's height-marks scratched on the white wainscot (short horizontal lines only, no numbers or letters); (5) a cobweb hanging from the crown moulding; (6) a faded rectangle on the wallpaper where a picture once hung.
+- Bottom row, 6 wall caps, left to right: (1) horizontal cap, room side at the bottom; (2) vertical cap, room side on the right (west wall); (3) vertical cap, room side on the left (east wall); (4) outer corner, top-left; (5) outer corner, top-right; (6) horizontal cap, room side at the top (south wall).
+
+SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- Top part: 6 columns, each 256 pixels wide and 768 pixels tall, each completely filled by one wall face strip (16x48 game pixels).
+- Bottom row: 6 square cells of 256x256 pixels, each completely filled by one wall cap tile (16x16 game pixels).
+- Each cell is ONE game tile drawn hugely enlarged: every game pixel is a clearly visible square block of 16x16 image pixels, aligned to a strict grid. Keep shapes bold and simple; the tile is downscaled to its in-game size.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling nothing: the pieces fill the whole canvas, so no magenta should be visible.
+- No scenery beyond what is described, no frame, no grid lines, no labels.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-20: Nursery - child's bed (made, someone hiding, empty)
+
+- **Mode:** Floor prop · **Directions:** 3/4 view · **Frames:** 3
+- **Grid:** 1 row x 3 cols, 1536x1024 · **In-game size:** 32x48
+- **Attach:** liam_master.png (style only) · **Output:** `prop_nursery_bed.png`
+- **Notes:** Two beds side by side, identical. Frame 2 is a hide-and-seek spot (a twin under the quilt); frame 3 after she is found.
+
+```
+Create a pixel-art sprite sheet of a child's bed for a top-down 2D game (3/4 view).
+
+A reference image (liam_master.png, the game's main character) is attached ONLY as a style reference. Match its art style, line work, outline thickness and shading approach. Do NOT draw that character or anything from his design.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, spooky but cosy. Not anime, not cute-kawaii, not horror.
+- Setting: an old Victorian mansion in faded grandeur: once beautiful, now dusty, a few cobwebs and peeling corners, but intact. Not ruined, not broken.
+- Slightly irregular, hand-drawn shapes. Nothing glossy.
+- Dark outline (#1A1020) around objects and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen.
+- Flat colours with minimal shading: at most 2-3 tones per material. Short dark hatching lines may be used for shadows and wood grain instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no reflections.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow, no lighting effects (lighting is added later in the game).
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+- Camera: top-down 2D game in 3/4 view (classic SNES-era RPG perspective): floors are seen from above, walls show their front face, furniture shows its top and front.
+
+PALETTE (exact hex, use nothing else):
+- Outline and hatching: #1A1020
+- Oak floor: #4A3426 (deep shadow), #6B4A33 (shadow), #8A6142 (base), #A57A55 (highlight)
+- Walnut (furniture, mouldings, skirting, frames): #3E2C22 (dark), #56402F (base), #6E5440 (highlight)
+- Nursery wallpaper, faded dusty blue: #6E7C88 (shadow and pattern), #8796A2 (base), #A3B0BA (highlight)
+- Faded rose (rug, quilts, curtains): #7E5257 (shadow), #9E6D71 (base), #BC8D8F (highlight)
+- Painted white (iron beds, dollhouse trim, linen): #C9C4BA (shadow), #E6E1D6 (base)
+- Wall top cap (seen from above): #2B2530 (base), #3A3340 (edge highlight)
+- Dust and cobwebs: #A9A39A (shadow), #CFC9BE (base)
+- Brass (handles, hinges, wind-up keys): #6E5A3A (shadow), #9C8352 (base), #C2AA72 (highlight)
+- Window glass by night: #2F3B4A (base), #45566A (light)
+- Toy red: #7E2E2A (shadow), #A4433A (base), #C2655A (highlight)
+- Toy navy: #2C3550 (shadow), #3F4A6B (base), #5A678A (highlight)
+- Toy mustard: #9C7A2C (shadow), #C29F45 (base), #DDBE6E (highlight)
+- Toy felt green: #4F6648 (shadow), #6B8460 (base)
+- Dapple grey (rocking horse): #8C857A (shadow), #B5AEA2 (base)
+- Black paint: #2A2630
+- Painted skin (toy faces): #C99A7E (shadow), #E5C09F (base)
+- Paper: #D3C29F (shadow), #E9DCC0 (base), #F4ECD8 (light)
+- Candle flame and lit windows ONLY: #FFB13B (outer), #FFE08A (core)
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere in the art.
+
+CONTENT: a small Victorian child's bed, 32 game pixels wide and 48 tall, seen in 3/4 view from above and in front, headboard at the top.
+- A painted-white iron bedstead with simple curved rails and round knobs on the posts, the paint a little chipped.
+- A faded-rose quilt with a simple square patchwork pattern, a white pillow, a little dust.
+
+FRAMES, left to right:
+  1. Neatly made.
+  2. A small lump under the quilt in the shape of a curled-up child (someone is hiding), the quilt pulled up over it.
+  3. The quilt thrown back toward the foot of the bed, the sheet rumpled, nobody there.
+
+SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- One row of exactly 3 equal cells, each cell 512x1024 pixels.
+- In every cell the bed is the same size (320x480 image pixels = 32x48 game pixels) and in the same position: centred horizontally, the bottom of the legs 192 pixels above the bottom of the cell.
+- Each game pixel is a clearly visible square block of 10x10 image pixels.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling every part of the canvas that is not art.
+- No scenery beyond what is described, no frame, no grid lines, no labels, no ground shadow.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-21: Nursery - dollhouse (closed, open, lit window)
+
+- **Mode:** Floor prop · **Directions:** 3/4 view · **Frames:** 3
+- **Grid:** 1 row x 3 cols, 1536x1024 · **In-game size:** 48x48
+- **Attach:** liam_master.png (style only) · **Output:** `prop_dollhouse.png`
+- **Notes:** A miniature of the mansion. Inspecting it open shows the tiny butler (an Ambrose clue). Frame 3 is a night scare: a light in a room nobody is in. Uses the shared candle-flame colours for the lit window.
+
+```
+Create a pixel-art sprite sheet of a dollhouse for a top-down 2D game (3/4 view).
+
+A reference image (liam_master.png, the game's main character) is attached ONLY as a style reference. Match its art style, line work, outline thickness and shading approach. Do NOT draw that character or anything from his design.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, spooky but cosy. Not anime, not cute-kawaii, not horror.
+- Setting: an old Victorian mansion in faded grandeur: once beautiful, now dusty, a few cobwebs and peeling corners, but intact. Not ruined, not broken.
+- Slightly irregular, hand-drawn shapes. Nothing glossy.
+- Dark outline (#1A1020) around objects and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen.
+- Flat colours with minimal shading: at most 2-3 tones per material. Short dark hatching lines may be used for shadows and wood grain instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no reflections.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow, no lighting effects (lighting is added later in the game).
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+- Camera: top-down 2D game in 3/4 view (classic SNES-era RPG perspective): floors are seen from above, walls show their front face, furniture shows its top and front.
+
+PALETTE (exact hex, use nothing else):
+- Outline and hatching: #1A1020
+- Oak floor: #4A3426 (deep shadow), #6B4A33 (shadow), #8A6142 (base), #A57A55 (highlight)
+- Walnut (furniture, mouldings, skirting, frames): #3E2C22 (dark), #56402F (base), #6E5440 (highlight)
+- Nursery wallpaper, faded dusty blue: #6E7C88 (shadow and pattern), #8796A2 (base), #A3B0BA (highlight)
+- Faded rose (rug, quilts, curtains): #7E5257 (shadow), #9E6D71 (base), #BC8D8F (highlight)
+- Painted white (iron beds, dollhouse trim, linen): #C9C4BA (shadow), #E6E1D6 (base)
+- Wall top cap (seen from above): #2B2530 (base), #3A3340 (edge highlight)
+- Dust and cobwebs: #A9A39A (shadow), #CFC9BE (base)
+- Brass (handles, hinges, wind-up keys): #6E5A3A (shadow), #9C8352 (base), #C2AA72 (highlight)
+- Window glass by night: #2F3B4A (base), #45566A (light)
+- Toy red: #7E2E2A (shadow), #A4433A (base), #C2655A (highlight)
+- Toy navy: #2C3550 (shadow), #3F4A6B (base), #5A678A (highlight)
+- Toy mustard: #9C7A2C (shadow), #C29F45 (base), #DDBE6E (highlight)
+- Toy felt green: #4F6648 (shadow), #6B8460 (base)
+- Dapple grey (rocking horse): #8C857A (shadow), #B5AEA2 (base)
+- Black paint: #2A2630
+- Painted skin (toy faces): #C99A7E (shadow), #E5C09F (base)
+- Paper: #D3C29F (shadow), #E9DCC0 (base), #F4ECD8 (light)
+- Candle flame and lit windows ONLY: #FFB13B (outer), #FFE08A (core)
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere in the art.
+
+CONTENT: a Victorian dollhouse standing on a low walnut table, 48 game pixels wide and 48 tall, seen in 3/4 view from the front and a little above.
+- It is a miniature of a gloomy Victorian mansion: a steep roof, a small tower on one side with a tiny clock face (just a cream circle, no hands, no numbers), three storeys of small windows, a front porch.
+- Walnut walls with painted-white trim, dark slate roof (#2B2530, #3A3340), dusty.
+
+FRAMES, left to right:
+  1. Front closed, windows dark (night glass colours).
+  2. Front wall swung open on a hinge to the left, showing tiny rooms inside: a tiny dining table, a tiny bed, a tiny staircase, a tiny figure of a butler with mutton-chop whiskers standing in the hall (2-3 pixels of detail, no face).
+  3. Front closed, ONE small window on the top floor lit warm (#FFB13B, #FFE08A), the others dark.
+
+SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- One row of exactly 3 equal cells, each cell 512x1024 pixels.
+- In every cell the dollhouse (with its table) is the same size (480x480 image pixels = 48x48 game pixels) and in the same position: centred horizontally, the bottom of the table legs 256 pixels above the bottom of the cell. In frame 2 the open front sticks out to the left inside the cell.
+- Each game pixel is a clearly visible square block of 10x10 image pixels.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling every part of the canvas that is not art.
+- No scenery beyond what is described, no frame, no grid lines, no labels, no ground shadow.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-22: Nursery - rocking horse (rocks by itself)
+
+- **Mode:** Floor prop · **Directions:** 3/4 view, facing left · **Frames:** 4
+- **Grid:** 1 row x 4 cols, 1536x1024 · **In-game size:** 32x32
+- **Attach:** liam_master.png (style only) · **Output:** `prop_rockinghorse.png`
+- **Notes:** Same horse as the fight's mini-boss (TWN-13). Rocking on its own with nobody on it is a first-meeting scare. Mirror in code to face right.
+
+```
+Create a pixel-art sprite sheet of a rocking horse for a top-down 2D game (3/4 view).
+
+A reference image (liam_master.png, the game's main character) is attached ONLY as a style reference. Match its art style, line work, outline thickness and shading approach. Do NOT draw that character or anything from his design.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, spooky but cosy. Not anime, not cute-kawaii, not horror.
+- Setting: an old Victorian mansion in faded grandeur: once beautiful, now dusty, a few cobwebs and peeling corners, but intact. Not ruined, not broken.
+- Slightly irregular, hand-drawn shapes. Nothing glossy.
+- Dark outline (#1A1020) around objects and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen.
+- Flat colours with minimal shading: at most 2-3 tones per material. Short dark hatching lines may be used for shadows and wood grain instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no reflections.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow, no lighting effects (lighting is added later in the game).
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+- Camera: top-down 2D game in 3/4 view (classic SNES-era RPG perspective): floors are seen from above, walls show their front face, furniture shows its top and front.
+
+THE ROCKING HORSE
+- A big old wooden rocking horse painted dapple grey (round grey spots), on two long curved wooden rockers.
+- Dark grey yarn mane and tail (#2A2630 and the dapple shadow), a faded red saddle and bridle with mustard trim and a small brass stirrup.
+- Painted face: round staring eyes with a dark dot, flared nostrils, a fixed toothy grin. Cheerful in a slightly unhinged way, not horror.
+- 32 game pixels long and 32 tall, seen in 3/4 view from the side and a little above, facing LEFT.
+
+PALETTE (exact hex, use nothing else):
+- Outline and hatching: #1A1020
+- Oak floor: #4A3426 (deep shadow), #6B4A33 (shadow), #8A6142 (base), #A57A55 (highlight)
+- Walnut (furniture, mouldings, skirting, frames): #3E2C22 (dark), #56402F (base), #6E5440 (highlight)
+- Nursery wallpaper, faded dusty blue: #6E7C88 (shadow and pattern), #8796A2 (base), #A3B0BA (highlight)
+- Faded rose (rug, quilts, curtains): #7E5257 (shadow), #9E6D71 (base), #BC8D8F (highlight)
+- Painted white (iron beds, dollhouse trim, linen): #C9C4BA (shadow), #E6E1D6 (base)
+- Wall top cap (seen from above): #2B2530 (base), #3A3340 (edge highlight)
+- Dust and cobwebs: #A9A39A (shadow), #CFC9BE (base)
+- Brass (handles, hinges, wind-up keys): #6E5A3A (shadow), #9C8352 (base), #C2AA72 (highlight)
+- Window glass by night: #2F3B4A (base), #45566A (light)
+- Toy red: #7E2E2A (shadow), #A4433A (base), #C2655A (highlight)
+- Toy navy: #2C3550 (shadow), #3F4A6B (base), #5A678A (highlight)
+- Toy mustard: #9C7A2C (shadow), #C29F45 (base), #DDBE6E (highlight)
+- Toy felt green: #4F6648 (shadow), #6B8460 (base)
+- Dapple grey (rocking horse): #8C857A (shadow), #B5AEA2 (base)
+- Black paint: #2A2630
+- Painted skin (toy faces): #C99A7E (shadow), #E5C09F (base)
+- Paper: #D3C29F (shadow), #E9DCC0 (base), #F4ECD8 (light)
+- Candle flame and lit windows ONLY: #FFB13B (outer), #FFE08A (core)
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere in the art.
+
+FRAMES, left to right (it rocks by itself):
+  1. Level on the rockers.
+  2. Tipped forward, nose down.
+  3. Level.
+  4. Tipped backward, nose up.
+
+SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- One row of exactly 4 equal cells, each cell 384x1024 pixels.
+- In every cell the horse is the same size (320x320 image pixels = 32x32 game pixels), centred horizontally, the middle of the rockers 320 pixels above the bottom of the cell.
+- Each game pixel is a clearly visible square block of 10x10 image pixels.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling every part of the canvas that is not art.
+- No scenery beyond what is described, no frame, no grid lines, no labels, no ground shadow.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-23: Nursery - toy chest (3 frames) + scattered toys
+
+- **Mode:** Floor props · **Directions:** 3/4 view · **Frames:** 8
+- **Grid:** 2 rows x 4 cols, 1536x1024 · **In-game size:** chest 32x24, toys 10-16 px
+- **Attach:** liam_master.png (style only) · **Output:** `prop_toys.png`
+- **Notes:** Process with cellcrop. Chest frame 3 rattles during the first-meeting scare; the ball rolls across the floor by itself (movement in code).
+
+```
+Create a pixel-art sprite sheet of a toy chest and small toys for a top-down 2D game (3/4 view).
+
+A reference image (liam_master.png, the game's main character) is attached ONLY as a style reference. Match its art style, line work, outline thickness and shading approach. Do NOT draw that character or anything from his design.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, spooky but cosy. Not anime, not cute-kawaii, not horror.
+- Setting: an old Victorian mansion in faded grandeur: once beautiful, now dusty, a few cobwebs and peeling corners, but intact. Not ruined, not broken.
+- Slightly irregular, hand-drawn shapes. Nothing glossy.
+- Dark outline (#1A1020) around objects and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen.
+- Flat colours with minimal shading: at most 2-3 tones per material. Short dark hatching lines may be used for shadows and wood grain instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no reflections.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow, no lighting effects (lighting is added later in the game).
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+- Camera: top-down 2D game in 3/4 view (classic SNES-era RPG perspective): floors are seen from above, walls show their front face, furniture shows its top and front.
+
+PALETTE (exact hex, use nothing else):
+- Outline and hatching: #1A1020
+- Oak floor: #4A3426 (deep shadow), #6B4A33 (shadow), #8A6142 (base), #A57A55 (highlight)
+- Walnut (furniture, mouldings, skirting, frames): #3E2C22 (dark), #56402F (base), #6E5440 (highlight)
+- Nursery wallpaper, faded dusty blue: #6E7C88 (shadow and pattern), #8796A2 (base), #A3B0BA (highlight)
+- Faded rose (rug, quilts, curtains): #7E5257 (shadow), #9E6D71 (base), #BC8D8F (highlight)
+- Painted white (iron beds, dollhouse trim, linen): #C9C4BA (shadow), #E6E1D6 (base)
+- Wall top cap (seen from above): #2B2530 (base), #3A3340 (edge highlight)
+- Dust and cobwebs: #A9A39A (shadow), #CFC9BE (base)
+- Brass (handles, hinges, wind-up keys): #6E5A3A (shadow), #9C8352 (base), #C2AA72 (highlight)
+- Window glass by night: #2F3B4A (base), #45566A (light)
+- Toy red: #7E2E2A (shadow), #A4433A (base), #C2655A (highlight)
+- Toy navy: #2C3550 (shadow), #3F4A6B (base), #5A678A (highlight)
+- Toy mustard: #9C7A2C (shadow), #C29F45 (base), #DDBE6E (highlight)
+- Toy felt green: #4F6648 (shadow), #6B8460 (base)
+- Dapple grey (rocking horse): #8C857A (shadow), #B5AEA2 (base)
+- Black paint: #2A2630
+- Painted skin (toy faces): #C99A7E (shadow), #E5C09F (base)
+- Paper: #D3C29F (shadow), #E9DCC0 (base), #F4ECD8 (light)
+- Candle flame and lit windows ONLY: #FFB13B (outer), #FFE08A (core)
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere in the art.
+
+CONTENT, eight pieces, each centred in its own cell, seen in 3/4 view from above and in front:
+Row 1:
+  1. A walnut toy chest (32x24 game pixels) with brass corners and a brass latch, lid closed.
+  2. The same chest, lid wide open, the inside dark with a few toys poking up.
+  3. The same chest, lid lifted a crack, as if something inside is pushing it (a rattling frame).
+  4. A small rag doll sitting slumped (12x16 game pixels): a faded-rose dress, a paper-white face with two button eyes (one hanging by a thread), yarn hair in black paint colour.
+Row 2:
+  5. A small ball, half toy-red and half toy-mustard (10x10 game pixels).
+  6. A little pile of three wooden toy blocks, red, navy and mustard, with simple painted shapes (star, moon, circle; no letters or numbers) (16x14 game pixels).
+  7. A tin soldier lying on his side (16x8 game pixels): black bearskin hat, faded red coat, navy trousers, brass wind-up key.
+  8. A wooden spinning top lying on its side, red and white stripes (10x10 game pixels).
+
+SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- Exactly 2 rows and 4 columns of equal cells, each cell 384x512 pixels.
+- Every game pixel is a clearly visible square block of 10x10 image pixels, in every cell (so the pieces keep their relative sizes: the chest is much bigger than the ball).
+- Each piece is centred in its cell with plenty of empty space around it; the three chest frames are the same size and in the same position.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling every part of the canvas that is not art.
+- No scenery beyond what is described, no frame, no grid lines, no labels, no ground shadow.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-24: Nursery - picture-book painting (still, portal swirl)
+
+- **Mode:** Wall prop · **Directions:** Front · **Frames:** 4
+- **Grid:** 1 row x 4 cols, 1536x1024 · **In-game size:** 48x40
+- **Attach:** liam_master.png (style only) · **Output:** `prop_painting_twins.png`
+- **Notes:** The magic door into the toy-army fight. Frames 2-4 play when the Twins drag Liam in; then the screen fades into the side-view level. Process with still_body (frame stays put, only the picture changes).
+
+```
+Create a pixel-art sprite sheet of a framed painting on a wall for a top-down 2D game (3/4 view, the wall is seen from the front).
+
+A reference image (liam_master.png, the game's main character) is attached ONLY as a style reference. Match its art style, line work, outline thickness and shading approach. Do NOT draw that character or anything from his design.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, spooky but cosy. Not anime, not cute-kawaii, not horror.
+- Setting: an old Victorian mansion in faded grandeur: once beautiful, now dusty, a few cobwebs and peeling corners, but intact. Not ruined, not broken.
+- Slightly irregular, hand-drawn shapes. Nothing glossy.
+- Dark outline (#1A1020) around objects and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen.
+- Flat colours with minimal shading: at most 2-3 tones per material. Short dark hatching lines may be used for shadows and wood grain instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no reflections.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow, no lighting effects (lighting is added later in the game).
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+- Camera: top-down 2D game in 3/4 view (classic SNES-era RPG perspective): floors are seen from above, walls show their front face, furniture shows its top and front.
+
+PALETTE (exact hex, use nothing else):
+- Outline and hatching: #1A1020
+- Oak floor: #4A3426 (deep shadow), #6B4A33 (shadow), #8A6142 (base), #A57A55 (highlight)
+- Walnut (furniture, mouldings, skirting, frames): #3E2C22 (dark), #56402F (base), #6E5440 (highlight)
+- Nursery wallpaper, faded dusty blue: #6E7C88 (shadow and pattern), #8796A2 (base), #A3B0BA (highlight)
+- Faded rose (rug, quilts, curtains): #7E5257 (shadow), #9E6D71 (base), #BC8D8F (highlight)
+- Painted white (iron beds, dollhouse trim, linen): #C9C4BA (shadow), #E6E1D6 (base)
+- Wall top cap (seen from above): #2B2530 (base), #3A3340 (edge highlight)
+- Dust and cobwebs: #A9A39A (shadow), #CFC9BE (base)
+- Brass (handles, hinges, wind-up keys): #6E5A3A (shadow), #9C8352 (base), #C2AA72 (highlight)
+- Window glass by night: #2F3B4A (base), #45566A (light)
+- Toy red: #7E2E2A (shadow), #A4433A (base), #C2655A (highlight)
+- Toy navy: #2C3550 (shadow), #3F4A6B (base), #5A678A (highlight)
+- Toy mustard: #9C7A2C (shadow), #C29F45 (base), #DDBE6E (highlight)
+- Toy felt green: #4F6648 (shadow), #6B8460 (base)
+- Dapple grey (rocking horse): #8C857A (shadow), #B5AEA2 (base)
+- Black paint: #2A2630
+- Painted skin (toy faces): #C99A7E (shadow), #E5C09F (base)
+- Paper: #D3C29F (shadow), #E9DCC0 (base), #F4ECD8 (light)
+- Candle flame and lit windows ONLY: #FFB13B (outer), #FFE08A (core)
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere in the art.
+
+CONTENT: a framed children's picture-book illustration hanging on the nursery wall, 48 game pixels wide and 40 tall including the frame.
+- A carved walnut frame with a little brass-coloured inner edge, dusty.
+- The picture: an ink-and-paper storybook scene of a small toy fort on a hill under a big pale moon, a line of tiny tin soldiers marching toward it, a rocking horse beside the fort, a navy night sky with ink-drawn stars. Paper, navy, faded red and mustard colours. No people in it.
+
+FRAMES, left to right:
+  1. The painting, still and ordinary.
+  2. The picture begins to swirl: the sky and the hill bend into a slow spiral around the fort.
+  3. Stronger spiral, the paper edges of the picture curling inward, the moon stretched into the swirl.
+  4. A full spiral of the picture's colours turning into a dark navy centre (the portal is open). The frame itself never changes.
+No glow, no light rays, no sparkles: the swirl is drawn only with the picture's own colours and ink lines.
+
+SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- One row of exactly 4 equal cells, each cell 384x1024 pixels.
+- In every cell the framed painting is the same size (336x280 image pixels = 48x40 game pixels) and in the same position: centred horizontally and vertically.
+- Each game pixel is a clearly visible square block of 7x7 image pixels.
+- The frame must be identical in all four cells; only the picture inside changes.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling every part of the canvas that is not art.
+- No scenery beyond what is described, no frame, no grid lines, no labels, no ground shadow.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-25: Nursery - oval rug
+
+- **Mode:** Floor decal · **Directions:** Top (3/4) · **Frames:** 2
+- **Grid:** 1 row x 2 cols, 1536x1024 · **In-game size:** 64x40
+- **Attach:** liam_master.png (style only) · **Output:** `prop_rug_nursery.png`
+- **Notes:** Drawn under everything (floor layer). Frame 2 after an invisible child runs over it.
+
+```
+Create a pixel-art sprite sheet of a floor rug for a top-down 2D game (3/4 view).
+
+A reference image (liam_master.png, the game's main character) is attached ONLY as a style reference. Match its art style, line work, outline thickness and shading approach. Do NOT draw that character or anything from his design.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, spooky but cosy. Not anime, not cute-kawaii, not horror.
+- Setting: an old Victorian mansion in faded grandeur: once beautiful, now dusty, a few cobwebs and peeling corners, but intact. Not ruined, not broken.
+- Slightly irregular, hand-drawn shapes. Nothing glossy.
+- Dark outline (#1A1020) around objects and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen.
+- Flat colours with minimal shading: at most 2-3 tones per material. Short dark hatching lines may be used for shadows and wood grain instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no reflections.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow, no lighting effects (lighting is added later in the game).
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+- Camera: top-down 2D game in 3/4 view (classic SNES-era RPG perspective): floors are seen from above, walls show their front face, furniture shows its top and front.
+
+PALETTE (exact hex, use nothing else):
+- Outline and hatching: #1A1020
+- Oak floor: #4A3426 (deep shadow), #6B4A33 (shadow), #8A6142 (base), #A57A55 (highlight)
+- Walnut (furniture, mouldings, skirting, frames): #3E2C22 (dark), #56402F (base), #6E5440 (highlight)
+- Nursery wallpaper, faded dusty blue: #6E7C88 (shadow and pattern), #8796A2 (base), #A3B0BA (highlight)
+- Faded rose (rug, quilts, curtains): #7E5257 (shadow), #9E6D71 (base), #BC8D8F (highlight)
+- Painted white (iron beds, dollhouse trim, linen): #C9C4BA (shadow), #E6E1D6 (base)
+- Wall top cap (seen from above): #2B2530 (base), #3A3340 (edge highlight)
+- Dust and cobwebs: #A9A39A (shadow), #CFC9BE (base)
+- Brass (handles, hinges, wind-up keys): #6E5A3A (shadow), #9C8352 (base), #C2AA72 (highlight)
+- Window glass by night: #2F3B4A (base), #45566A (light)
+- Toy red: #7E2E2A (shadow), #A4433A (base), #C2655A (highlight)
+- Toy navy: #2C3550 (shadow), #3F4A6B (base), #5A678A (highlight)
+- Toy mustard: #9C7A2C (shadow), #C29F45 (base), #DDBE6E (highlight)
+- Toy felt green: #4F6648 (shadow), #6B8460 (base)
+- Dapple grey (rocking horse): #8C857A (shadow), #B5AEA2 (base)
+- Black paint: #2A2630
+- Painted skin (toy faces): #C99A7E (shadow), #E5C09F (base)
+- Paper: #D3C29F (shadow), #E9DCC0 (base), #F4ECD8 (light)
+- Candle flame and lit windows ONLY: #FFB13B (outer), #FFE08A (core)
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere in the art.
+
+CONTENT: an oval nursery rug lying on the floor, 64 game pixels wide and 40 tall, seen from above at the 3/4 angle (so it looks slightly squashed vertically).
+- Faded rose with a simple border of two thin lines in the darker rose and a ring of small paper-white dots; a worn, lighter patch in the middle; a little dust at the edges.
+
+FRAMES, left to right:
+  1. Lying flat.
+  2. One edge kicked up into a wrinkle (someone ran across it).
+
+SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- One row of exactly 2 equal cells, each cell 768x1024 pixels.
+- In both cells the rug is the same size (640x400 image pixels = 64x40 game pixels) and in the same position: centred horizontally and vertically.
+- Each game pixel is a clearly visible square block of 10x10 image pixels.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling every part of the canvas that is not art.
+- No scenery beyond what is described, no frame, no grid lines, no labels, no ground shadow.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```
+
+### TWN-26: Guest room - wardrobe (closed, ajar with eye, open)
+
+- **Mode:** Floor prop · **Directions:** 3/4 view · **Frames:** 3
+- **Grid:** 1 row x 3 cols, 1536x1024 · **In-game size:** 32x56
+- **Attach:** liam_master.png (style only) · **Output:** `prop_wardrobe.png`
+- **Notes:** Frame 2 is a scare (a twin watching from inside). Frame 3 is the resolution: Liam hangs as a bat from the empty rail (his bat sprite, drawn by code).
+
+```
+Create a pixel-art sprite sheet of a wardrobe for a top-down 2D game (3/4 view).
+
+A reference image (liam_master.png, the game's main character) is attached ONLY as a style reference. Match its art style, line work, outline thickness and shading approach. Do NOT draw that character or anything from his design.
+
+STYLE
+- Gothic storybook style translated into pixel art: think Edward Gorey and Tim Burton illustrations. Darkly whimsical, spooky but cosy. Not anime, not cute-kawaii, not horror.
+- Setting: an old Victorian mansion in faded grandeur: once beautiful, now dusty, a few cobwebs and peeling corners, but intact. Not ruined, not broken.
+- Slightly irregular, hand-drawn shapes. Nothing glossy.
+- Dark outline (#1A1020) around objects and major shapes, slightly uneven and hand-inked looking, as if drawn with a scratchy pen.
+- Flat colours with minimal shading: at most 2-3 tones per material. Short dark hatching lines may be used for shadows and wood grain instead of smooth shading.
+- Everything is matte: no shine, no glints, no specular highlights, no reflections.
+- Crisp pixel art with hard pixel edges. No anti-aliasing, no blur, no gradients, no glow, no lighting effects (lighting is added later in the game).
+- Every pixel must be one flat colour from the palette below.
+- Light comes from the top-left.
+- Camera: top-down 2D game in 3/4 view (classic SNES-era RPG perspective): floors are seen from above, walls show their front face, furniture shows its top and front.
+
+PALETTE (exact hex, use nothing else):
+- Outline and hatching: #1A1020
+- Oak floor: #4A3426 (deep shadow), #6B4A33 (shadow), #8A6142 (base), #A57A55 (highlight)
+- Walnut (furniture, mouldings, skirting, frames): #3E2C22 (dark), #56402F (base), #6E5440 (highlight)
+- Nursery wallpaper, faded dusty blue: #6E7C88 (shadow and pattern), #8796A2 (base), #A3B0BA (highlight)
+- Faded rose (rug, quilts, curtains): #7E5257 (shadow), #9E6D71 (base), #BC8D8F (highlight)
+- Painted white (iron beds, dollhouse trim, linen): #C9C4BA (shadow), #E6E1D6 (base)
+- Wall top cap (seen from above): #2B2530 (base), #3A3340 (edge highlight)
+- Dust and cobwebs: #A9A39A (shadow), #CFC9BE (base)
+- Brass (handles, hinges, wind-up keys): #6E5A3A (shadow), #9C8352 (base), #C2AA72 (highlight)
+- Window glass by night: #2F3B4A (base), #45566A (light)
+- Toy red: #7E2E2A (shadow), #A4433A (base), #C2655A (highlight)
+- Toy navy: #2C3550 (shadow), #3F4A6B (base), #5A678A (highlight)
+- Toy mustard: #9C7A2C (shadow), #C29F45 (base), #DDBE6E (highlight)
+- Toy felt green: #4F6648 (shadow), #6B8460 (base)
+- Dapple grey (rocking horse): #8C857A (shadow), #B5AEA2 (base)
+- Black paint: #2A2630
+- Painted skin (toy faces): #C99A7E (shadow), #E5C09F (base)
+- Paper: #D3C29F (shadow), #E9DCC0 (base), #F4ECD8 (light)
+- Candle flame and lit windows ONLY: #FFB13B (outer), #FFE08A (core)
+Do not use magenta (#FF00FF) or any pink/purple close to it anywhere in the art.
+
+CONTENT: a tall Victorian walnut wardrobe standing against the back wall of a guest room, 32 game pixels wide and 56 tall, seen in 3/4 view from the front and a little above.
+- Two tall doors with simple raised panels, small brass knobs, a carved crest on top with dust on it, short feet.
+
+FRAMES, left to right:
+  1. Both doors closed.
+  2. The right door slightly ajar: a narrow dark gap (#1A1020) with ONE big round dark eye and a sliver of a faded-white bow just visible in it.
+  3. Both doors wide open: a dark interior (#1A1020, #2B2530) with an empty rail and two old coats in walnut-brown hanging at the sides, the middle of the rail empty (something will hang there).
+
+SHEET LAYOUT
+- Canvas: 1536x1024 pixels, landscape.
+- One row of exactly 3 equal cells, each cell 512x1024 pixels.
+- In every cell the wardrobe is the same size (320x560 image pixels = 32x56 game pixels) and in the same position: centred horizontally, its feet 192 pixels above the bottom of the cell. In frame 3 the open doors stick out to the sides inside the cell.
+- Each game pixel is a clearly visible square block of 10x10 image pixels.
+
+BACKGROUND
+- Solid flat magenta #FF00FF filling every part of the canvas that is not art.
+- No scenery beyond what is described, no frame, no grid lines, no labels, no ground shadow.
+
+NO TEXT: no letters, labels, numbers, captions, signatures or watermarks anywhere in the image.
+```

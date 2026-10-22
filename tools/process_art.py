@@ -394,7 +394,11 @@ def palette_from_xlsx():
     pal = {"_note": "Generated from the Palette sheet of docs/Haunted_Mansion_Art_Prompts.xlsx. Regenerate with: python3 tools/process_art.py --palette-from-xlsx",
            "groups": {"liam": groups.get("liam", []),
                       "ambrose": [outline] + groups.get("ambrose", []) + shared,
-                      "world": [outline] + groups.get("world", []) + brass + shared}}
+                      "world": [outline] + groups.get("world", []) + brass + shared,
+                      # tenants: one group per character, plus their worlds
+                      "twins": [outline] + groups.get("twins", []),
+                      "picturebook": [outline] + groups.get("picturebook", []) + shared,
+                      "nursery": [outline] + groups.get("world", []) + brass + shared + groups.get("nursery", []) + groups.get("picturebook", [])}}
     (TOOLS / "palette.json").write_text(json.dumps(pal, indent=1))
     print("palette.json refreshed:", {k: len(v) for k, v in pal["groups"].items()})
 
