@@ -1,0 +1,304 @@
+{
+  "_note": "The Twins chapter map. x = pixels from the room's left inner wall; y = pixels below the top of the floor (the bottom of a sprite). Wall props use negative y (above the floor line). frame = a frame name from the sprite manifest. solid = [half width, depth] blocks walking. spot = an id Liam can press E on (outcomes in src/game/chapter.js, lines in texts.json -> twins.spots).",
+  "start": {
+    "room": "bedroom",
+    "x": 200,
+    "y": 70
+  },
+  "rooms": {
+    "bedroom": {
+      "tilesW": 22,
+      "tilesH": 8,
+      "wall": "tiles_wall_sage",
+      "doors": [
+        {
+          "id": "landing",
+          "x": 60,
+          "to": "landing",
+          "toDoor": "bedroom"
+        }
+      ],
+      "sconces": [
+        150
+      ],
+      "window": 260,
+      "props": [
+        {
+          "id": "table",
+          "sheet": "prop_table",
+          "frame": "clean",
+          "x": 262,
+          "y": 104,
+          "solid": [
+            33,
+            18
+          ],
+          "spot": "teatable"
+        },
+        {
+          "id": "memento",
+          "kind": "memento",
+          "x": 196,
+          "y": -46
+        }
+      ]
+    },
+    "landing": {
+      "tilesW": 36,
+      "tilesH": 5,
+      "wall": "tiles_wall_sage",
+      "doors": [
+        {
+          "id": "bedroom",
+          "x": 60,
+          "to": "bedroom",
+          "toDoor": "landing"
+        },
+        {
+          "id": "nursery",
+          "x": 250,
+          "to": "nursery",
+          "toDoor": "landing"
+        },
+        {
+          "id": "guest",
+          "x": 470,
+          "to": "guest",
+          "toDoor": "landing"
+        }
+      ],
+      "sconces": [
+        150,
+        360,
+        540
+      ]
+    },
+    "nursery": {
+      "tilesW": 30,
+      "tilesH": 9,
+      "wall": "tiles_wall_nursery",
+      "wallMarksAt": 64,
+      "doors": [
+        {
+          "id": "landing",
+          "x": 46,
+          "to": "landing",
+          "toDoor": "nursery"
+        },
+        {
+          "id": "linen",
+          "x": 436,
+          "to": "linen",
+          "toDoor": "nursery"
+        }
+      ],
+      "sconces": [
+        150,
+        336
+      ],
+      "props": [
+        {
+          "id": "painting",
+          "sheet": "prop_painting_twins",
+          "frame": "still",
+          "x": 242,
+          "y": -22,
+          "wall": true,
+          "spot": "painting"
+        },
+        {
+          "id": "rug",
+          "sheet": "prop_rug_nursery",
+          "frame": "flat",
+          "x": 242,
+          "y": 104,
+          "flat": true
+        },
+        {
+          "id": "bed1",
+          "sheet": "prop_nursery_bed",
+          "frame": "made",
+          "x": 108,
+          "y": 60,
+          "solid": [
+            13,
+            30
+          ],
+          "spot": "bed1"
+        },
+        {
+          "id": "bed2",
+          "sheet": "prop_nursery_bed",
+          "frame": "hiding",
+          "x": 158,
+          "y": 60,
+          "solid": [
+            13,
+            30
+          ],
+          "spot": "bed2"
+        },
+        {
+          "id": "horse",
+          "sheet": "prop_rockinghorse",
+          "frame": "level",
+          "x": 336,
+          "y": 122,
+          "solid": [
+            14,
+            8
+          ],
+          "spot": "horse"
+        },
+        {
+          "id": "chest",
+          "sheet": "prop_toys",
+          "frame": "chest_closed",
+          "x": 392,
+          "y": 60,
+          "solid": [
+            16,
+            10
+          ],
+          "spot": "chest"
+        },
+        {
+          "id": "dollhouse",
+          "sheet": "prop_dollhouse",
+          "frame": "closed",
+          "x": 404,
+          "y": 132,
+          "solid": [
+            17,
+            10
+          ],
+          "spot": "dollhouse"
+        },
+        {
+          "id": "ragdoll",
+          "sheet": "prop_toys",
+          "frame": "rag_doll",
+          "x": 186,
+          "y": 76,
+          "hidden": true
+        },
+        {
+          "id": "ball",
+          "sheet": "prop_toys",
+          "frame": "ball",
+          "x": 286,
+          "y": 132
+        },
+        {
+          "id": "blocks",
+          "sheet": "prop_toys",
+          "frame": "blocks",
+          "x": 190,
+          "y": 126
+        },
+        {
+          "id": "soldier",
+          "sheet": "prop_toys",
+          "frame": "soldier",
+          "x": 300,
+          "y": 74
+        },
+        {
+          "id": "marks",
+          "kind": "spotOnly",
+          "x": 64,
+          "y": 8,
+          "spot": "marks"
+        }
+      ],
+      "twinsStand": [
+        [
+          226,
+          34
+        ],
+        [
+          258,
+          34
+        ]
+      ]
+    },
+    "guest": {
+      "tilesW": 24,
+      "tilesH": 8,
+      "wall": "tiles_wall_sage",
+      "doors": [
+        {
+          "id": "landing",
+          "x": 46,
+          "to": "landing",
+          "toDoor": "guest"
+        },
+        {
+          "id": "linen",
+          "x": 334,
+          "to": "linen",
+          "toDoor": "guest"
+        }
+      ],
+      "sconces": [
+        146,
+        290
+      ],
+      "window": 196,
+      "props": [
+        {
+          "id": "wardrobe",
+          "sheet": "prop_wardrobe",
+          "frame": "ajar",
+          "x": 118,
+          "y": 14,
+          "solid": [
+            17,
+            12
+          ],
+          "spot": "wardrobe"
+        },
+        {
+          "id": "gbed",
+          "sheet": "prop_nursery_bed",
+          "frame": "made",
+          "x": 262,
+          "y": 92,
+          "solid": [
+            13,
+            30
+          ],
+          "spot": "underbed"
+        }
+      ]
+    },
+    "linen": {
+      "tilesW": 10,
+      "tilesH": 5,
+      "wall": "tiles_wall_sage",
+      "doors": [
+        {
+          "id": "nursery",
+          "x": 34,
+          "to": "nursery",
+          "toDoor": "linen"
+        },
+        {
+          "id": "guest",
+          "x": 126,
+          "to": "guest",
+          "toDoor": "linen"
+        }
+      ],
+      "props": [
+        {
+          "id": "shelves",
+          "kind": "shelves",
+          "x": 80,
+          "y": -20,
+          "spot": "linens"
+        }
+      ]
+    }
+  }
+}

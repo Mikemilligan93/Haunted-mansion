@@ -5,6 +5,8 @@ import { Input } from './engine/input.js';
 import { UI } from './engine/ui.js';
 import { Rng } from './engine/util.js';
 import { TestRoomScene, SandboxScene } from './game/scenes.js';
+import { ChapterScene, newChapter } from './game/chapter.js';
+import { ToyFightScene } from './game/side.js';
 import { daylight } from './game/lighting.js';
 import { DevTools } from './debug/devtools.js';
 import { PauseMenu } from './game/menu.js';
@@ -32,6 +34,7 @@ window.addEventListener('error', (e) => game.errors.push(String(e.message)));
 async function boot() {
   game.config = await loadJSON('config.json', {});
   game.texts = await loadJSON('texts.json', {});
+  game.levels = { twins: await loadJSON('levels/twins.json', null) };
   game.sprites = await Sprites.load('assets/sprites/', { noArt: params.get('noart') === '1' });
   game.seed = num('seed', Math.floor(Math.random() * 1e9));
   game.rng = new Rng(game.seed);
@@ -54,10 +57,14 @@ async function boot() {
   switchScene(params.get('scene') || 'testroom', {
     intro: params.get('intro') !== '0',
     sheet: params.get('sheet'),
+    step: params.get('step'),
+    room: params.get('room'),
+    phase: params.get('phase'),
+    hp: params.get('hp'),
   });
   if (params.has('x')) game.scene.liam.x = num('x', 0);
   if (params.has('y')) game.scene.liam.y = num('y', 0);
-  if (params.has('curtain') && game.scene.room) game.scene.room.curtain = params.get('curtain');
+  if (params.has('curtain') && game.scene.room?.props) game.scene.room.curtain = params.get('curtain');
   if (params.get('bat') === '1') game.scene.liam.setBat();
   if (params.get('tools') === '1') game.devtools.toggle(true);
   game.ready = true;
@@ -76,7 +83,11 @@ function resize() {
 
 // ---------------------------------------------------------------- scenes
 export function switchScene(name, opts = {}) {
-  game.scene = name === 'sandbox' ? new SandboxScene(game, opts) : new TestRoomScene(game, opts);
+  // the chapter's fight beat is its own (side-view) scene
+  if (name === 'twins' && opts.step === 'fight') { game.chapter = newChapter('fight'); name = 'toyfight'; }
+  if (name === 'toyfight' && !game.chapter) game.chapter = newChapter('fight');
+  const make = { sandbox: SandboxScene, twins: ChapterScene, toyfight: ToyFightScene }[name] || TestRoomScene;
+  game.scene = new make(game, opts);
   game.ui.messages = [];
   if (opts.restore) game.scene.restore(opts.restore);
   game.devtools.refresh();
@@ -194,16 +205,20 @@ game.setSeed = (seed) => {
 };
 
 game.state = () => {
-  const s = game.scene, l = s.liam, r = s.room;
+  const s = game.scene, l = s.liam, r = s.room || {};
   return {
     scene: s.name, x: l.x, y: l.y, dir: l.dir, mode: l.mode, anim: `${l.anim.sheet}:${l.anim.name}`, form: l.form, panicLeft: l.panicLeft,
     inSun: l.inSun, speedNow: l.speedNow, hour: game.clock.hour, day: game.clock.day,
-    daylight: daylight(game.clock.hour, game.config.time), darkness: s.lighting.lastDarkness,
-    curtain: r.curtain, door: r.door.state, lights: s.allLights().length, intro: !!s.intro,
+    daylight: daylight(game.clock.hour, game.config.time), darkness: s.lighting ? s.lighting.lastDarkness : 0,
+    curtain: r.curtain, door: r.door?.state, lights: s.allLights().length, intro: !!s.intro,
     speaking: game.ui.speaking, message: game.ui.messages[0]?.text || null, entities: s.entities.length,
     ambrose: s.ambrose ? { x: s.ambrose.x, y: s.ambrose.y, dir: s.ambrose.dir, task: s.ambrose.task?.type || null, alpha: s.ambrose.alpha, hidden: s.ambrose.hidden, anim: `${s.ambrose.anim.sheet}:${s.ambrose.anim.name}`, talking: s.ambrose.talking > 0 } : null,
     plates: r.plates, clockStopped: r.clockStopped, speaker: game.ui.messages[0]?.speaker || null, queued: game.ui.messages.length,
     paused: game.paused, menu: game.menu.open ? game.menu.view : null, menuIndex: game.menu.index, speed: game.speed, steps: game.steps, viewer: s.viewer ? { ...s.viewer } : null,
+    chapter: game.chapter ? { step: game.chapter.step, found: { ...game.chapter.found }, fright: game.chapter.fright, batAtWill: game.chapter.batAtWill, memento: game.chapter.memento } : null,
+    room: s.isChapter ? s.room.id : null, script: s.script?.name || null, hidden: !!s.liamHidden, fade: s.fadeAlpha ?? 0,
+    twins: s.isChapter ? Object.fromEntries(Object.entries(s.twins).map(([k, t]) => [k, { x: t.x, y: t.y, visible: t.visible && t.alpha > 0.05, anim: `${t.anim.sheet}:${t.anim.name}` }])) : null,
+    fight: s.isSide ? { phase: s.phase, wave: s.wave, hp: l.hp, liamState: l.state, onGround: l.onGround, enemies: s.enemies.filter((e) => e.alive).map((e) => ({ type: e.type, x: e.x, y: e.y, state: e.state, hp: e.hp })), tagged: s.twins.filter((t) => t.tagged).length, shots: s.shots.length, cleared: s.cleared } : null,
   };
 };
 

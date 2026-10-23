@@ -2,6 +2,7 @@
 // Cheats, speed, pause/step, time of day, spawning, overlays, live config reload,
 // save states, seed and a copyable test link.
 import { SPAWNABLE } from '../game/scenes.js';
+import { STEPS } from '../game/chapter.js';
 
 const STORE = 'hm-savestate-';
 
@@ -59,6 +60,8 @@ export class DevTools {
     sec('Scene',
       [this.btn('Test room', () => g.switchScene('testroom', { intro: true }), s.name === 'testroom', 'scene-testroom'),
        this.btn('Sandbox', () => g.switchScene('sandbox'), s.name === 'sandbox', 'scene-sandbox'),
+       this.btn('Twins chapter', () => g.switchScene('twins', { step: 'opening' }), s.name === 'twins', 'scene-twins'),
+       this.btn('Toy fight', () => g.switchScene('toyfight', { phase: 1 }), s.name === 'toyfight', 'scene-toyfight'),
        this.btn('Restart (no intro)', () => g.switchScene(s.name, { intro: false }), false, 'restart')],
       s.viewer ? [this.btn(s.viewer.on ? 'Close animation viewer' : 'Open animation viewer (V)', () => { s.viewer.on = !s.viewer.on; }, s.viewer.on, 'viewer'),
         this.btn('◀', () => s.page(-1)), this.btn('▶', () => s.page(1))] : []);
@@ -66,7 +69,7 @@ export class DevTools {
     sec('Cheats',
       [this.check('God mode (no damage)', g.cheats.god, (v) => (g.cheats.god = v), 'god'),
        this.check('Infinite resources', g.cheats.infinite, (v) => (g.cheats.infinite = v), 'infinite')],
-      this.h('div', { class: 'hint' }, 'No damage or resources exist in the demo yet; the switches are wired for later.'),
+      this.h('div', { class: 'hint' }, 'God mode: Liam takes no damage in the toy-army fight. Infinite resources is wired for later.'),
       ['Speed:', ...[0.5, 1, 2, 4].map((v) => this.btn(`×${v}`, () => (g.speed = v), g.speed === v, `speed-${v}`))],
       [this.btn(g.paused ? 'Unfreeze' : 'Freeze game', () => (g.paused = !g.paused), g.paused, 'pause'),
        this.btn('Step 1 frame (.)', () => { g.paused = true; g.stepRequests++; }, false, 'step')]);
@@ -82,9 +85,28 @@ export class DevTools {
       ['Dawn', 'Noon', 'Dusk', 'Midnight'].map((n, i) => this.btn(n, () => (g.clock.hour = [6.5, 12, 19, 0][i]), false, `t-${n.toLowerCase()}`)),
       [this.check('Freeze time', g.clock.frozen, (v) => (g.clock.frozen = v), 'freeze'), ' Day length (s): ', dayLen]);
 
+    if (s.isChapter) {
+      const ch = g.chapter;
+      sec('Twins chapter',
+        [s.describe()],
+        ['Jump to:', ...STEPS.map((st) => this.btn(st, () => g.switchScene('twins', { step: st }), ch.step === st, `step-${st}`))],
+        ['Room:', ...Object.keys(g.levels.twins.rooms).map((id) => this.btn(id, () => s.enterRoom(id, { silent: true }), s.room.id === id, `room-${id}`))],
+        ['Fright:', this.btn('+25', () => s.addFright(25), false, 'fright-add'), this.btn('Panic now', () => s.panic(), false, 'fright-panic'), this.btn('Reset', () => (ch.fright = 0), false, 'fright-reset')],
+        [this.btn('Find Frida', () => s.run('found', s.foundTwin('frida')), ch.found.frida, 'find-frida'), this.btn('Find Wilhelmina', () => s.run('found', s.foundTwin('wilhelmina')), ch.found.wilhelmina, 'find-wilhelmina'),
+         this.check('Bat at will (Q)', ch.batAtWill, (v) => (ch.batAtWill = v), 'bat-at-will')],
+        this.h('div', { class: 'hint' }, 'Each step starts its own cutscene (if it has one). Lines: texts.json → twins. Numbers: config.json → twins, fright. Map: levels/twins.json.'));
+    }
+    if (s.isSide) {
+      sec('Toy-army fight',
+        [s.describe()],
+        ['Phase:', ...[1, 2, 3].map((n) => this.btn(`${n}`, () => g.switchScene('toyfight', { phase: n }), s.phase === n, `phase-${n}`)),
+         this.btn('Full HP', () => (s.liam.hp = g.config.side.liamHp), false, 'hp-full'), this.btn('Win this phase', () => s.clearPhase(), false, 'phase-win')],
+        this.h('div', { class: 'hint' }, 'Phase 1 soldiers, 2 rocking horse, 3 tag the Twins. A defeat retries the phase. Numbers: config.json → side. Hitbox overlay shows hit areas and platforms.'));
+    }
+
     const L = s.liam;
     const busy = L.form === 'transforming';
-    sec('Bat form',
+    if (L.transform) sec('Bat form',
       [`Liam is: ${busy ? 'transforming…' : L.form === 'bat' ? (L.panicLeft > 0 ? 'a panicking bat' : 'a bat') : 'human'}`],
       [this.btn('Turn into bat', () => L.transform(true), false, 'bat-on'),
        this.btn('Turn back', () => L.transform(false), false, 'bat-off'),
@@ -109,9 +131,10 @@ export class DevTools {
       sec('Room', ['Curtains:', ...['open', 'half', 'closed'].map((c) => this.btn(c, () => (s.room.curtain = c), s.room.curtain === c, `curtain-${c}`))]);
     }
 
+    const spawnList = s.spawnables ? s.spawnables() : SPAWNABLE;
+    if (!spawnList[this.spawnType]) this.spawnType = Object.keys(spawnList)[0];
     const typeSel = this.h('select', { 'data-id': 'spawn-type', onchange: (e) => { this.spawnType = e.target.value; this.refresh(); } },
-      ...Object.entries(SPAWNABLE).map(([k, v]) => this.h('option', { value: k, selected: k === (this.spawnType || 'candle') }, v.label)));
-    this.spawnType = this.spawnType || 'candle';
+      ...Object.entries(spawnList).map(([k, v]) => this.h('option', { value: k, selected: k === this.spawnType }, v.label)));
     const animOpts = [];
     for (const [name, sh] of Object.entries(g.sprites.sheets)) {
       if (!name.startsWith('liam_td') && !name.startsWith('liam_bat')) continue;
@@ -167,6 +190,7 @@ export class DevTools {
     if (g.clock.frozen) p.set('freeze', 1);
     if (g.speed !== 1) p.set('speed', g.speed);
     if (s.room?.props) p.set('curtain', s.room.curtain);
+    if (s.testParams) for (const [k, v] of Object.entries(s.testParams())) p.set(k, v);
     p.set('x', s.liam.x.toFixed(0)); p.set('y', s.liam.y.toFixed(0));
     if (s.liam.form === 'bat') p.set('bat', 1);
     const ov = Object.keys(g.overlays).filter((k) => g.overlays[k]);

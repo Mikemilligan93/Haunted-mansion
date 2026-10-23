@@ -1,12 +1,15 @@
 // Keyboard input: held keys plus "pressed this step" edges.
 const MAP = {
-  ArrowUp: 'up', KeyW: 'up', ArrowDown: 'down', KeyS: 'down',
+  ArrowUp: ['up', 'jump'], KeyW: ['up', 'jump'], ArrowDown: 'down', KeyS: 'down',
   ArrowLeft: 'left', KeyA: 'left', ArrowRight: 'right', KeyD: 'right',
-  KeyE: 'interact', Space: 'interact', Enter: 'interact', NumpadEnter: 'interact',
+  KeyE: ['interact', 'attack'], Space: ['interact', 'jump'], Enter: 'interact', NumpadEnter: 'interact',
+  KeyJ: 'attack', KeyF: 'throw', KeyK: 'throw', KeyQ: 'bat',
   Escape: 'menu', KeyP: 'menu',
   F1: 'devtools', Backquote: 'devtools', Period: 'step',
   KeyV: 'viewer', BracketLeft: 'pagePrev', BracketRight: 'pageNext',
 };
+// a key can mean several things (Space = interact in the house, jump in the paintings)
+const actions = (code) => [].concat(MAP[code] || []);
 
 // handled immediately, even while the game is paused
 const GLOBAL = new Set(['menu', 'devtools', 'step', 'viewer', 'pagePrev', 'pageNext']);
@@ -22,16 +25,19 @@ export class Input {
     this.blocked = () => false; // set by devtools: true while typing in a field
     this.menuActive = () => false; // set by main: true while the pause menu is open
     window.addEventListener('keydown', (e) => {
-      const a = MAP[e.code];
-      if (!a) return;
+      const list = actions(e.code);
+      if (!list.length) return;
+      const a = list[0];
       if (this.blocked() && a !== 'devtools') return;
       if (['up', 'down', 'left', 'right', 'interact', 'devtools', 'menu'].includes(a)) e.preventDefault();
       if (this.menuActive() && MENU_KEYS.has(a)) { if (!e.repeat || a === 'up' || a === 'down') this.onGlobal(`menu:${a}`); return; }
       if (GLOBAL.has(a)) { if (!e.repeat) this.onGlobal(a); return; }
-      if (!e.repeat) this.queue.push(a);
-      this.held.add(a);
+      for (const x of list) {
+        if (!e.repeat) this.queue.push(x);
+        this.held.add(x);
+      }
     });
-    window.addEventListener('keyup', (e) => { const a = MAP[e.code]; if (a) this.held.delete(a); });
+    window.addEventListener('keyup', (e) => { for (const a of actions(e.code)) this.held.delete(a); });
     window.addEventListener('blur', () => this.held.clear());
   }
   // called once per simulation step

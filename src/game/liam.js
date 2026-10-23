@@ -194,6 +194,16 @@ export class Liam {
     }
   }
 
+  // hook used by walkTo() in cutscenes
+  walk(dx, dy, moving) {
+    if (moving) {
+      if (Math.abs(dx) > Math.abs(dy)) this.dir = dx > 0 ? 'right' : 'left';
+      else this.dir = dy > 0 ? 'down' : 'up';
+      if (this.form === 'bat') { this.anim.row = this.dir; return; }
+      this.setAnim(MOVE_ANIM);
+    } else if (this.form === 'human') this.setAnim(IDLE_ANIM);
+  }
+
   setAnim(a, rate = 1) {
     if (this.anim.sheet !== a.sheet || this.anim.name !== a.name) this.anim = { ...a, row: this.dir, t: 0 };
     this.anim.row = this.dir;

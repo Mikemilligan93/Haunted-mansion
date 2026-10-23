@@ -2456,6 +2456,1447 @@
     "centre",
     "right"
    ]
+  },
+  "twins_td_idle": {
+   "image": "twins_td_idle.png",
+   "grid": [
+    3,
+    4
+   ],
+   "scale": 0.1481,
+   "bounds": [
+    [
+     [
+      23,
+      6,
+      46,
+      54
+     ],
+     [
+      17,
+      7,
+      41,
+      54
+     ],
+     [
+      10,
+      7,
+      34,
+      54
+     ],
+     [
+      3,
+      6,
+      25,
+      54
+     ]
+    ],
+    [
+     [
+      23,
+      7,
+      44,
+      54
+     ],
+     [
+      15,
+      7,
+      37,
+      54
+     ],
+     [
+      9,
+      8,
+      30,
+      54
+     ],
+     [
+      5,
+      7,
+      25,
+      54
+     ]
+    ],
+    [
+     [
+      22,
+      8,
+      43,
+      54
+     ],
+     [
+      16,
+      9,
+      38,
+      54
+     ],
+     [
+      8,
+      10,
+      31,
+      54
+     ],
+     [
+      3,
+      9,
+      24,
+      54
+     ]
+    ]
+   ],
+   "frame": [
+    48,
+    56
+   ],
+   "origin": [
+    24,
+    54
+   ],
+   "anims": {
+    "idle": {
+     "frames": [
+      0,
+      1,
+      2,
+      2,
+      3
+     ],
+     "fps": 3,
+     "loop": true
+    }
+   },
+   "rows": [
+    "down",
+    "left",
+    "up"
+   ]
+  },
+  "twins_td_walk": {
+   "image": "twins_td_walk.png",
+   "grid": [
+    3,
+    6
+   ],
+   "scale": 0.1853,
+   "bounds": [
+    [
+     [
+      16,
+      6,
+      41,
+      54
+     ],
+     [
+      15,
+      6,
+      39,
+      53
+     ],
+     [
+      12,
+      6,
+      37,
+      54
+     ],
+     [
+      10,
+      5,
+      35,
+      54
+     ],
+     [
+      9,
+      6,
+      34,
+      53
+     ],
+     [
+      6,
+      6,
+      32,
+      54
+     ]
+    ],
+    [
+     [
+      17,
+      5,
+      41,
+      54
+     ],
+     [
+      14,
+      5,
+      38,
+      54
+     ],
+     [
+      13,
+      5,
+      36,
+      54
+     ],
+     [
+      10,
+      5,
+      34,
+      54
+     ],
+     [
+      8,
+      5,
+      32,
+      54
+     ],
+     [
+      7,
+      5,
+      31,
+      54
+     ]
+    ],
+    [
+     [
+      16,
+      4,
+      40,
+      54
+     ],
+     [
+      14,
+      4,
+      38,
+      53
+     ],
+     [
+      12,
+      4,
+      37,
+      54
+     ],
+     [
+      10,
+      4,
+      34,
+      53
+     ],
+     [
+      8,
+      4,
+      33,
+      53
+     ],
+     [
+      7,
+      4,
+      31,
+      54
+     ]
+    ]
+   ],
+   "frame": [
+    48,
+    56
+   ],
+   "origin": [
+    24,
+    54
+   ],
+   "anims": {
+    "walk": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fps": 8,
+     "loop": true
+    }
+   },
+   "rows": [
+    "down",
+    "left",
+    "up"
+   ]
+  },
+  "twins_td_giggle": {
+   "image": "twins_td_giggle.png",
+   "grid": [
+    1,
+    4
+   ],
+   "scale": 0.0671,
+   "bounds": [
+    [
+     [
+      16,
+      6,
+      35,
+      54
+     ],
+     [
+      15,
+      7,
+      34,
+      54
+     ],
+     [
+      14,
+      7,
+      34,
+      54
+     ],
+     [
+      13,
+      7,
+      32,
+      54
+     ]
+    ]
+   ],
+   "frame": [
+    48,
+    56
+   ],
+   "origin": [
+    24,
+    54
+   ],
+   "anims": {
+    "giggle": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3
+     ],
+     "fps": 8,
+     "loop": false
+    }
+   },
+   "rows": [
+    "down"
+   ]
+  },
+  "twins_td_peek": {
+   "image": "twins_td_peek.png",
+   "grid": [
+    1,
+    4
+   ],
+   "scale": 0.071,
+   "bounds": [
+    [
+     [
+      25,
+      6,
+      44,
+      54
+     ],
+     [
+      21,
+      7,
+      45,
+      54
+     ],
+     [
+      19,
+      9,
+      46,
+      54
+     ],
+     [
+      21,
+      7,
+      42,
+      54
+     ]
+    ]
+   ],
+   "frame": [
+    64,
+    56
+   ],
+   "origin": [
+    32,
+    54
+   ],
+   "anims": {
+    "peek": {
+     "frames": [
+      0,
+      1,
+      2,
+      2,
+      2,
+      3,
+      0
+     ],
+     "fps": 5,
+     "loop": false
+    }
+   },
+   "rows": [
+    "down"
+   ]
+  },
+  "twins_td_point": {
+   "image": "twins_td_point.png",
+   "grid": [
+    1,
+    3
+   ],
+   "scale": 0.0602,
+   "bounds": [
+    [
+     [
+      14,
+      6,
+      35,
+      54
+     ],
+     [
+      14,
+      6,
+      34,
+      54
+     ],
+     [
+      14,
+      6,
+      34,
+      54
+     ]
+    ]
+   ],
+   "frame": [
+    48,
+    56
+   ],
+   "origin": [
+    24,
+    54
+   ],
+   "anims": {
+    "point": {
+     "frames": [
+      0,
+      1,
+      2
+     ],
+     "fps": 5,
+     "loop": false
+    }
+   },
+   "rows": [
+    "down"
+   ]
+  },
+  "twins_td_count": {
+   "image": "twins_td_count.png",
+   "grid": [
+    1,
+    4
+   ],
+   "scale": 0.0709,
+   "bounds": [
+    [
+     [
+      15,
+      6,
+      36,
+      54
+     ],
+     [
+      15,
+      7,
+      35,
+      54
+     ],
+     [
+      14,
+      6,
+      34,
+      54
+     ],
+     [
+      13,
+      5,
+      33,
+      54
+     ]
+    ]
+   ],
+   "frame": [
+    48,
+    56
+   ],
+   "origin": [
+    24,
+    54
+   ],
+   "anims": {
+    "count": {
+     "frames": [
+      0,
+      1,
+      2,
+      1,
+      2,
+      3
+     ],
+     "fps": 3,
+     "loop": false
+    }
+   },
+   "rows": [
+    "up"
+   ]
+  },
+  "twins_sv_float": {
+   "image": "twins_sv_float.png",
+   "grid": [
+    1,
+    4
+   ],
+   "scale": 0.0778,
+   "bounds": [
+    [
+     [
+      15,
+      14,
+      35,
+      62
+     ],
+     [
+      15,
+      13,
+      35,
+      60
+     ],
+     [
+      13,
+      11,
+      33,
+      59
+     ],
+     [
+      13,
+      14,
+      32,
+      62
+     ]
+    ]
+   ],
+   "frame": [
+    48,
+    64
+   ],
+   "origin": [
+    24,
+    62
+   ],
+   "anims": {
+    "float": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 4,
+     "loop": true
+    }
+   },
+   "rows": [
+    "right"
+   ]
+  },
+  "twins_sv_command": {
+   "image": "twins_sv_command.png",
+   "grid": [
+    1,
+    4
+   ],
+   "scale": 0.0713,
+   "bounds": [
+    [
+     [
+      23,
+      14,
+      40,
+      62
+     ],
+     [
+      21,
+      10,
+      38,
+      62
+     ],
+     [
+      19,
+      14,
+      43,
+      62
+     ],
+     [
+      19,
+      14,
+      44,
+      62
+     ]
+    ]
+   ],
+   "frame": [
+    64,
+    64
+   ],
+   "origin": [
+    32,
+    62
+   ],
+   "anims": {
+    "command": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 6,
+     "loop": false
+    }
+   },
+   "rows": [
+    "right"
+   ]
+  },
+  "twins_sv_throw": {
+   "image": "twins_sv_throw.png",
+   "grid": [
+    1,
+    4
+   ],
+   "scale": 0.0807,
+   "bounds": [
+    [
+     [
+      20,
+      14,
+      45,
+      62
+     ],
+     [
+      25,
+      14,
+      44,
+      62
+     ],
+     [
+      20,
+      14,
+      50,
+      62
+     ],
+     [
+      18,
+      15,
+      44,
+      62
+     ]
+    ]
+   ],
+   "frame": [
+    64,
+    64
+   ],
+   "origin": [
+    32,
+    62
+   ],
+   "anims": {
+    "throw": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 10,
+     "loop": false
+    }
+   },
+   "rows": [
+    "right"
+   ]
+  },
+  "twins_sv_tagged": {
+   "image": "twins_sv_tagged.png",
+   "grid": [
+    1,
+    3
+   ],
+   "scale": 0.0615,
+   "bounds": [
+    [
+     [
+      21,
+      14,
+      44,
+      62
+     ],
+     [
+      16,
+      16,
+      48,
+      62
+     ],
+     [
+      22,
+      15,
+      41,
+      62
+     ]
+    ]
+   ],
+   "frame": [
+    64,
+    64
+   ],
+   "origin": [
+    32,
+    62
+   ],
+   "anims": {
+    "tagged": {
+     "frames": [
+      0,
+      1,
+      2
+     ],
+     "fps": 8,
+     "loop": false
+    }
+   },
+   "rows": [
+    "right"
+   ]
+  },
+  "twins_portraits": {
+   "image": "twins_portraits.png",
+   "grid": [
+    2,
+    4
+   ],
+   "frame": [
+    96,
+    96
+   ],
+   "origin": [
+    0,
+    0
+   ],
+   "names": [
+    "stare",
+    "tilt",
+    "giggle",
+    "whisper",
+    "pout",
+    "lonely",
+    "delighted",
+    "peace"
+   ]
+  },
+  "toy_soldier": {
+   "image": "toy_soldier.png",
+   "grid": [
+    2,
+    6
+   ],
+   "scale": 0.0744,
+   "bounds": [
+    [
+     [
+      18,
+      6,
+      32,
+      38
+     ],
+     [
+      19,
+      6,
+      29,
+      38
+     ],
+     [
+      18,
+      6,
+      30,
+      38
+     ],
+     [
+      18,
+      6,
+      31,
+      38
+     ],
+     [
+      18,
+      6,
+      29,
+      38
+     ],
+     [
+      17,
+      6,
+      29,
+      38
+     ]
+    ],
+    [
+     [
+      16,
+      9,
+      35,
+      38
+     ],
+     [
+      16,
+      8,
+      37,
+      38
+     ],
+     [
+      19,
+      8,
+      29,
+      38
+     ],
+     [
+      13,
+      10,
+      31,
+      38
+     ],
+     [
+      12,
+      16,
+      31,
+      38
+     ],
+     [
+      13,
+      29,
+      32,
+      38
+     ]
+    ]
+   ],
+   "frame": [
+    48,
+    40
+   ],
+   "origin": [
+    24,
+    38
+   ],
+   "anims": {
+    "march": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fps": 8,
+     "loop": true,
+     "row": 0
+    },
+    "lunge": {
+     "frames": [
+      0,
+      1,
+      2
+     ],
+     "fps": 10,
+     "loop": false,
+     "row": 1
+    },
+    "knocked": {
+     "frames": [
+      3,
+      4,
+      5
+     ],
+     "fps": 8,
+     "loop": false,
+     "row": 1
+    }
+   },
+   "rows": [
+    "march",
+    "attack"
+   ]
+  },
+  "toy_rockinghorse": {
+   "image": "toy_rockinghorse.png",
+   "grid": [
+    2,
+    4
+   ],
+   "scale": 0.1429,
+   "bounds": [
+    [
+     [
+      16,
+      14,
+      66,
+      62
+     ],
+     [
+      15,
+      18,
+      66,
+      62
+     ],
+     [
+      16,
+      14,
+      66,
+      62
+     ],
+     [
+      15,
+      10,
+      65,
+      62
+     ]
+    ],
+    [
+     [
+      16,
+      6,
+      67,
+      61
+     ],
+     [
+      13,
+      9,
+      67,
+      51
+     ],
+     [
+      15,
+      18,
+      66,
+      60
+     ],
+     [
+      14,
+      39,
+      65,
+      62
+     ]
+    ]
+   ],
+   "frame": [
+    80,
+    64
+   ],
+   "origin": [
+    40,
+    62
+   ],
+   "anims": {
+    "rock": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 6,
+     "loop": true,
+     "row": 0
+    },
+    "charge": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 8,
+     "loop": false,
+     "row": 1
+    }
+   },
+   "rows": [
+    "rock",
+    "charge"
+   ]
+  },
+  "toy_projectiles": {
+   "image": "toy_projectiles.png",
+   "grid": [
+    1,
+    6
+   ],
+   "frame": [
+    16,
+    18
+   ],
+   "origin": [
+    8,
+    18
+   ],
+   "names": [
+    "block_star",
+    "block_moon",
+    "ball",
+    "jack",
+    "top1",
+    "top2"
+   ]
+  },
+  "tiles_picturebook": {
+   "image": "tiles_picturebook.png",
+   "grid": null,
+   "frame": [
+    16,
+    16
+   ],
+   "regions": {
+    "ground": {
+     "row": 0,
+     "count": 6,
+     "size": [
+      16,
+      14
+     ]
+    },
+    "fill": {
+     "row": 1,
+     "count": 6,
+     "size": [
+      16,
+      16
+     ]
+    },
+    "shelf": {
+     "row": 2,
+     "count": 6,
+     "size": [
+      16,
+      10
+     ]
+    },
+    "deco": {
+     "row": 3,
+     "count": 6,
+     "size": [
+      16,
+      16
+     ]
+    }
+   }
+  },
+  "bg_picturebook_far": {
+   "image": "bg_picturebook_far.png",
+   "grid": [
+    1,
+    1
+   ],
+   "frame": [
+    768,
+    512
+   ],
+   "origin": [
+    384,
+    512
+   ],
+   "names": [
+    "far"
+   ]
+  },
+  "bg_picturebook_mid": {
+   "image": "bg_picturebook_mid.png",
+   "grid": [
+    1,
+    1
+   ],
+   "frame": [
+    768,
+    317
+   ],
+   "origin": [
+    384,
+    317
+   ],
+   "names": [
+    "mid"
+   ]
+  },
+  "prop_toyfort": {
+   "image": "prop_toyfort.png",
+   "grid": [
+    1,
+    2
+   ],
+   "frame": [
+    128,
+    83
+   ],
+   "origin": [
+    64,
+    83
+   ],
+   "names": [
+    "intact",
+    "battered"
+   ]
+  },
+  "tiles_wall_nursery": {
+   "image": "tiles_wall_nursery.png",
+   "grid": null,
+   "frame": [
+    32,
+    96
+   ],
+   "regions": {
+    "wall": {
+     "row": 0,
+     "count": 6,
+     "size": [
+      32,
+      96
+     ]
+    },
+    "cap": {
+     "row": 1,
+     "count": 6,
+     "size": [
+      16,
+      16
+     ]
+    }
+   }
+  },
+  "prop_nursery_bed": {
+   "image": "prop_nursery_bed.png",
+   "grid": [
+    1,
+    3
+   ],
+   "frame": [
+    28,
+    48
+   ],
+   "origin": [
+    14,
+    48
+   ],
+   "names": [
+    "made",
+    "hiding",
+    "empty"
+   ]
+  },
+  "prop_dollhouse": {
+   "image": "prop_dollhouse.png",
+   "grid": [
+    1,
+    3
+   ],
+   "frame": [
+    34,
+    48
+   ],
+   "origin": [
+    17,
+    48
+   ],
+   "names": [
+    "closed",
+    "open",
+    "lit"
+   ]
+  },
+  "prop_rockinghorse": {
+   "image": "prop_rockinghorse.png",
+   "grid": [
+    1,
+    4
+   ],
+   "frame": [
+    35,
+    32
+   ],
+   "origin": [
+    17,
+    32
+   ],
+   "names": [
+    "level",
+    "forward",
+    "level2",
+    "back"
+   ]
+  },
+  "prop_toys": {
+   "image": "prop_toys.png",
+   "grid": [
+    2,
+    4
+   ],
+   "frame": [
+    32,
+    38
+   ],
+   "origin": [
+    16,
+    38
+   ],
+   "names": [
+    "chest_closed",
+    "chest_open",
+    "chest_rattle",
+    "rag_doll",
+    "ball",
+    "blocks",
+    "soldier",
+    "top"
+   ]
+  },
+  "prop_rug_nursery": {
+   "image": "prop_rug_nursery.png",
+   "grid": [
+    1,
+    2
+   ],
+   "frame": [
+    64,
+    34
+   ],
+   "origin": [
+    32,
+    34
+   ],
+   "names": [
+    "flat",
+    "kicked"
+   ]
+  },
+  "prop_wardrobe": {
+   "image": "prop_wardrobe.png",
+   "grid": [
+    1,
+    3
+   ],
+   "frame": [
+    37,
+    56
+   ],
+   "origin": [
+    18,
+    56
+   ],
+   "names": [
+    "closed",
+    "ajar",
+    "open"
+   ]
+  },
+  "prop_painting_twins": {
+   "image": "prop_painting_twins.png",
+   "grid": [
+    1,
+    4
+   ],
+   "frame": [
+    48,
+    56
+   ],
+   "origin": [
+    24,
+    56
+   ],
+   "names": [
+    "still",
+    "swirl1",
+    "swirl2",
+    "portal"
+   ]
+  },
+  "liam_sv_swipe": {
+   "image": "liam_sv_swipe.png",
+   "grid": [
+    1,
+    4
+   ],
+   "scale": 0.1105,
+   "bounds": [
+    [
+     [
+      30,
+      15,
+      81,
+      70
+     ],
+     [
+      28,
+      14,
+      81,
+      70
+     ],
+     [
+      22,
+      14,
+      98,
+      70
+     ],
+     [
+      39,
+      13,
+      75,
+      70
+     ]
+    ]
+   ],
+   "frame": [
+    112,
+    72
+   ],
+   "origin": [
+    56,
+    70
+   ],
+   "anims": {
+    "swipe": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 12,
+     "loop": false
+    }
+   },
+   "rows": [
+    "right"
+   ]
+  },
+  "liam_sv_throw": {
+   "image": "liam_sv_throw.png",
+   "grid": [
+    1,
+    4
+   ],
+   "scale": 0.1118,
+   "bounds": [
+    [
+     [
+      20,
+      13,
+      60,
+      70
+     ],
+     [
+      18,
+      9,
+      56,
+      70
+     ],
+     [
+      14,
+      14,
+      66,
+      70
+     ],
+     [
+      20,
+      13,
+      58,
+      70
+     ]
+    ]
+   ],
+   "frame": [
+    80,
+    72
+   ],
+   "origin": [
+    40,
+    70
+   ],
+   "anims": {
+    "throw": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 12,
+     "loop": false
+    }
+   },
+   "rows": [
+    "right"
+   ]
+  },
+  "liam_sv_hurt": {
+   "image": "liam_sv_hurt.png",
+   "grid": [
+    1,
+    2
+   ],
+   "scale": 0.0786,
+   "bounds": [
+    [
+     [
+      15,
+      8,
+      66,
+      62
+     ],
+     [
+      14,
+      8,
+      64,
+      62
+     ]
+    ]
+   ],
+   "frame": [
+    80,
+    64
+   ],
+   "origin": [
+    40,
+    62
+   ],
+   "anims": {
+    "hurt": {
+     "frames": [
+      0,
+      1
+     ],
+     "fps": 6,
+     "loop": false
+    }
+   },
+   "rows": [
+    "right"
+   ]
   }
  }
 }

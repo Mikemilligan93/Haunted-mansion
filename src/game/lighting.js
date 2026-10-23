@@ -34,7 +34,7 @@ export class Lighting {
   render(ctx, game, lights) {
     const L = game.config.light;
     const dl = daylight(game.clock.hour, game.config.time);
-    const darkness = L.nightDarkness * (1 - dl);
+    const darkness = (game.scene?.nightDarkness ?? L.nightDarkness) * (1 - dl); // a scene may set its own (the chapter is a bit lighter)
     this.lastDarkness = darkness;
     const w = this.canvas.width, h = this.canvas.height;
 

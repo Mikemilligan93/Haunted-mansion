@@ -1,5 +1,6 @@
 // Automated smoke tests: the game starts, every scene loads, a scripted playthrough of the
-// test room works, and nothing logs an error. Screenshots go to tests/screenshots/.
+// test room works, the Twins chapter plays through to the end (with a small bot for the fight),
+// and nothing logs an error. Screenshots go to tests/screenshots/.
 //
 //   node tests/smoke.mjs            (needs Node 18+ and Playwright: npm i -g playwright && npx playwright install chromium)
 //
@@ -340,6 +341,263 @@ check(clockDiff.outside === 0 && clockDiff.inside > 0, 'the clock case stays sti
 await clean(p, 'ambrose');
 await p.close();
 
+// ---------------------------------------------------------------- the Twins chapter (scripted playthrough to the end)
+async function chapterTests() {
+  const talk = async (p, maxSteps = 4000) => p.evaluate((m) => {
+    // skip lines and let cutscenes run until the player has control again
+    for (let i = 0; i < m; i++) {
+      const s = game.scene;
+      if (game.ui.speaking && game.ui.messages.length > 1) game.input.tap('interact');
+      game.advance(4);
+      const busy = s !== game.scene || game.ui.speaking || (s.script && !s.script.done) || s.trans || game.scene.fadeAlpha > 0.01 || (game.scene.liam.mode !== 'free' && game.scene.liam.form !== 'bat');
+      if (!busy && game.scene === s) return i;
+    }
+    return -1;
+  }, maxSteps);
+  const goDoor = async (p, doorId) => p.evaluate((id) => {
+    const s = game.scene, d = s.room.doorById(id);
+    if (!d) return `no door ${id} in ${s.room.id}`;
+    Object.assign(s.liam, { x: d.x, y: s.room.floorTop + 8 });
+    game.input.hold('up', true); game.advance(3); game.input.hold('up', false);
+    for (let i = 0; i < 200 && (s.trans); i++) game.advance(1);
+    return game.scene.room.id;
+  }, doorId);
+  const useSpot = async (p, spotId) => p.evaluate((id) => {
+    const s = game.scene, it = s.room.interactables().find((q) => q.id === id);
+    Object.assign(s.liam, { x: it.x, y: Math.min(s.room.bounds().y2, Math.max(s.room.bounds().y1, it.y + (it.face === 'down' ? -2 : 4))) });
+    game.advance(1); game.input.tap('interact'); game.advance(2);
+    return { near: s.near && s.near.id, msg: game.ui.messages[0]?.text || null };
+  }, spotId);
+
+  console.log('Twins chapter: opening');
+  let p = await open('debug=1&seed=7&scene=twins&step=opening');
+  await adv(p, 120); await shot(p, '30_twins_opening');
+  let s = await st(p);
+  check(s.room === 'bedroom' && s.script === 'opening' && !!s.ambrose, 'opening: Ambrose brings tea to Liam\'s bedroom', JSON.stringify([s.room, s.script, !!s.ambrose]));
+  let sawTea = false;
+  for (let i = 0; i < 80 && !sawTea; i++) { await adv(p, 5); s = await st(p); if (s.ambrose?.anim === 'ambrose_td_produce:produce') sawTea = true; }
+  check(sawTea, 'he produces the tea from behind his back');
+  let heard = '';
+  for (let i = 0; i < 200; i++) { await p.evaluate(() => { if (game.ui.speaking) game.input.tap('interact'); game.advance(4); }); s = await st(p); if (s.speaker === 'ambrose') heard += ' ' + s.message; if (/young misses/.test(heard)) break; }
+  check(/young misses/.test(heard), 'and mentions the young misses', heard.slice(0, 200));
+  await talk(p);
+  s = await st(p);
+  check(s.chapter.step === 'toNursery' && !s.ambrose && s.mode === 'free', 'then he leaves and Liam has control', JSON.stringify([s.chapter.step, !!s.ambrose, s.mode]));
+
+  console.log('Twins chapter: doors and the landing');
+  let room = await goDoor(p, 'landing');
+  check(room === 'landing', 'walking up into the door goes to the landing', room);
+  await adv(p, 20); await shot(p, '31_twins_landing_ball');
+  s = await st(p);
+  check(s.script === 'landingBall', 'a ball rolls across the landing by itself', s.script);
+  await talk(p);
+  room = await goDoor(p, 'guest');
+  s = await st(p);
+  check(room === 'landing' && /Locked/.test(s.message || ''), 'the guest room is locked for now', s.message);
+  await talk(p);
+
+  console.log('Twins chapter: first meeting');
+  room = await goDoor(p, 'nursery');
+  s = await st(p);
+  check(room === 'nursery' && s.script === 'meeting', 'the nursery starts the first meeting', JSON.stringify([room, s.script]));
+  let sawPanic = false, sawWhisper = false, maxFright = 0;
+  for (let i = 0; i < 900; i++) {
+    await p.evaluate(() => { if (game.ui.speaking) game.input.tap('interact'); game.advance(4); });
+    s = await st(p);
+    maxFright = Math.max(maxFright, s.chapter.fright);
+    if (s.form === 'bat' && s.panicLeft > 0) sawPanic = true;
+    if (/Found you/.test(s.message || '') && !sawWhisper) { sawWhisper = true; await shot(p, '32_twins_whisper'); }
+    if (s.chapter.step === 'seeking' && !s.script) break;
+  }
+  check(sawWhisper, '"Found you..." behind him');
+  check(maxFright >= 100 && sawPanic, 'the fright meter fills and he panics into a bat', `max ${maxFright} panic ${sawPanic}`);
+  check(s.chapter.step === 'seeking' && !s.twins.frida.visible && !s.twins.wilhelmina.visible, 'they hide; seeking begins', JSON.stringify(s.twins));
+  await shot(p, '33_twins_seeking');
+
+  console.log('Twins chapter: hiding spots');
+  let r = await useSpot(p, 'chest');
+  await adv(p, 3); s = await st(p);
+  check(/toy chest/.test(r.msg || '') && s.chapter.fright > 20, 'the toy chest is a scare (fright goes up)', JSON.stringify([r, s.chapter.fright]));
+  await adv(p, 30); await shot(p, '34_twins_chest');
+  await talk(p);
+  r = await useSpot(p, 'dollhouse');
+  check(/dollhouse/.test(r.msg || ''), 'the dollhouse is a clue (with a tiny butler)', r.msg);
+  await talk(p);
+  // a full meter outside a cutscene: a short bat panic in the same room
+  await p.evaluate(() => game.scene.addFright(200)); await adv(p, 70);
+  s = await st(p);
+  check(s.form === 'bat' && s.panicLeft > 0 && s.room === 'nursery', 'a full fright meter: bat panic in the same room', JSON.stringify([s.form, s.panicLeft]));
+  await adv(p, 400); s = await st(p);
+  check(s.form === 'human' && s.chapter.fright === 0, 'then he lands and the meter is empty', JSON.stringify([s.form, s.chapter.fright]));
+  await talk(p);
+  r = await useSpot(p, 'bed1');
+  await adv(p, 30); await shot(p, '35_twins_found_frida');
+  await talk(p);
+  s = await st(p);
+  check(s.chapter.found.frida && !s.chapter.found.wilhelmina && s.twins.frida.visible, 'Frida was under the quilt; she waits by the painting', JSON.stringify([s.chapter.found, s.twins.frida]));
+  // giggles from the room that still hides a twin
+  room = await goDoor(p, 'linen');
+  await talk(p);
+  room = await goDoor(p, 'guest');
+  await talk(p);
+  check(room === 'guest', 'through the linen closet to the guest room', room);
+  const giggled = await p.evaluate(() => { for (let i = 0; i < 60; i++) { game.advance(10); if (game.scene.floaters.some((f) => /hee/.test(f.text))) return true; } return false; });
+  check(giggled, 'giggles come from the room with a hidden twin');
+  r = await useSpot(p, 'wardrobe');
+  await adv(p, 40); await shot(p, '36_twins_found_wilhelmina');
+  await talk(p);
+  s = await st(p);
+  check(s.chapter.found.wilhelmina && s.chapter.step === 'pulled', 'Wilhelmina was in the wardrobe; both found', JSON.stringify(s.chapter));
+
+  console.log('Twins chapter: pulled into the painting');
+  room = await goDoor(p, 'linen'); await talk(p);
+  room = await goDoor(p, 'nursery');
+  s = await st(p);
+  check(s.script === 'pulled', 'back in the nursery: "Now play with us properly"', s.script);
+  let sawPortal = false;
+  for (let i = 0; i < 400; i++) {
+    await p.evaluate(() => { if (game.ui.speaking) game.input.tap('interact'); game.advance(4); });
+    s = await st(p);
+    if (s.scene === 'twins' && (await p.evaluate(() => game.scene.room.frames.painting)) === 'portal') { if (!sawPortal) await shot(p, '37_twins_portal'); sawPortal = true; }
+    if (s.scene === 'toyfight') break;
+  }
+  check(sawPortal && s.scene === 'toyfight', 'the painting swirls into a portal and pulls him in', JSON.stringify([sawPortal, s.scene]));
+  const snapC = await p.evaluate(() => game.chapter);
+  check(snapC.step === 'fight', 'chapter step is now the fight');
+  await clean(p, 'twins chapter (house)');
+  await p.close();
+
+  console.log('Toy-army fight');
+  p = await open('debug=1&seed=9&scene=toyfight&phase=1');
+  await talk(p);
+  s = await st(p);
+  check(s.scene === 'toyfight' && s.fight.phase === 1 && s.mode === 'free', 'phase 1 starts after the Twins\' lines', JSON.stringify(s.fight));
+  // controls: run, jump, swipe, throw
+  const x0 = s.x;
+  await p.evaluate(() => { game.input.hold('right', true); game.advance(30); game.input.hold('right', false); game.advance(1); });
+  s = await st(p);
+  check(s.x > x0 + 40, 'runs right', `${x0} -> ${s.x}`);
+  await p.evaluate(() => { game.input.tap('jump'); game.input.hold('jump', true); game.advance(15); });
+  s = await st(p);
+  check(!s.fight.onGround && s.y < 300, 'jumps', JSON.stringify([s.y, s.fight.onGround]));
+  await p.evaluate(() => { game.input.hold('jump', false); game.advance(60); });
+  await p.evaluate(() => { const sc = game.scene; sc.liam.y = sc.groundY; sc.liam.vy = 0; sc.enemies = []; sc.waveSpawn = []; sc.spawn('soldier', sc.liam.x + 26); sc.enemies[0].state = 'recover'; sc.liam.facing = 1; game.input.tap('attack'); game.advance(12); });
+  s = await st(p);
+  check(s.anim === 'liam_sv_swipe:swipe' && s.fight.enemies.length && s.fight.enemies[0].state === 'knocked', 'the cape swipe knocks a tin soldier down', JSON.stringify([s.anim, s.fight.enemies]));
+  await shot(p, '40_fight_swipe');
+  await p.evaluate(() => { game.advance(30); const sc = game.scene; sc.enemies = []; sc.spawn('soldier', sc.liam.x + 120); sc.enemies[0].state = 'recover'; sc.enemies[0].t = -99; game.input.tap('throw'); game.advance(60); });
+  s = await st(p);
+  check(s.fight.enemies.length === 0 || s.fight.enemies[0].state === 'knocked', 'a thrown sketch knocks one down at range', JSON.stringify(s.fight.enemies));
+  // getting hurt and losing: retry the same phase
+  const hp0 = (await st(p)).fight.hp;
+  await p.evaluate(() => { const sc = game.scene; sc.liam.invuln = 0; sc.liam.hurt(sc.liam.x + 10); game.advance(2); });
+  s = await st(p);
+  check(s.fight.hp === hp0 - 1, 'a hit costs one page of HP', `${hp0} -> ${s.fight.hp}`);
+  await p.evaluate(() => { game.cheats.god = true; const sc = game.scene; sc.liam.invuln = 0; sc.liam.hurt(sc.liam.x + 10); game.advance(2); });
+  check((await st(p)).fight.hp === hp0 - 1, 'god mode: no damage');
+  await p.evaluate(() => { game.cheats.god = false; const sc = game.scene; sc.liam.hp = 1; sc.liam.invuln = 0; sc.liam.hurt(sc.liam.x + 10); });
+  for (let i = 0; i < 60; i++) { await adv(p, 5); if ((await st(p)).script === 'phase1') break; }
+  s = await st(p);
+  check(s.fight.phase === 1 && s.fight.hp === 5, 'losing all HP retries the same phase with full HP', JSON.stringify(s.fight));
+  await talk(p);
+  // a simple bot plays the rest with god mode on: chase the nearest soldier and swipe
+  await p.evaluate(() => { game.cheats.god = true; });
+  const bot = async (maxFrames) => p.evaluate((mf) => {
+    const sc0 = game.scene;
+    for (let f = 0; f < mf; f++) {
+      const sc = game.scene;
+      if (sc !== sc0 || sc.name !== 'toyfight') return 'left';
+      if (game.ui.speaking) { game.input.tap('interact'); game.advance(4); continue; }
+      const L = sc.liam;
+      if (!window.__phases.includes(sc.phase)) window.__phases.push(sc.phase);
+      game.input.hold('left', false); game.input.hold('right', false);
+      let target = null;
+      if (sc.phase === 3) target = sc.twins.find((t) => !t.tagged);
+      else target = sc.enemies.filter((e) => e.alive && e.state !== 'knocked').sort((a, b) => Math.abs(a.x - L.x) - Math.abs(b.x - L.x))[0];
+      if (target) {
+        if (sc.phase === 3) { L.x = target.x; L.y = target.y + 2; L.vy = 0; }
+        const dx = target.x - L.x;
+        L.facing = dx >= 0 ? 1 : -1;
+        if (sc.phase === 2) {
+          if (target.state === 'topple' && Math.abs(dx) < 30) { if (L.state !== 'swipe') game.input.tap('attack'); }
+          else if (target.state === 'topple') game.input.hold(dx > 0 ? 'right' : 'left', true);
+        } else if (Math.abs(dx) < 28) { if (L.state !== 'swipe') game.input.tap('attack'); }
+        else game.input.hold(dx > 0 ? 'right' : 'left', true);
+      }
+      game.advance(1);
+    }
+    game.input.hold('left', false); game.input.hold('right', false);
+    return `phase ${game.scene.phase}`;
+  }, maxFrames);
+  await p.evaluate(() => { window.__phases = [1]; });
+  let phasesSeen = new Set([1]);
+  for (let k = 0; k < 40; k++) {
+    const r2 = await bot(600);
+    s = await st(p);
+    if (s.scene !== 'toyfight') break;
+    phasesSeen.add(s.fight.phase);
+    if (s.fight.phase === 2 && !phasesSeen.has('shot2')) { phasesSeen.add('shot2'); await shot(p, '41_fight_horse'); }
+    if (s.fight.phase === 3 && !phasesSeen.has('shot3')) { phasesSeen.add('shot3'); await adv(p, 100); await shot(p, '42_fight_tag'); }
+  }
+  s = await st(p);
+  const order = await p.evaluate(() => window.__phases);
+  check(JSON.stringify(order) === '[1,2,3]', 'phases: soldiers, then the rocking horse, then tag', JSON.stringify(order));
+  check(s.scene === 'twins' && s.chapter.step === 'yourTurn', 'winning returns to the nursery: "Your turn"', JSON.stringify([s.scene, s.chapter?.step]));
+
+  console.log('Twins chapter: your turn to hide');
+  await talk(p);
+  s = await st(p);
+  check(s.chapter.batAtWill && s.twins.frida.anim === 'twins_td_count:count', 'they count by the wall; bat at will is unlocked', JSON.stringify([s.chapter.batAtWill, s.twins.frida.anim]));
+  await shot(p, '43_twins_counting');
+  await p.evaluate(() => { game.input.tap('bat'); game.advance(80); });
+  s = await st(p);
+  check(s.form === 'bat' && s.panicLeft === 0, 'Q turns him into a bat on purpose (controlled)', JSON.stringify([s.form, s.panicLeft]));
+  room = await goDoor(p, 'linen'); await talk(p);
+  room = await goDoor(p, 'guest'); await talk(p);
+  check(room === 'guest' && (await st(p)).form === 'bat', 'the bat flies through doors', room);
+  r = await useSpot(p, 'wardrobe');
+  await adv(p, 60);
+  s = await st(p);
+  check(s.hidden && s.script === 'hidden', 'he hides as a bat in the wardrobe', JSON.stringify([s.hidden, s.script]));
+  await shot(p, '44_twins_bat_hidden');
+  let sawPoint = false;
+  for (let i = 0; i < 300; i++) {
+    await p.evaluate(() => { if (game.ui.speaking) game.input.tap('interact'); game.advance(4); });
+    s = await st(p);
+    if (s.twins.frida.anim === 'twins_td_point:point' && !sawPoint) { sawPoint = true; await shot(p, '45_twins_found_you'); }
+    if (s.chapter.step === 'epilogue') break;
+  }
+  check(sawPoint && s.chapter.step === 'epilogue', 'they find him: "Found you!"', JSON.stringify([sawPoint, s.chapter.step]));
+
+  console.log('Twins chapter: epilogue');
+  let sawFoundYou = false, sawAmbrose = false;
+  for (let i = 0; i < 600; i++) {
+    await p.evaluate(() => { if (game.ui.speaking) game.input.tap('interact'); game.advance(4); });
+    s = await st(p);
+    if (s.ambrose) sawAmbrose = true;
+    if (/Found you, Miss Frida/.test(s.message || '')) { if (!sawFoundYou) await shot(p, '46_twins_epilogue'); sawFoundYou = true; }
+    if (s.chapter.step === 'done' && !s.script) break;
+  }
+  check(sawAmbrose && sawFoundYou, 'Ambrose finally says "Found you, Miss Frida. Miss Wilhelmina."');
+  check(s.chapter.step === 'done' && s.room === 'bedroom' && s.chapter.memento, 'the crayon drawing hangs in Liam\'s bedroom', JSON.stringify([s.chapter.step, s.room, s.chapter.memento]));
+  await adv(p, 30); await shot(p, '47_twins_memento');
+  await clean(p, 'twins chapter (end)');
+  await p.close();
+
+  console.log('Twins chapter: save states');
+  p = await open('debug=1&seed=3&scene=twins&step=seeking&room=guest');
+  await talk(p);
+  await p.evaluate(() => { game.chapter.found.frida = true; game.chapter.fright = 40; });
+  const snapS = await p.evaluate(() => game.snapshot());
+  await p.evaluate(() => { game.switchScene('twins', { step: 'opening' }); game.advance(10); });
+  await p.evaluate((x) => game.restore(x), snapS); await adv(p, 2);
+  s = await st(p);
+  check(s.scene === 'twins' && s.room === 'guest' && s.chapter.step === 'seeking' && s.chapter.found.frida && s.chapter.fright > 30, 'save states keep the step, room, found twins and fright', JSON.stringify([s.room, s.chapter]));
+  await clean(p, 'twins save states');
+  await p.close();
+}
+await chapterTests();
+
 console.log('Fixed seed');
 p = await open('debug=1&seed=42&intro=0');
 check(floorA === await p.evaluate(() => JSON.stringify(game.scene.room.floor)), 'same seed gives the same room');
@@ -371,6 +629,13 @@ s = await st(p);
 check(!s.intro && s.mode === 'free', 'game runs without any art');
 await clean(p, 'fallback');
 await p.close();
+for (const q of ['scene=twins&step=seeking&room=nursery', 'scene=toyfight&phase=2']) {
+  p = await open(`debug=1&noart=1&seed=1&${q}`);
+  await p.evaluate(() => { for (let i = 0; i < 120; i++) { if (game.ui.messages.length > 1) game.input.tap('interact'); game.advance(4); } });
+  await shot(p, `13_fallback_${q.split('&')[0].split('=')[1]}`);
+  await clean(p, `fallback ${q}`);
+  await p.close();
+}
 
 await browser.close();
 server.close();

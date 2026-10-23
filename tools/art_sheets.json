@@ -1,5 +1,5 @@
 {
- "_note": "Sheet definitions for tools/process_art.py. grid = [rows, cols]. frame = output frame [w, h] in game pixels. scale_ref = which source frame sets the scale (px = its height in game pixels); scale_from = reuse another sheet's scale (same drawing size). rows/anims/names are copied into assets/sprites/manifest.json for the game.",
+ "_note": "Sheet definitions for tools/process_art.py. grid = [rows, cols]. frame = output frame [w, h] in game pixels. scale_ref = which source frame sets the scale (px = its height in game pixels); scale_from = reuse another sheet's scale (same drawing size). rows/anims/names are copied into assets/sprites/manifest.json for the game. An anim may name its \"row\" when a sheet's rows are different actions (enemies), not directions.",
  "sheets": [
   {
    "name": "liam_td_idle",
@@ -1158,6 +1158,1066 @@
     ],
     "pad": 1,
     "_note": "Only the pendulum window (dark glass) comes from each frame; the case is taken from the middle frame so it does not shimmer."
+   }
+  },
+  {
+   "name": "twins_td_idle",
+   "file": "twins_td_idle.png",
+   "kind": "sprite",
+   "palette": "twins",
+   "grid": [
+    3,
+    4
+   ],
+   "frame": [
+    48,
+    56
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 48
+   },
+   "rows": [
+    "down",
+    "left",
+    "up"
+   ],
+   "anims": {
+    "idle": {
+     "frames": [
+      0,
+      1,
+      2,
+      2,
+      3
+     ],
+     "fps": 3,
+     "loop": true
+    }
+   },
+   "remap": {
+    "#514D5A": "#6F6D72",
+    "#3A3740": "#514D5A",
+    "#26232B": "#3A3740"
+   },
+   "ink_share": 0.15,
+   "_note": "Hair is remapped one step lighter after snapping so the big dark eyes read against the fringe."
+  },
+  {
+   "name": "twins_td_walk",
+   "file": "twins_td_walk.png",
+   "kind": "sprite",
+   "palette": "twins",
+   "grid": [
+    3,
+    6
+   ],
+   "frame": [
+    48,
+    56
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 48
+   },
+   "rows": [
+    "down",
+    "left",
+    "up"
+   ],
+   "anims": {
+    "walk": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fps": 8,
+     "loop": true
+    }
+   },
+   "remap": {
+    "#514D5A": "#6F6D72",
+    "#3A3740": "#514D5A",
+    "#26232B": "#3A3740"
+   },
+   "ink_share": 0.15,
+   "_note": "Hair is remapped one step lighter after snapping so the big dark eyes read against the fringe."
+  },
+  {
+   "name": "twins_td_giggle",
+   "file": "twins_td_giggle.png",
+   "kind": "sprite",
+   "palette": "twins",
+   "grid": [
+    1,
+    4
+   ],
+   "frame": [
+    48,
+    56
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 48
+   },
+   "rows": [
+    "down"
+   ],
+   "anims": {
+    "giggle": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      3
+     ],
+     "fps": 8,
+     "loop": false
+    }
+   },
+   "remap": {
+    "#514D5A": "#6F6D72",
+    "#3A3740": "#514D5A",
+    "#26232B": "#3A3740"
+   },
+   "ink_share": 0.15,
+   "_note": "Hair is remapped one step lighter after snapping so the big dark eyes read against the fringe."
+  },
+  {
+   "name": "twins_td_peek",
+   "file": "twins_td_peek.png",
+   "kind": "sprite",
+   "palette": "twins",
+   "grid": [
+    1,
+    4
+   ],
+   "frame": [
+    64,
+    56
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 48
+   },
+   "rows": [
+    "down"
+   ],
+   "anims": {
+    "peek": {
+     "frames": [
+      0,
+      1,
+      2,
+      2,
+      2,
+      3,
+      0
+     ],
+     "fps": 5,
+     "loop": false
+    }
+   },
+   "remap": {
+    "#514D5A": "#6F6D72",
+    "#3A3740": "#514D5A",
+    "#26232B": "#3A3740"
+   },
+   "ink_share": 0.15,
+   "_note": "Hair is remapped one step lighter after snapping so the big dark eyes read against the fringe."
+  },
+  {
+   "name": "twins_td_point",
+   "file": "twins_td_point.png",
+   "kind": "sprite",
+   "palette": "twins",
+   "grid": [
+    1,
+    3
+   ],
+   "frame": [
+    48,
+    56
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 48
+   },
+   "rows": [
+    "down"
+   ],
+   "anims": {
+    "point": {
+     "frames": [
+      0,
+      1,
+      2
+     ],
+     "fps": 5,
+     "loop": false
+    }
+   },
+   "remap": {
+    "#514D5A": "#6F6D72",
+    "#3A3740": "#514D5A",
+    "#26232B": "#3A3740"
+   },
+   "ink_share": 0.15,
+   "_note": "Hair is remapped one step lighter after snapping so the big dark eyes read against the fringe."
+  },
+  {
+   "name": "twins_td_count",
+   "file": "twins_td_count.png",
+   "kind": "sprite",
+   "palette": "twins",
+   "grid": [
+    1,
+    4
+   ],
+   "frame": [
+    48,
+    56
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 48
+   },
+   "rows": [
+    "up"
+   ],
+   "anims": {
+    "count": {
+     "frames": [
+      0,
+      1,
+      2,
+      1,
+      2,
+      3
+     ],
+     "fps": 3,
+     "loop": false
+    }
+   },
+   "remap": {
+    "#514D5A": "#6F6D72",
+    "#3A3740": "#514D5A",
+    "#26232B": "#3A3740"
+   },
+   "ink_share": 0.15,
+   "_note": "Hair is remapped one step lighter after snapping so the big dark eyes read against the fringe."
+  },
+  {
+   "name": "twins_sv_float",
+   "file": "twins_sv_float.png",
+   "kind": "sprite",
+   "palette": "twins",
+   "grid": [
+    1,
+    4
+   ],
+   "frame": [
+    48,
+    64
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 48
+   },
+   "rows": [
+    "right"
+   ],
+   "anims": {
+    "float": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 4,
+     "loop": true
+    }
+   },
+   "remap": {
+    "#514D5A": "#6F6D72",
+    "#3A3740": "#514D5A",
+    "#26232B": "#3A3740"
+   },
+   "ink_share": 0.15,
+   "_note": "Hair is remapped one step lighter after snapping so the big dark eyes read against the fringe."
+  },
+  {
+   "name": "twins_sv_command",
+   "file": "twins_sv_command.png",
+   "kind": "sprite",
+   "palette": "twins",
+   "grid": [
+    1,
+    4
+   ],
+   "frame": [
+    64,
+    64
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 48
+   },
+   "rows": [
+    "right"
+   ],
+   "anims": {
+    "command": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 6,
+     "loop": false
+    }
+   },
+   "remap": {
+    "#514D5A": "#6F6D72",
+    "#3A3740": "#514D5A",
+    "#26232B": "#3A3740"
+   },
+   "ink_share": 0.15,
+   "_note": "Hair is remapped one step lighter after snapping so the big dark eyes read against the fringe."
+  },
+  {
+   "name": "twins_sv_throw",
+   "file": "twins_sv_throw.png",
+   "kind": "sprite",
+   "palette": "twins",
+   "grid": [
+    1,
+    4
+   ],
+   "frame": [
+    64,
+    64
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 48
+   },
+   "rows": [
+    "right"
+   ],
+   "anims": {
+    "throw": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 10,
+     "loop": false
+    }
+   },
+   "remap": {
+    "#514D5A": "#6F6D72",
+    "#3A3740": "#514D5A",
+    "#26232B": "#3A3740"
+   },
+   "ink_share": 0.15,
+   "_note": "Hair is remapped one step lighter after snapping so the big dark eyes read against the fringe."
+  },
+  {
+   "name": "twins_sv_tagged",
+   "file": "twins_sv_tagged.png",
+   "kind": "sprite",
+   "palette": "twins",
+   "grid": [
+    1,
+    3
+   ],
+   "frame": [
+    64,
+    64
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 48
+   },
+   "rows": [
+    "right"
+   ],
+   "anims": {
+    "tagged": {
+     "frames": [
+      0,
+      1,
+      2
+     ],
+     "fps": 8,
+     "loop": false
+    }
+   },
+   "remap": {
+    "#514D5A": "#6F6D72",
+    "#3A3740": "#514D5A",
+    "#26232B": "#3A3740"
+   },
+   "ink_share": 0.15,
+   "_note": "Hair is remapped one step lighter after snapping so the big dark eyes read against the fringe."
+  },
+  {
+   "name": "twins_portraits",
+   "file": "twins_portraits.png",
+   "kind": "cellcrop",
+   "palette": "twins",
+   "grid": [
+    2,
+    4
+   ],
+   "crop": [
+    0,
+    0,
+    384,
+    384
+   ],
+   "size": [
+    96,
+    96
+   ],
+   "names": [
+    "stare",
+    "tilt",
+    "giggle",
+    "whisper",
+    "pout",
+    "lonely",
+    "delighted",
+    "peace"
+   ],
+   "_note": "Both girls share one portrait (they speak together).",
+   "remap": {
+    "#514D5A": "#6F6D72",
+    "#3A3740": "#514D5A",
+    "#26232B": "#3A3740"
+   }
+  },
+  {
+   "name": "toy_soldier",
+   "file": "toy_soldier.png",
+   "kind": "sprite",
+   "palette": "picturebook",
+   "grid": [
+    2,
+    6
+   ],
+   "frame": [
+    48,
+    40
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 32
+   },
+   "rows": [
+    "march",
+    "attack"
+   ],
+   "anims": {
+    "march": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fps": 8,
+     "loop": true,
+     "row": 0
+    },
+    "lunge": {
+     "frames": [
+      0,
+      1,
+      2
+     ],
+     "fps": 10,
+     "loop": false,
+     "row": 1
+    },
+    "knocked": {
+     "frames": [
+      3,
+      4,
+      5
+     ],
+     "fps": 8,
+     "loop": false,
+     "row": 1
+    }
+   },
+   "_note": "Row 2 frame 6 (lying flat) was drawn smaller than the rest; regen pending (TWN-12)."
+  },
+  {
+   "name": "toy_rockinghorse",
+   "file": "toy_rockinghorse.png",
+   "kind": "sprite",
+   "palette": "picturebook",
+   "grid": [
+    2,
+    4
+   ],
+   "frame": [
+    80,
+    64
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     0
+    ],
+    "px": 48
+   },
+   "rows": [
+    "rock",
+    "charge"
+   ],
+   "anims": {
+    "rock": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 6,
+     "loop": true,
+     "row": 0
+    },
+    "charge": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 8,
+     "loop": false,
+     "row": 1
+    }
+   }
+  },
+  {
+   "name": "toy_projectiles",
+   "file": "toy_projectiles.png",
+   "kind": "fit",
+   "palette": "picturebook",
+   "grid": [
+    1,
+    6
+   ],
+   "fit": [
+    16,
+    0
+   ],
+   "names": [
+    "block_star",
+    "block_moon",
+    "ball",
+    "jack",
+    "top1",
+    "top2"
+   ]
+  },
+  {
+   "name": "tiles_picturebook",
+   "file": "tiles_picturebook.png",
+   "kind": "tiles",
+   "palette": "picturebook",
+   "tile": [
+    16,
+    16
+   ],
+   "inset": 4,
+   "keep_alpha": true,
+   "seamless_check": false,
+   "regions": [
+    {
+     "name": "ground",
+     "rect": [
+      0,
+      57,
+      1536,
+      212
+     ],
+     "count": 6,
+     "size": [
+      16,
+      14
+     ]
+    },
+    {
+     "name": "fill",
+     "rect": [
+      0,
+      287,
+      1536,
+      245
+     ],
+     "count": 6,
+     "size": [
+      16,
+      16
+     ]
+    },
+    {
+     "name": "shelf",
+     "rect": [
+      0,
+      549,
+      1536,
+      154
+     ],
+     "count": 6,
+     "size": [
+      16,
+      10
+     ]
+    },
+    {
+     "name": "deco",
+     "rect": [
+      0,
+      743,
+      1536,
+      249
+     ],
+     "count": 6,
+     "size": [
+      16,
+      16
+     ]
+    }
+   ],
+   "_note": "Stopgap: the generated sheet ignored the 256 px grid, so each row band is cut by hand (regen pending, TWN-15)."
+  },
+  {
+   "name": "bg_picturebook_far",
+   "file": "bg_picturebook_far.png",
+   "kind": "fit",
+   "palette": "picturebook",
+   "grid": [
+    1,
+    1
+   ],
+   "fit": [
+    768,
+    0
+   ],
+   "names": [
+    "far"
+   ],
+   "ink_share": 0.5
+  },
+  {
+   "name": "bg_picturebook_mid",
+   "file": "bg_picturebook_mid.png",
+   "kind": "fit",
+   "palette": "picturebook",
+   "grid": [
+    1,
+    1
+   ],
+   "fit": [
+    768,
+    0
+   ],
+   "names": [
+    "mid"
+   ],
+   "ink_share": 0.5,
+   "_note": "Brighter than asked; dim it in code (parallax tint)."
+  },
+  {
+   "name": "prop_toyfort",
+   "file": "prop_toyfort.png",
+   "kind": "fit",
+   "palette": "picturebook",
+   "grid": [
+    1,
+    2
+   ],
+   "fit": [
+    128,
+    0
+   ],
+   "names": [
+    "intact",
+    "battered"
+   ],
+   "align": "bottom-centre"
+  },
+  {
+   "name": "tiles_wall_nursery",
+   "file": "tiles_wall_nursery.png",
+   "kind": "tiles",
+   "palette": "nursery",
+   "tile": [
+    16,
+    16
+   ],
+   "inset": 6,
+   "seamless_check": true,
+   "regions": [
+    {
+     "name": "wall",
+     "rect": [
+      0,
+      0,
+      1536,
+      738
+     ],
+     "count": 6,
+     "size": [
+      32,
+      96
+     ]
+    },
+    {
+     "name": "cap",
+     "rect": [
+      0,
+      738,
+      1536,
+      286
+     ],
+     "count": 6,
+     "size": [
+      16,
+      16
+     ]
+    }
+   ],
+   "edge_tiles": [
+    "cap[0]",
+    "cap[1]",
+    "cap[2]",
+    "cap[3]",
+    "cap[4]",
+    "cap[5]"
+   ]
+  },
+  {
+   "name": "prop_nursery_bed",
+   "file": "prop_nursery_bed.png",
+   "kind": "fit",
+   "palette": "nursery",
+   "grid": [
+    1,
+    3
+   ],
+   "fit": [
+    0,
+    48
+   ],
+   "names": [
+    "made",
+    "hiding",
+    "empty"
+   ],
+   "align": "bottom-centre"
+  },
+  {
+   "name": "prop_dollhouse",
+   "file": "prop_dollhouse.png",
+   "kind": "fit",
+   "palette": "nursery",
+   "grid": [
+    1,
+    3
+   ],
+   "fit": [
+    0,
+    48
+   ],
+   "names": [
+    "closed",
+    "open",
+    "lit"
+   ]
+  },
+  {
+   "name": "prop_rockinghorse",
+   "file": "prop_rockinghorse.png",
+   "kind": "fit",
+   "palette": "nursery",
+   "grid": [
+    1,
+    4
+   ],
+   "fit": [
+    0,
+    32
+   ],
+   "names": [
+    "level",
+    "forward",
+    "level2",
+    "back"
+   ]
+  },
+  {
+   "name": "prop_toys",
+   "file": "prop_toys.png",
+   "kind": "fit",
+   "palette": "nursery",
+   "grid": [
+    2,
+    4
+   ],
+   "fit": [
+    32,
+    0
+   ],
+   "names": [
+    "chest_closed",
+    "chest_open",
+    "chest_rattle",
+    "rag_doll",
+    "ball",
+    "blocks",
+    "soldier",
+    "top"
+   ]
+  },
+  {
+   "name": "prop_rug_nursery",
+   "file": "prop_rug_nursery.png",
+   "kind": "fit",
+   "palette": "nursery",
+   "grid": [
+    1,
+    2
+   ],
+   "fit": [
+    64,
+    0
+   ],
+   "names": [
+    "flat",
+    "kicked"
+   ]
+  },
+  {
+   "name": "prop_wardrobe",
+   "file": "prop_wardrobe.png",
+   "kind": "fit",
+   "palette": "nursery",
+   "grid": [
+    1,
+    3
+   ],
+   "fit": [
+    0,
+    56
+   ],
+   "names": [
+    "closed",
+    "ajar",
+    "open"
+   ],
+   "align": "bottom-centre"
+  },
+  {
+   "name": "prop_painting_twins",
+   "file": "prop_painting_twins.png",
+   "kind": "fit",
+   "palette": "nursery",
+   "grid": [
+    1,
+    4
+   ],
+   "fit": [
+    48,
+    0
+   ],
+   "names": [
+    "still",
+    "swirl1",
+    "swirl2",
+    "portal"
+   ],
+   "still_body": {
+    "base": 0,
+    "pad": 0,
+    "moving_colours": [
+     "#D3C29F",
+     "#E9DCC0",
+     "#F4ECD8",
+     "#2C3550",
+     "#3F4A6B",
+     "#5A678A",
+     "#7E2E2A",
+     "#A4433A",
+     "#C2655A",
+     "#9C7A2C",
+     "#C29F45",
+     "#DDBE6E",
+     "#4F6648",
+     "#6B8460",
+     "#8AA27C",
+     "#8C857A",
+     "#B5AEA2",
+     "#2A2630"
+    ],
+    "_note": "The frame comes from frame 1; only the picture inside changes."
+   }
+  },
+  {
+   "name": "liam_sv_swipe",
+   "file": "liam_sv_swipe.png",
+   "kind": "sprite",
+   "palette": "liam",
+   "grid": [
+    1,
+    4
+   ],
+   "frame": [
+    112,
+    72
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     3
+    ],
+    "px": 57
+   },
+   "rows": [
+    "right"
+   ],
+   "anims": {
+    "swipe": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 12,
+     "loop": false
+    }
+   }
+  },
+  {
+   "name": "liam_sv_throw",
+   "file": "liam_sv_throw.png",
+   "kind": "sprite",
+   "palette": "liam",
+   "grid": [
+    1,
+    4
+   ],
+   "frame": [
+    80,
+    72
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     3
+    ],
+    "px": 57
+   },
+   "rows": [
+    "right"
+   ],
+   "anims": {
+    "throw": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 12,
+     "loop": false
+    }
+   }
+  },
+  {
+   "name": "liam_sv_hurt",
+   "file": "liam_sv_hurt.png",
+   "kind": "sprite",
+   "palette": "liam",
+   "grid": [
+    1,
+    2
+   ],
+   "frame": [
+    80,
+    64
+   ],
+   "scale_ref": {
+    "frame": [
+     0,
+     1
+    ],
+    "px": 55
+   },
+   "rows": [
+    "right"
+   ],
+   "anims": {
+    "hurt": {
+     "frames": [
+      0,
+      1
+     ],
+     "fps": 6,
+     "loop": false
+    }
    }
   }
  ]

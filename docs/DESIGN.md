@@ -183,6 +183,27 @@ Each tenant gets: a home, a fear they mirror, a fight format, a bat-control upgr
 
 **Memento:** their crayon drawing of Liam (as a bat, hanging in the wardrobe).
 
+**Chapter flow** (the playable level; draft beats)
+
+*Rooms:* Liam's bedroom → Landing → Nursery and Guest room, joined by the Linen closet passage. The toy-army fight is a separate side-view level inside the nursery painting.
+
+1. **Evening, Liam's bedroom.** The room is still bare. Ambrose brings the evening tea (his produce animation) and mentions that "the young misses" are rather lively tonight. Liam has no idea who he means. Goal: go and complain.
+2. **The landing.** Giggles behind the doors; a ball rolls across the floor by itself. Doors to the nursery and the guest room.
+3. **First meeting, nursery (scripted, menacing).** The rocking horse rocks with nobody on it, the toy chest rattles, the light flickers. Two voices whisper "Found you…" right behind Liam. **His first big panic into bat form**: the fright meter fills on screen and teaches the mechanic. When he lands, the Twins are standing there: "Let's play hide-and-seek. You count." Liam counts; they vanish into the linen closet.
+4. **Seeking.** Liam checks **hand-placed hiding spots** in the nursery and the guest room. Each spot is a **scare** (fills the fright meter), a **clue** (a line that hints where to look), or **a twin**. Giggles come from the room that still hides a twin. Fixed layout (first draft):
+   - Nursery: toy chest (scare: it bursts open), rocking horse (scare: it rocks), dollhouse (clue and Ambrose lore: the tiny butler inside; a lit window), second bed (scare: the lump is a rag doll), **first bed (Frida, under the quilt)**, wainscot (lore: two identical height marks).
+   - Guest room: curtains (scare), under the bed (clue), **wardrobe (Wilhelmina, one eye in the gap)**.
+   - Linen closet: a shortcut both ways; the Twins' giggles echo through it.
+5. **"Now play with us properly."** Once Liam has found both, the Twins take his hands and pull him into the picture-book painting (the portal swirl).
+6. **Fight: the toy army** (side view, toy-fort arena). Three phases, and **a defeat retries the current phase**:
+   - Phase 1: waves of tin soldiers, while the Twins throw toys from the fort towers.
+   - Phase 2: the rocking horse charges across the arena.
+   - Phase 3: tag both Twins as they float between the towers.
+7. **Back in the nursery: "Your turn to hide."** The Twins count with hands over their eyes. The player learns the **bat upgrade: transform at will**, and hides as a bat on the empty rail of the guest-room wardrobe. The Twins find him and dissolve into giggles.
+8. **Epilogue.** Liam brings Ambrose to the nursery: "Ninety-nine… one hundred. Ready or not. Found you, Miss Frida. Miss Wilhelmina." The crayon drawing appears in Liam's bedroom.
+
+**Fright meter in this chapter:** scares fill it. When it is full outside the fight, Liam panics into bat form for a few seconds in the same room, then lands and the meter resets.
+
 **Sample lines** *(draft)*
 > **Twins:** "You're not the one who was counting." / "You're taller." / "And dead-er."
 
@@ -214,7 +235,7 @@ Each tenant gets: a home, a fear they mirror, a fight format, a bat-control upgr
   - **Painting worlds:** side-view 2D platformer arenas inside paintings (doors in the portrait gallery).
   - **Locked boss rooms:** top-down; the room locks until the fight is over.
   - **Survivor nights:** wave survival outside (garden, cemetery or the tower roof).
-- **Liam's moves:** a **cape swipe** (melee) and **one projectile** (not decided yet; ideas: teacups, a withering glare, tiny bats, crumpled sketches).
+- **Liam's moves:** a **cape swipe** (melee) and **one projectile: crumpled sketches** (balled-up drawings: he is a failed painter). Code-drawn placeholder until the art exists.
 - **Difficulty:** hard, fair, quick retry (Celeste or Hollow Knight style).
 - **Defeat:** no death. Liam startles, turns into a bat and flees in a panic. Retry puts him back at the door, mid-pose, pretending nothing happened.
 
@@ -291,6 +312,7 @@ Each tenant gets: a home, a fear they mirror, a fight format, a bat-control upgr
 - Every prompt is self-contained: style block, exact palette, solid magenta `#FF00FF` background, grid layout, no text.
 - Each character's approved master turnaround is attached to all of that character's prompts.
 - `tools/process_art.py`: chroma-key, auto-crop, palette snapping, nearest-neighbour resize, seamless tiles.
+- Per-sheet options in `tools/art_sheets.json` include `remap` (swap colours after snapping; the Twins' hair is one step lighter so their dark eyes read), `still_body` (only the moving part changes between frames), `keep_alpha` (tiles drawn on magenta keep their transparency) and per-row animations for enemy sheets.
 
 ## 9. Technical defaults
 
@@ -301,7 +323,7 @@ Each tenant gets: a home, a fear they mirror, a fight format, a bat-control upgr
 - Deploy to Cloudflare Workers (`wrangler.jsonc`, server code in `worker/`).
 - **Testing environment from day one:** testing modal, cheats (god mode, infinite resources, game speed, frame step), spawn anything, sandbox room, visual overlays, live config reload, save states, fixed random seed, automated smoke tests.
 
-### 9.1 Current build (demo room)
+### 9.1 Current build
 
 - **Test room:** one room with the oak floor, the sage back wall, a door, a sash window with curtains and two candle sconces. Liam enters through the door and strikes his door pose; then he walks in four directions, idles, fidgets (with a line) after standing still, and inspects things with E.
 - **Day/night:** a real-time cycle (a full day is 240 s, in `config.json`). Dawn and dusk get a warm tint; at night the room darkens and the sconces light up with flickering candle light. The window glass switches to night.
@@ -312,7 +334,18 @@ Each tenant gets: a home, a fear they mirror, a fight format, a bat-control upgr
 - **Night rituals (20:00–05:30):** he sets the small dining table place by place (4 places), winds the grandfather clock back (its hands then stay at 3:00 until dawn) and walks through the left wall where the 1890s plan shows a door, fading out, gone for 6 s, then back. Dawn clears the table and restarts the clock. Liam can inspect the table and the clock. The table (72 px wide, with four staggered settings), the place settings (white china so they read on the cream cloth) and the clock (its hands are drawn by the game) use their real art (PROP-02 to PROP-04).
 - **Pause menu:** Esc or P freezes the game and opens Resume, Controls (the controls hint), Testing tools and Restart room. A small "Esc: menu" hint shows for the first 6 seconds.
 - **Testing toolkit:** testing panel (from the pause menu, or F1 / \`) with cheats, game speed, pause and frame step, a time-of-day slider, curtain controls, spawning (candle, Liam dummy playing any animation, Ambrose fallback, test dialogue) next to Liam or at the cursor, overlays (hitboxes, ranges/auras/sunbeam, nav grid, FPS, live values), live reload of `config.json` and `texts.json`, 3 save-state slots plus export/import, a fixed seed, and a copyable test link. The **sandbox** scene has an animation viewer that plays every sheet and shows a seam test for tiles. URL parameters are listed in `README.md`.
-- **Smoke tests:** `node tests/smoke.mjs` runs 68 checks in a headless browser (intro, movement, walls, curtains, sunbeam, dusk/night, day rollover, fidget, save states, config reload, the pause menu and testing panel, the bat form, Ambrose (schedule, greeting, conversations, drift, rituals, dawn reset), the fixed seed, the sandbox and every viewer page, and a no-art run) and saves screenshots to `tests/screenshots/`.
+- **The Twins chapter (playable from start to end, scene `twins`):** five rooms built from `levels/twins.json` (Liam's bedroom, the landing, the nursery, the guest room, the linen closet). Walking up into a door (or E on it) fades to the next room; Liam strikes his door pose in each new room. The chapter follows the flow in 5.4 step by step: Ambrose's tea, the ball on the landing, the scripted first meeting, the hiding spots, the pull into the painting, the toy-army fight, "your turn to hide", the epilogue and the crayon drawing on Liam's wall, then a chapter card.
+  - **Fright meter:** a bar at the top left. Scares fill it; it drains slowly. Full = a short panic into bat form in the same room, then it is empty. The first meeting fills it on purpose as the tutorial.
+  - **The Twins:** Frida, and Wilhelmina as Frida mirrored. Slightly see-through, with a faint cold glow so they read in the dark. They speak together with one shared portrait.
+  - **Bat at will:** after the Twins teach him, Q turns Liam into a bat and back. The bat can fly through doors and hide in the wardrobe.
+  - **Cutscenes** are small scripts (`src/engine/script.js`); every line is in `texts.json` → `twins`, every number in `config.json` → `twins` and `fright`.
+- **The toy-army fight (scene `toyfight`, side view):** the picture-book world with the moonlit window, a dimmed giant-toys layer, the toy fort (its towers and walkway are platforms) and two bookshelf planks. Liam runs, jumps (buffered, a little coyote time, short hop when the key is released), swipes his cape and throws crumpled sketches (a code-drawn placeholder). 5 HP shown as pages, a second of invulnerability after a hit, god mode in the testing tools.
+  - Phase 1: three waves of tin soldiers (3, 4, 5). They march, wind up and lunge with the bayonet; a swipe or a sketch knocks them flat. The Twins throw toys from the towers.
+  - Phase 2: the rocking horse rocks, leaps across the arena, lands and topples; hit it while it is down (5 hits).
+  - Phase 3: tag both Twins (touch or swipe) while they float between the towers, the shelves and mid-air spots, still throwing toys.
+  - Losing all HP retries the current phase with full HP. Winning returns to the nursery. Numbers in `config.json` → `side`.
+- **Testing tools for the chapter:** jump to any step or room, add fright or panic now, find either twin, toggle bat at will; for the fight: pick the phase, refill HP, win the phase. Spawn the Twins, Ambrose or a scare in the house; soldiers, the horse or a thrown toy in the fight. Test links are in `README.md`.
+- **Smoke tests:** `node tests/smoke.mjs` runs 115 checks in a headless browser and saves screenshots to `tests/screenshots/`: the test room (intro, movement, walls, curtains, sunbeam, dusk/night, day rollover, fidget, save states, config reload, the pause menu and testing panel, the bat form), Ambrose (schedule, greeting, conversations, drift, rituals, dawn reset), a scripted playthrough of the whole Twins chapter with a small bot for the fight, the fixed seed, the sandbox and every viewer page, and no-art runs.
 - **Art pipeline:** `tools/process_art.py` keys out the magenta, snaps every pixel to the palette group (`tools/palette.json`, exported from the tracker) and downscales by block sampling: each output pixel takes the most common palette colour of its block, with dark ink colours winning so outlines and eye rings survive. It keeps each drawing whole even when it pokes over its grid cell (it is given to the cell that holds most of it), removes stray specks, trims tile seams and checks that tiles repeat cleanly. A sheet can also swap colours after processing (`remap`, used to turn the cream china white), line its frames up on their own boxes (`align`), and keep one frame for everything except a moving part (`still_body`, used so only the clock's pendulum moves). Sheet layouts and animation timings are in `tools/art_sheets.json`.
 - **Font:** the DotGothic16 file has to be added to `assets/fonts/` by hand (download blocked from here); until then a bold system font is used.
 
@@ -324,7 +357,9 @@ Each tenant gets: a home, a fear they mirror, a fight format, a bat-control upgr
 | Story | How does Ambrose learn he's dead? |
 | Art | Ambrose's sepia blends a little with the oak floor by day; consider a darker coat or a rim light. |
 | Tenants | Each tenant's origin (former resident or stranger, ghost or creature), story and unfinished business. One design session per tenant. |
-| Combat | What is Liam's projectile? |
+| Twins | Dialogue is a first draft in `texts.json` → `twins`: review the voice and the jokes. |
+| Twins | Fight difficulty is a first pass (a simple bot clears phase 1 with two defeats; phases 2 and 3 are easier). Tune in `config.json` → `side` after playtesting. |
+| Art | Still code-drawn: the crumpled-sketch projectile, the crayon drawing on Liam's wall, the linen-closet shelves. The platform tileset (TWN-15) and the tin soldier (TWN-12) need their regens. |
 | Gating | The upgrade order in 5.3 is a draft; confirm it once rooms are built. |
 | Weather | Which weather types, and what they change. |
 | World art | Exterior palette, lighting model, day/night look. (Interior base palette is set.) |
@@ -357,3 +392,6 @@ Each tenant gets: a home, a fear they mirror, a fight format, a bat-control upgr
 | 2026-10-21 | The Twins are Frida and Wilhelmina. Ambrose stopped counting because he died mid-count. |
 | 2026-10-21 | Ambrose's death hour is 9 pm (was a 3:00 placeholder); the stopped clock now shows nine. |
 | 2026-10-21 | Twins art direction: faded white and grey, big dark eyes, tiny smiles; mirror images (Frida's bow left, Wilhelmina's right), only Frida is drawn. 32×48 px. Toy army, picture-book world (own palette) and nursery props designed; 27 prompts (TWN-00 to TWN-26) in the new Twins sheet of the tracker. |
+| 2026-10-23 | Liam's projectile: crumpled sketches (placeholder art for now). Twins chapter flow: Ambrose sends Liam from his bedroom; scripted first-meeting panic; hand-placed hiding spots (scare, clue or twin); finding both triggers the painting; the fight retries the current phase; a full fright meter outside fights causes a short bat panic in the same room. |
+| 2026-10-23 | Twins, toy army, picture-book world, nursery props and Liam's side-view swipe/throw/hurt processed (29 new sprite sheets, all in the sandbox viewer). Twins drawn at 48 px; the platform tileset is hand-cut as a stopgap until its regen. |
+| 2026-10-23 | The Twins chapter is playable from start to end: five rooms with doors, the fright meter, hide-and-seek, the side-view toy-army fight (3 phases, phase retry), bat at will (Q), the epilogue and the memento. |

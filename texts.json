@@ -2,7 +2,8 @@
   "_note": "All on-screen text. Keys are used by the code; edit the strings freely. A list means one line is picked at random.",
   "names": {
     "liam": "Liam",
-    "ambrose": "Ambrose"
+    "ambrose": "Ambrose",
+    "twins": "Frida & Wilhelmina"
   },
   "intro": {
     "entrance": "Behold! The lord of this manor arrives, and the shadows bow before him.",
@@ -53,8 +54,24 @@
       "WASD / Arrow keys"
     ],
     [
-      "Interact",
+      "Interact / skip a line",
       "E / Space / Enter"
+    ],
+    [
+      "Turn into a bat (once learned)",
+      "Q"
+    ],
+    [
+      "Paintings: jump",
+      "W / Up / Space"
+    ],
+    [
+      "Paintings: cape swipe",
+      "E / J"
+    ],
+    [
+      "Paintings: throw a sketch",
+      "F / K"
     ],
     [
       "Pause menu",
@@ -122,5 +139,733 @@
   "clock": {
     "ticking": "A grandfather clock. It ticks like it's judging me.",
     "stopped": "It says nine o'clock. It's been saying that all night."
+  },
+  "twins": {
+    "_note": "The Twins chapter. Each line is {who: liam | twins | ambrose, face: portrait name, text}. Portraits - liam: grand smug flat startled panicked embarrassed soft sad; twins: stare tilt giggle whisper pout lonely delighted peace; ambrose: composed polite eyebrow drifting remembering concerned warm shaken.",
+    "ui": {
+      "fright": "FRIGHT",
+      "goHint": "The nursery is down the landing.",
+      "seekHint": "Find the Twins. Press E on anything that could hide a small girl.",
+      "backHint": "Back to the nursery.",
+      "batHint": "Q: turn into a bat (and back). Now hide!",
+      "learned": "Learned: turn into a bat at will (Q)",
+      "chapterCard": "The Twins",
+      "chapterSub": "Found, at last.",
+      "giggles": [
+        "hee hee",
+        "hee hee hee",
+        "heh"
+      ]
+    },
+    "enter": {
+      "bedroom": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "My room. Still bare. Minimalist. On purpose."
+        }
+      ],
+      "landing": [
+        {
+          "who": "liam",
+          "face": "grand",
+          "text": "Behold: the landing. Long. Dark. A great many doors."
+        },
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "I love it here. I'm lying."
+        }
+      ],
+      "guest": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "A guest room. For guests. I've never had one."
+        }
+      ],
+      "linen": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "A linen closet. Cosy. Or a trap. Cosy trap."
+        }
+      ]
+    },
+    "opening": [
+      {
+        "who": "ambrose",
+        "face": "polite",
+        "text": "Your evening tea, Master Edmund."
+      },
+      {
+        "who": "liam",
+        "face": "flat",
+        "text": "It's Liam. And I can't drink tea."
+      },
+      {
+        "who": "ambrose",
+        "face": "composed",
+        "text": "Of course, sir. I shall leave it here regardless."
+      },
+      {
+        "who": "ambrose",
+        "face": "concerned",
+        "text": "Oh, and sir. The young misses are rather lively this evening. In the nursery."
+      },
+      {
+        "who": "liam",
+        "face": "startled",
+        "text": "The young who?"
+      },
+      {
+        "who": "ambrose",
+        "face": "composed",
+        "text": "Goodnight, sir."
+      }
+    ],
+    "openingAfter": [
+      {
+        "who": "liam",
+        "face": "flat",
+        "text": "I don't have young misses. I don't have a nursery. ...I have a nursery?"
+      },
+      {
+        "who": "liam",
+        "face": "grand",
+        "text": "Very well. I shall go and complain. Majestically."
+      }
+    ],
+    "landingBall": [
+      {
+        "who": "liam",
+        "face": "startled",
+        "text": "A ball. Rolling. By itself."
+      },
+      {
+        "who": "liam",
+        "face": "flat",
+        "text": "Balls do that. On slopes. This floor is flat. I checked. Just now. With my whole soul."
+      }
+    ],
+    "panicLine": [
+      {
+        "who": "liam",
+        "face": "panicked",
+        "text": "NOPE."
+      }
+    ],
+    "meeting": {
+      "horse": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "The horse is rocking. Nobody is on the horse."
+        }
+      ],
+      "chest": [
+        {
+          "who": "liam",
+          "face": "startled",
+          "text": "And the toy chest is... knocking. From the inside."
+        }
+      ],
+      "whisper": [
+        {
+          "who": "twins",
+          "face": "whisper",
+          "text": "Found you..."
+        }
+      ],
+      "after": [
+        {
+          "who": "twins",
+          "face": "stare",
+          "text": "You're not the one who was counting."
+        },
+        {
+          "who": "twins",
+          "face": "tilt",
+          "text": "You're taller."
+        },
+        {
+          "who": "twins",
+          "face": "giggle",
+          "text": "And dead-er."
+        },
+        {
+          "who": "liam",
+          "face": "embarrassed",
+          "text": "That was a tactical retreat. Bats are very tactical."
+        },
+        {
+          "who": "twins",
+          "face": "stare",
+          "text": "Let's play hide-and-seek."
+        },
+        {
+          "who": "twins",
+          "face": "stare",
+          "text": "You count."
+        },
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "I'm not going to-"
+        },
+        {
+          "who": "twins",
+          "face": "stare",
+          "text": "Count."
+        }
+      ],
+      "count": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "One. Two. Three. This is beneath me. Four..."
+        },
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "...Nine. Ten. Ready or not, I suppose."
+        }
+      ],
+      "seekStart": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "They're hiding. In my house. ...Fine."
+        },
+        {
+          "who": "liam",
+          "face": "smug",
+          "text": "I'm very good at finding things. I found this house. It was in a will."
+        }
+      ]
+    },
+    "spots": {
+      "teatable": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "My evening tea. Going cold. I can't drink it anyway. It's the thought that counts."
+        }
+      ],
+      "teatableLater": [
+        {
+          "who": "liam",
+          "face": "soft",
+          "text": "The tea's still there. So is the drawing. Things are piling up. In a nice way."
+        }
+      ],
+      "painting": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "A picture-book painting. Toy soldiers marching on a fort. Very wholesome. Suspiciously still."
+        }
+      ],
+      "paintingSeeking": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "The soldiers in the painting have moved. I'm almost sure the soldiers have moved."
+        }
+      ],
+      "bed1Empty": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "An empty bed. Neatly unmade."
+        }
+      ],
+      "bed2": [
+        {
+          "who": "liam",
+          "face": "startled",
+          "text": "There's someone under the-"
+        },
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "It's a rag doll. It's a rag doll with one button eye. I'm fine."
+        }
+      ],
+      "bed2Later": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "The rag doll is watching me. With its remaining eye."
+        }
+      ],
+      "chest": [
+        {
+          "who": "liam",
+          "face": "startled",
+          "text": "The toy chest bursts open-"
+        },
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "Blocks. Tops. A jack-in-the-box with no jack. Nobody in it. Good. Great."
+        }
+      ],
+      "chestLater": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "The toy chest. Nothing in it but toys and my dignity."
+        }
+      ],
+      "horse": [
+        {
+          "who": "liam",
+          "face": "startled",
+          "text": "It's rocking again. I didn't touch it. I'm not touching it."
+        }
+      ],
+      "horseLater": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "The horse rocks whenever I look at it. I'll stop looking at it."
+        }
+      ],
+      "dollhouse": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "A dollhouse. It's this house. There's a tiny butler in the hall."
+        },
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "...Of course there is."
+        }
+      ],
+      "dollhouseLit": [
+        {
+          "who": "liam",
+          "face": "startled",
+          "text": "A light just went on in the dollhouse. Top floor."
+        },
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "Nobody up there. Nobody small enough, anyway."
+        }
+      ],
+      "marks": [
+        {
+          "who": "liam",
+          "face": "soft",
+          "text": "Height marks on the wainscot. Two, at the same height. Then nothing above them."
+        }
+      ],
+      "underbed": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "Under the bed: dust, one white ribbon, and two small footprints. Heading for the wardrobe."
+        }
+      ],
+      "underbedLater": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "Dust. Just dust now."
+        }
+      ],
+      "curtainsScare": [
+        {
+          "who": "liam",
+          "face": "startled",
+          "text": "The curtains moved. Without me. That's my job."
+        }
+      ],
+      "linens": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "Sheets, folded with military precision. Ambrose."
+        },
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "Or something that folds like Ambrose."
+        }
+      ],
+      "wardrobeLater": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "The wardrobe. Two coats. They're not people. I checked twice."
+        }
+      ],
+      "tooBig": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "I don't fit in a wardrobe. I'd need to be smaller. Much smaller. With wings."
+        }
+      ]
+    },
+    "found": {
+      "frida": [
+        {
+          "who": "twins",
+          "face": "giggle",
+          "text": "Found me."
+        },
+        {
+          "who": "twins",
+          "face": "stare",
+          "text": "Took you long enough."
+        },
+        {
+          "who": "liam",
+          "face": "smug",
+          "text": "You were under a quilt. You were a lump. I'm good at lumps."
+        },
+        {
+          "who": "twins",
+          "face": "tilt",
+          "text": "Now find my sister."
+        }
+      ],
+      "wilhelmina": [
+        {
+          "who": "twins",
+          "face": "giggle",
+          "text": "Found me."
+        },
+        {
+          "who": "twins",
+          "face": "tilt",
+          "text": "I was watching you the whole time."
+        },
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "Yes. I noticed the eye. Everyone noticed the eye."
+        }
+      ],
+      "oneLeft": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "One down. One small, unblinking one to go."
+        }
+      ],
+      "both": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "Both found. They want me back in the nursery. To play 'properly'."
+        },
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "I don't like 'properly'."
+        }
+      ]
+    },
+    "pulled": [
+      {
+        "who": "twins",
+        "face": "stare",
+        "text": "Found us."
+      },
+      {
+        "who": "twins",
+        "face": "tilt",
+        "text": "Both of us."
+      },
+      {
+        "who": "twins",
+        "face": "delighted",
+        "text": "Nobody's ever found us before."
+      },
+      {
+        "who": "liam",
+        "face": "soft",
+        "text": "Nobody looked?"
+      },
+      {
+        "who": "twins",
+        "face": "lonely",
+        "text": "Nobody came."
+      },
+      {
+        "who": "twins",
+        "face": "stare",
+        "text": "Now play with us properly."
+      },
+      {
+        "who": "liam",
+        "face": "startled",
+        "text": "Properly? What's improp-"
+      }
+    ],
+    "yourTurn": [
+      {
+        "who": "twins",
+        "face": "delighted",
+        "text": "You won."
+      },
+      {
+        "who": "twins",
+        "face": "giggle",
+        "text": "Our soldiers liked you."
+      },
+      {
+        "who": "twins",
+        "face": "stare",
+        "text": "Now it's your turn."
+      },
+      {
+        "who": "twins",
+        "face": "stare",
+        "text": "You hide."
+      },
+      {
+        "who": "twins",
+        "face": "whisper",
+        "text": "We count."
+      },
+      {
+        "who": "liam",
+        "face": "flat",
+        "text": "Hide. Where? I'm taller than every hiding place in this house."
+      },
+      {
+        "who": "liam",
+        "face": "flat",
+        "text": "...Unless."
+      },
+      {
+        "who": "liam",
+        "face": "grand",
+        "text": "Unless I'm not."
+      }
+    ],
+    "hiddenFound": [
+      {
+        "who": "twins",
+        "face": "whisper",
+        "text": "...ninety-nine, a hundred."
+      },
+      {
+        "who": "twins",
+        "face": "delighted",
+        "text": "Found you!"
+      },
+      {
+        "who": "twins",
+        "face": "delighted",
+        "text": "You were a bat!"
+      },
+      {
+        "who": "twins",
+        "face": "tilt",
+        "text": "Hanging in the wardrobe."
+      },
+      {
+        "who": "twins",
+        "face": "giggle",
+        "text": "Like a coat."
+      }
+    ],
+    "hiddenAfter": [
+      {
+        "who": "liam",
+        "face": "embarrassed",
+        "text": "I was hanging decoratively."
+      },
+      {
+        "who": "twins",
+        "face": "delighted",
+        "text": "Again! Again!"
+      },
+      {
+        "who": "liam",
+        "face": "soft",
+        "text": "...Maybe tomorrow."
+      }
+    ],
+    "epilogue": {
+      "ask": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "Ambrose. These two say you were supposed to find them."
+        },
+        {
+          "who": "ambrose",
+          "face": "remembering",
+          "text": "Find them, sir? I'm not sure I..."
+        }
+      ],
+      "count": [
+        {
+          "who": "ambrose",
+          "face": "drifting",
+          "text": "Ninety-seven... ninety-eight..."
+        },
+        {
+          "who": "ambrose",
+          "face": "drifting",
+          "text": "Ninety-nine... one hundred. Ready or not."
+        }
+      ],
+      "found": [
+        {
+          "who": "ambrose",
+          "face": "warm",
+          "text": "Found you, Miss Frida. Miss Wilhelmina."
+        }
+      ],
+      "after": [
+        {
+          "who": "twins",
+          "face": "delighted",
+          "text": "Found us."
+        },
+        {
+          "who": "twins",
+          "face": "peace",
+          "text": "Finally."
+        },
+        {
+          "who": "ambrose",
+          "face": "composed",
+          "text": "I seem to have lost track of the time, sir."
+        },
+        {
+          "who": "liam",
+          "face": "soft",
+          "text": "It happens. I hear it happens a lot here."
+        }
+      ],
+      "bedroom": [
+        {
+          "who": "liam",
+          "face": "soft",
+          "text": "They drew me. As a bat. Hanging in a wardrobe."
+        },
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "...It's a good likeness."
+        }
+      ]
+    },
+    "locked": {
+      "default": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "Not now."
+        }
+      ],
+      "guest": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "Locked. Or stuck. Or held shut by something small."
+        }
+      ],
+      "linen": [
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "This one doesn't open. From this side."
+        }
+      ]
+    },
+    "fight": {
+      "title": "The toy army",
+      "wave": "Wave",
+      "retry": "Again.",
+      "defeat": "Liam panics. A tactical retreat.",
+      "tagged": "tag!",
+      "horseBeaten": "zzz",
+      "controls": "Move A/D · Jump W/Space · Swipe E/J · Throw sketch F/K",
+      "phase1": [
+        {
+          "who": "twins",
+          "face": "stare",
+          "text": "Soldiers!"
+        },
+        {
+          "who": "twins",
+          "face": "giggle",
+          "text": "March!"
+        },
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "Wind-up soldiers. I've faced worse. I've faced stairs."
+        }
+      ],
+      "clear1": [
+        {
+          "who": "twins",
+          "face": "pout",
+          "text": "Our soldiers..."
+        },
+        {
+          "who": "twins",
+          "face": "delighted",
+          "text": "Horsey!"
+        }
+      ],
+      "phase2": [
+        {
+          "who": "liam",
+          "face": "startled",
+          "text": "That's a lot of horse."
+        }
+      ],
+      "clear2": [
+        {
+          "who": "twins",
+          "face": "tilt",
+          "text": "Horsey's tired."
+        },
+        {
+          "who": "twins",
+          "face": "giggle",
+          "text": "Now you have to catch us."
+        }
+      ],
+      "phase3": [
+        {
+          "who": "twins",
+          "face": "giggle",
+          "text": "Tag! You're it."
+        }
+      ],
+      "clear3": [
+        {
+          "who": "twins",
+          "face": "delighted",
+          "text": "You caught us!"
+        }
+      ],
+      "won": [
+        {
+          "who": "twins",
+          "face": "tilt",
+          "text": "Again tomorrow?"
+        },
+        {
+          "who": "liam",
+          "face": "flat",
+          "text": "Let's not get ahead of ourselves."
+        }
+      ]
+    }
   }
 }

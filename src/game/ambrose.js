@@ -141,6 +141,8 @@ export class Ambrose {
     this.anim.t += dt;
     this.greetCooldown = Math.max(0, this.greetCooldown - dt);
     this.driftCooldown = Math.max(0, (this.driftCooldown ?? 0) - dt);
+    // cutscenes drive him directly (walkTo, play); no schedule, no greeting
+    if (this.scripted) return;
 
     // dawn clears the night's work
     const ph = this.phaseNow();
@@ -242,6 +244,11 @@ export class Ambrose {
       }
       default: done();
     }
+  }
+
+  // hook used by walkTo() in cutscenes
+  walk(dx, dy, moving) {
+    if (moving) { this.face(dx, dy); this.setAnim(WALK); } else this.setAnim(IDLE);
   }
 
   // ---------------------------------------------------------------- talking

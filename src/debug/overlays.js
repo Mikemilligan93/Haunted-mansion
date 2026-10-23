@@ -2,7 +2,7 @@
 // Toggled in the testing modal or with ?overlays=hitbox,ranges,grid,fps,values
 export function drawOverlays(ctx, game) {
   const o = game.overlays, s = game.scene;
-  if (!s) return;
+  if (!s || !s.room) return; // the side-view fight draws its own hitboxes
   ctx.save();
   if (o.grid && s.room) {
     const { cols, rows, grid } = s.room.navGrid();
@@ -41,8 +41,8 @@ export function drawOverlays(ctx, game) {
       ctx.strokeStyle = 'rgba(200,160,255,0.8)';
       ctx.beginPath(); ctx.ellipse(A.x, A.y, R2, R2 / 1.4, 0, 0, Math.PI * 2); ctx.stroke();
       if (s.room.wallDoor) { ctx.fillStyle = 'rgba(200,160,255,0.8)'; ctx.fillRect(s.room.wallDoor.x - 2, s.room.wallDoor.y - 20, 4, 20); }
-      for (const o of s.room.obstacles()) { ctx.strokeStyle = 'rgba(255,90,90,0.8)'; ctx.strokeRect(o.x1 + 0.5, o.y1 + 0.5, o.x2 - o.x1, o.y2 - o.y1); }
     }
+    for (const o of s.room.obstacles()) { ctx.strokeStyle = 'rgba(255,90,90,0.8)'; ctx.strokeRect(o.x1 + 0.5, o.y1 + 0.5, o.x2 - o.x1, o.y2 - o.y1); }
     for (const lt of s.allLights()) {
       ctx.strokeStyle = 'rgba(255,170,60,0.7)';
       ctx.beginPath(); ctx.arc(lt.x, lt.y, lt.r, 0, Math.PI * 2); ctx.stroke();
@@ -59,12 +59,13 @@ drawOverlays.ui = (ui, game) => {
     const st = game.state();
     const h = Math.floor(st.hour), m = Math.floor((st.hour % 1) * 60);
     const lines = [
-      `time ${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')} day ${st.day}  daylight ${st.daylight.toFixed(2)}  darkness ${st.darkness.toFixed(2)}`,
+      `time ${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')} day ${st.day}  daylight ${st.daylight.toFixed(2)}  darkness ${(st.darkness || 0).toFixed(2)}`,
       `liam ${st.x.toFixed(1)},${st.y.toFixed(1)} ${st.dir} ${st.mode} ${st.form}${st.panicLeft > 0 ? ` (panic ${st.panicLeft.toFixed(1)}s)` : ''} ${st.anim}`,
-      `speed ${st.speedNow.toFixed(0)} px/s  in sun ${st.inSun}  curtain ${st.curtain}  door ${st.door}`,
+      `speed ${(st.speedNow || 0).toFixed(0)} px/s  in sun ${st.inSun}  curtain ${st.curtain}  door ${st.door}`,
       `lights ${st.lights}  entities ${st.entities}  seed ${game.seed}  rng ${game.rng.state}`,
       `cheats god ${game.cheats.god} infinite ${game.cheats.infinite}`,
       ...(game.scene.ambrose ? [`ambrose ${game.scene.ambrose.describe()}  plates ${st.plates}  clock ${st.clockStopped ?? 'running'}`] : []),
+      ...(game.scene.describe ? [game.scene.describe()] : []),
     ];
     for (const l of lines) { ui.text(l, 4, y, { size: 8, color: '#9effa0' }); y += 10; }
   }

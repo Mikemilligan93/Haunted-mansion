@@ -352,8 +352,10 @@ def process_tiles(sheet, arr, idx, mask, pal):
             y0 = ry + inset
             sx = (cw - 2 * inset) / reg["size"][0]
             sy = (rh - 2 * inset) / reg["size"][1]
-            full = np.ones_like(mask)
-            o = downscale(idx, full, reg["size"][0], reg["size"][1], x0, y0, sx, sy, len(pal.rgb), None, 1, 0.0)
+            # keep_alpha: pieces drawn on magenta (platform ends, shelves, decorations) keep their transparency
+            full = mask if sheet.get("keep_alpha") else np.ones_like(mask)
+            o = downscale(idx, full, reg["size"][0], reg["size"][1], x0, y0, sx, sy, len(pal.rgb), None, 1,
+                          0.5 if sheet.get("keep_alpha") else 0.0)
             frames.append((reg["name"], i, to_rgba(o, pal)))
     # pack: one row per region, padded to the widest
     widths = {}
@@ -426,7 +428,7 @@ def main(argv):
         im = Image.open(src).convert("RGB")
         arr = np.asarray(im)
         mask = key_mask(arr)
-        if sh["kind"] == "tiles":
+        if sh["kind"] == "tiles" and not sh.get("keep_alpha"):
             mask[:] = True
         pal = pals[sh["palette"]]
         if sh.get("extra_colors"):

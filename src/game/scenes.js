@@ -277,16 +277,19 @@ export class SandboxScene extends RoomScene {
     const rows = s.rows || ['row'];
     const nRows = (s.grid || [1, 1])[0], nCols = (s.grid || [1, 1])[1];
     const anims = Object.entries(s.anims || {});
-    ctx.scale(k, k);
-    const W = 640 / k;
+    // big sheets (backgrounds) are shrunk so one frame fits on screen
+    const kk = Math.min(k, 620 / fw, 280 / fh);
+    ctx.scale(kk, kk);
+    const W = 640 / kk;
     // animated row previews
     let x = 6, y = 14;
     for (let r = 0; r < nRows; r++) {
       for (const [an, d] of anims.length ? anims : [['frames', { frames: [...Array(nCols).keys()], fps: 4, loop: true }]]) {
+        if (d.row !== undefined && d.row !== r) continue; // an animation that belongs to one row only
         if (x + fw > W) { x = 6; y += fh + 12; }
         const col = d.frames[Math.floor(this.viewer.t * d.fps) % d.frames.length];
         sp.draw(ctx, name, r, col, x + s.origin[0], y + s.origin[1]);
-        this.viewerLabels.push([`${rows[r] || r} ${an}`, (x) * k, (y + fh) * k + 1]);
+        this.viewerLabels.push([`${rows[r] || r} ${an}`, (x) * kk, (y + fh) * kk + 1]);
         x += fw + 6;
       }
     }

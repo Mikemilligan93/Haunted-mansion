@@ -46,7 +46,7 @@ export class PauseMenu {
     if (id === 'resume') this.setOpen(false);
     else if (id === 'controls') this.view = 'controls';
     else if (id === 'tools') { this.setOpen(false); g.devtools.toggle(true); }
-    else if (id === 'restart') { this.setOpen(false); g.switchScene(g.scene.name, { intro: g.scene.name === 'testroom' }); }
+    else if (id === 'restart') { this.setOpen(false); g.switchScene(g.scene.name, { intro: g.scene.name === 'testroom', room: g.scene.isChapter ? g.scene.room.id : undefined, phase: g.scene.isSide ? g.scene.phase : undefined }); }
   }
 
   draw(ui) {
